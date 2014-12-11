@@ -1,2 +1,2 @@
-Javascript-Motion-Activated-Midi
+JavaScript-Motion-Activated-Midi
 ================================
