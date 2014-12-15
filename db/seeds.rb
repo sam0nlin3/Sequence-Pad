@@ -3,8 +3,6 @@ User.destroy_all
 Column.destroy_all
 Cell.destroy_all
 
-
-
 column1 = Column.create()
 column2 = Column.create()
 column3 = Column.create()
@@ -231,6 +229,3 @@ cell16 = Cell.create!(
     row: 1,
     column: column16
 )
-
-
-
