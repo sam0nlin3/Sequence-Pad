@@ -23,24 +23,18 @@ $(document).ready(function() {
 function fetchCells() {
 	console.log('loaded')
 	$.get('/').done(displayCells);
-
 }
 
 function displayCells(data){
 	console.log('loaded')
+	cellsContainer = $('<div>').addClass('cellsContainer');
 	data.cells.forEach(renderCell);
 }
 
 function renderCell(data){
-	
-	var cellContainer = $('<div>').addClass('cellContainer');
-	var column = $('<div>').addClass('column').attr('id', data.column);
 
-	column.appendTo(cellContainer);
-	
-	var purple_audio = $('<audio>').attr('id', 'purple_audio')
+	var purple_audio = $('<audio>').attr('id', 'purple_audio');
 	var purple_source = $('<source>').attr('src', data.purple_note).attr('type', 'audio/mpeg');
-
 	var green_audio = $('<audio>').attr('id', 'green_audio')
 	var green_source = $('<source>').attr('src', data.green_note).attr('type', 'audio/mpeg');
 
@@ -63,7 +57,8 @@ function renderCell(data){
 							.append(yellow_audio)
 							.append(blue_audio);
 							
-
-	cell.appendTo(cellContainer).appendTo($(document.body));
-
+	cell.appendTo(cellsContainer);
+	
+	cellsContainer.appendTo($(document.body));
 }
+

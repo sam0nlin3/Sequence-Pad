@@ -14,10 +14,22 @@
  *= require_self
  */
 
+.cellsContainer {
+	width: 1152px;
+	height: 600px;
+	margin: 0 auto;
+	background-color: silver;
+}
 
 .cell {
-	background-color: red;
+	text-align: center;
+	background-color: whitesmoke;
+	opacity: 50%;
+	margin: 4px;
 	width: 60px;
-	height: 60px;
+	height: 40px;
 	border: 2px solid black;
+	border-radius: 12px;
+	display: inline;
+	float: left;
 }
