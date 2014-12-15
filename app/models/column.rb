@@ -5,4 +5,5 @@ class Column < ActiveRecord::Base
 	# Associations
 	has_many :cells
 
+
 end

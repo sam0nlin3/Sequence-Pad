@@ -3,7 +3,6 @@ User.destroy_all
 Column.destroy_all
 Cell.destroy_all
 
-
 column1 = Column.create()
 column2 = Column.create()
 column3 = Column.create()
@@ -24,208 +23,208 @@ column16 = Column.create()
 
 
 cell1 = Cell.create!(
-        purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    purple_note: "lib/assets/sounds/84570^laserric.mp3",
     purple_active: false,
-    blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    blue_note: "lib/assets/sounds/84570^laserric.mp3",
     blue_active: false,   
-    yellow_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    yellow_note: "lib/assets/sounds/84570^laserric.mp3",
     yellow_active: false,
-    green_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    green_note: "lib/assets/sounds/84570^laserric.mp3",
     green_active: false, 
     row: 1,
     column: column1
 ) 
 
 cell2 = Cell.create!(
-        purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+        purple_note: "lib/assets/sounds/84570^laserric.mp3",
     purple_active: false,
-    blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    blue_note: "lib/assets/sounds/84570^laserric.mp3",
     blue_active: false,   
-    yellow_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    yellow_note: "lib/assets/sounds/84570^laserric.mp3",
     yellow_active: false,
-    green_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    green_note: "lib/assets/sounds/84570^laserric.mp3",
     green_active: false, 
     row: 1,
     column: column2
 ) 
 
 cell3 = Cell.create!(
-        purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+        purple_note: "lib/assets/sounds/84570^laserric.mp3",
     purple_active: false,
-    blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    blue_note: "lib/assets/sounds/84570^laserric.mp3",
     blue_active: false,   
-    yellow_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    yellow_note: "lib/assets/sounds/84570^laserric.mp3",
     yellow_active: false,
-    green_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    green_note: "lib/assets/sounds/84570^laserric.mp3",
     green_active: false, 
     row: 1,
     column: column3
 ) 
 
 cell4 = Cell.create!(
-        purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+        purple_note: "lib/assets/sounds/84570^laserric.mp3",
     purple_active: false,
-    blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    blue_note: "lib/assets/sounds/84570^laserric.mp3",
     blue_active: false,   
-    yellow_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    yellow_note: "lib/assets/sounds/84570^laserric.mp3",
     yellow_active: false,
-    green_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    green_note: "lib/assets/sounds/84570^laserric.mp3",
     green_active: false, 
     row: 1,
     column: column4
 ) 
 
 cell5 = Cell.create!(
-        purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+        purple_note: "lib/assets/sounds/84570^laserric.mp3",
     purple_active: false,
-    blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    blue_note: "lib/assets/sounds/84570^laserric.mp3",
     blue_active: false,   
-    yellow_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    yellow_note: "lib/assets/sounds/84570^laserric.mp3",
     yellow_active: false,
-    green_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    green_note: "lib/assets/sounds/84570^laserric.mp3",
     green_active: false, 
     row: 1,
     column: column5
 )
 
 cell6 = Cell.create!(
-        purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+        purple_note: "lib/assets/sounds/84570^laserric.mp3",
     purple_active: false,
-    blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    blue_note: "lib/assets/sounds/84570^laserric.mp3",
     blue_active: false,   
-    yellow_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    yellow_note: "lib/assets/sounds/84570^laserric.mp3",
     yellow_active: false,
-    green_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    green_note: "lib/assets/sounds/84570^laserric.mp3",
     green_active: false, 
     row: 1,
     column: column6
 )
 
 cell7 = Cell.create!(
-        purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+        purple_note: "lib/assets/sounds/84570^laserric.mp3",
     purple_active: false,
-    blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    blue_note: "lib/assets/sounds/84570^laserric.mp3",
     blue_active: false,   
-    yellow_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    yellow_note: "lib/assets/sounds/84570^laserric.mp3",
     yellow_active: false,
-    green_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    green_note: "lib/assets/sounds/84570^laserric.mp3",
     green_active: false, 
     row: 1,
     column: column7
 )
 
 cell8 = Cell.create!(
-        purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+        purple_note: "lib/assets/sounds/84570^laserric.mp3",
     purple_active: false,
-    blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    blue_note: "lib/assets/sounds/84570^laserric.mp3",
     blue_active: false,   
-    yellow_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    yellow_note: "lib/assets/sounds/84570^laserric.mp3",
     yellow_active: false,
-    green_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    green_note: "lib/assets/sounds/84570^laserric.mp3",
     green_active: false, 
     row: 1,
     column: column8
 )
 
 cell9 = Cell.create!(
-        purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+        purple_note: "lib/assets/sounds/84570^laserric.mp3",
     purple_active: false,
-    blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    blue_note: "lib/assets/sounds/84570^laserric.mp3",
     blue_active: false,   
-    yellow_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    yellow_note: "lib/assets/sounds/84570^laserric.mp3",
     yellow_active: false,
-    green_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    green_note: "lib/assets/sounds/84570^laserric.mp3",
     green_active: false, 
     row: 1,
     column: column9
 )
 
 cell10 = Cell.create!(
-        purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+        purple_note: "lib/assets/sounds/84570^laserric.mp3",
     purple_active: false,
-    blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    blue_note: "lib/assets/sounds/84570^laserric.mp3",
     blue_active: false,   
-    yellow_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    yellow_note: "lib/assets/sounds/84570^laserric.mp3",
     yellow_active: false,
-    green_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    green_note: "lib/assets/sounds/84570^laserric.mp3",
     green_active: false, 
     row: 1,
     column: column10
 )
 
 cell11 = Cell.create!(
-        purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+        purple_note: "lib/assets/sounds/84570^laserric.mp3",
     purple_active: false,
-    blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    blue_note: "lib/assets/sounds/84570^laserric.mp3",
     blue_active: false,   
-    yellow_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    yellow_note: "lib/assets/sounds/84570^laserric.mp3",
     yellow_active: false,
-    green_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    green_note: "lib/assets/sounds/84570^laserric.mp3",
     green_active: false, 
     row: 1,
     column: column11
 )
 
 cell12 = Cell.create!(
-        purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+        purple_note: "lib/assets/sounds/84570^laserric.mp3",
     purple_active: false,
-    blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    blue_note: "lib/assets/sounds/84570^laserric.mp3",
     blue_active: false,   
-    yellow_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    yellow_note: "lib/assets/sounds/84570^laserric.mp3",
     yellow_active: false,
-    green_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    green_note: "lib/assets/sounds/84570^laserric.mp3",
     green_active: false, 
     row: 1,
     column: column12
 )
 
 cell13 = Cell.create!(
-        purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+        purple_note: "lib/assets/sounds/84570^laserric.mp3",
     purple_active: false,
-    blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    blue_note: "lib/assets/sounds/84570^laserric.mp3",
     blue_active: false,   
-    yellow_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    yellow_note: "lib/assets/sounds/84570^laserric.mp3",
     yellow_active: false,
-    green_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    green_note: "lib/assets/sounds/84570^laserric.mp3",
     green_active: false, 
     row: 1,
     column: column13
 )
 
 cell14 = Cell.create!(
-        purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+        purple_note: "lib/assets/sounds/84570^laserric.mp3",
     purple_active: false,
-    blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    blue_note: "lib/assets/sounds/84570^laserric.mp3",
     blue_active: false,   
-    yellow_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    yellow_note: "lib/assets/sounds/84570^laserric.mp3",
     yellow_active: false,
-    green_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    green_note: "lib/assets/sounds/84570^laserric.mp3",
     green_active: false, 
     row: 1,
     column: column14
 )
 
 cell15 = Cell.create!(
-        purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+        purple_note: "lib/assets/sounds/84570^laserric.mp3",
     purple_active: false,
-    blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    blue_note: "lib/assets/sounds/84570^laserric.mp3",
     blue_active: false,   
-    yellow_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    yellow_note: "lib/assets/sounds/84570^laserric.mp3",
     yellow_active: false,
-    green_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    green_note: "lib/assets/sounds/84570^laserric.mp3",
     green_active: false, 
     row: 1,
     column: column15
 )
 
 cell16 = Cell.create!(
-        purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+        purple_note: "lib/assets/sounds/84570^laserric.mp3",
     purple_active: false,
-    blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    blue_note: "lib/assets/sounds/84570^laserric.mp3",
     blue_active: false,   
-    yellow_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    yellow_note: "lib/assets/sounds/84570^laserric.mp3",
     yellow_active: false,
-    green_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    green_note: "lib/assets/sounds/84570^laserric.mp3",
     green_active: false, 
     row: 1,
     column: column16
