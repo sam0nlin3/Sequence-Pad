@@ -19,7 +19,7 @@ $(document).ready(function() {
 	console.log('loaded');
 	fetchCells();
 	$(document.body).on('click', 'button', changeCurrentColor);
-	$(document.body).on('click', '.cell', activateCell);
+	$(document.body).on('mousedown', '.cell', activateCell);
 	board = new Board();
 })
 
@@ -42,6 +42,8 @@ function changeCurrentColor() {
 	board.currentColor = color;
 	console.log(board.currentColor);
 }
+
+function deactivate() {}
 
 
 function displayCells(data){
@@ -81,15 +83,19 @@ function renderCells(data){
 }
 
 function activateCell() {
-	this.active = board.currentColor;
-	if (this.active === "blue") {
-		$(this).css("background-color", blue);
-	} else if (this.active === "purple") {
-		$(this).css("background-color", purple);	
-	} else if (this.active === "yellow") {
-		$(this).css("background-color", yellow);	
-	} else if (this.active === "green") {
-		$(this).css("background-color", green);		
+	if (this.active === board.currentColor) {
+		this.active = "none";
+		$(this).css("background-color", "whitesmoke");
+	}
+	else if (this.active = board.currentColor) {
+		if (this.active === "blue") {
+			$(this).css("background-color", blue);
+		} else if (this.active === "purple") {
+			$(this).css("background-color", purple);	
+		} else if (this.active === "yellow") {
+			$(this).css("background-color", yellow);	
+		} else if (this.active === "green") {
+			$(this).css("background-color", green);		
+		}	
 	}	
-	console.log(this.active);
 }
