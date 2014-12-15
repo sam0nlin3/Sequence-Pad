@@ -4,7 +4,11 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def index
-  	render layout: 'application', text: ''
+    @cells = Cell.all
+    @columns = Column.all
+    response = {cells: @cells, columns: @columns}
+    render json: response
+  	# render layout: 'application', text: ''
   end
 
   # This makes the method available in any file in our app

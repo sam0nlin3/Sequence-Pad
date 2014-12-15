@@ -24,12 +24,13 @@ function fetchCells() {
 }
 
 function displayCells(data){
-	console.log(this);
+	console.log(data);
+	debugger;
 	data.forEach(renderCell);
 }
 
 function renderCell(data){
-	console.log(this);
+	console.log(data);
 	var cellContainer = $('<div>').addClass('cellContainer');
 	var column = $('<div>').addClass('column').attr('id', data.column);
 
