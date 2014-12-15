@@ -3,8 +3,6 @@ User.destroy_all
 Column.destroy_all
 Cell.destroy_all
 
-
-
 column1 = Column.create()
 column2 = Column.create()
 column3 = Column.create()
@@ -25,7 +23,7 @@ column16 = Column.create()
 
 
 cell1 = Cell.create!(
-		purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+        purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
     purple_active: false,
     blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
     blue_active: false,   
@@ -38,7 +36,7 @@ cell1 = Cell.create!(
 ) 
 
 cell2 = Cell.create!(
-		purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+        purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
     purple_active: false,
     blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
     blue_active: false,   
@@ -51,7 +49,7 @@ cell2 = Cell.create!(
 ) 
 
 cell3 = Cell.create!(
-		purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+        purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
     purple_active: false,
     blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
     blue_active: false,   
@@ -64,7 +62,7 @@ cell3 = Cell.create!(
 ) 
 
 cell4 = Cell.create!(
-		purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+        purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
     purple_active: false,
     blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
     blue_active: false,   
@@ -77,7 +75,7 @@ cell4 = Cell.create!(
 ) 
 
 cell5 = Cell.create!(
-		purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+        purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
     purple_active: false,
     blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
     blue_active: false,   
@@ -90,7 +88,7 @@ cell5 = Cell.create!(
 )
 
 cell6 = Cell.create!(
-		purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+        purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
     purple_active: false,
     blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
     blue_active: false,   
@@ -103,7 +101,7 @@ cell6 = Cell.create!(
 )
 
 cell7 = Cell.create!(
-		purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+        purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
     purple_active: false,
     blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
     blue_active: false,   
@@ -116,7 +114,7 @@ cell7 = Cell.create!(
 )
 
 cell8 = Cell.create!(
-		purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+        purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
     purple_active: false,
     blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
     blue_active: false,   
@@ -129,7 +127,7 @@ cell8 = Cell.create!(
 )
 
 cell9 = Cell.create!(
-		purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+        purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
     purple_active: false,
     blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
     blue_active: false,   
@@ -142,7 +140,7 @@ cell9 = Cell.create!(
 )
 
 cell10 = Cell.create!(
-		purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+        purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
     purple_active: false,
     blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
     blue_active: false,   
@@ -155,7 +153,7 @@ cell10 = Cell.create!(
 )
 
 cell11 = Cell.create!(
-		purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+        purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
     purple_active: false,
     blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
     blue_active: false,   
@@ -168,7 +166,7 @@ cell11 = Cell.create!(
 )
 
 cell12 = Cell.create!(
-		purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+        purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
     purple_active: false,
     blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
     blue_active: false,   
@@ -181,7 +179,7 @@ cell12 = Cell.create!(
 )
 
 cell13 = Cell.create!(
-		purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+        purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
     purple_active: false,
     blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
     blue_active: false,   
@@ -194,7 +192,7 @@ cell13 = Cell.create!(
 )
 
 cell14 = Cell.create!(
-		purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+        purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
     purple_active: false,
     blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
     blue_active: false,   
@@ -207,7 +205,7 @@ cell14 = Cell.create!(
 )
 
 cell15 = Cell.create!(
-		purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+        purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
     purple_active: false,
     blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
     blue_active: false,   
@@ -220,7 +218,7 @@ cell15 = Cell.create!(
 )
 
 cell16 = Cell.create!(
-		purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+        purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
     purple_active: false,
     blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
     blue_active: false,   
@@ -231,6 +229,3 @@ cell16 = Cell.create!(
     row: 1,
     column: column16
 )
-
-
-

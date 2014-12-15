@@ -15,4 +15,4 @@ class Cell < ActiveRecord::Base
 	# Associations
 	belongs_to :column
 
-end	
+end
