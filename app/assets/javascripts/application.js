@@ -24,13 +24,12 @@ $(document).ready(function() {
 function fetchCells() {
 	console.log('loaded')
 	$.get('/').done(displayCells);
-
 }
 
 function displayCells(data){
 	console.log('loaded')
 	cellsContainer = $('<div>').addClass('cellsContainer');
-	data.cells.forEach(renderCells);
+	data.cells.forEach(renderCell);
 }
 
 function renderCells(data){
@@ -68,13 +67,3 @@ function playSound() {
 	console.log(this);
 	$(this).find('#blue_audio')[0].play();
 }
-
-
-
-
-
-
-
-
-
-
