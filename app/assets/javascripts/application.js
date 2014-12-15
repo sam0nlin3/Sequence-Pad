@@ -18,6 +18,7 @@
 $(document).ready(function() {
 	console.log('loaded');
 	fetchCells();
+	$(document.body).on('click', '.cell', playSound);
 })
 
 function fetchCells() {
@@ -31,34 +32,38 @@ function displayCells(data){
 	data.cells.forEach(renderCell);
 }
 
-function renderCell(data){
+function renderCells(data){
+		var purple_audio = $('<audio>').attr('id', 'purple_audio')
+		var purple_source = $('<source>').attr('src', data.purple_note).attr('type', 'audio/mpeg');
 
-	var purple_audio = $('<audio>').attr('id', 'purple_audio');
-	var purple_source = $('<source>').attr('src', data.purple_note).attr('type', 'audio/mpeg');
-	var green_audio = $('<audio>').attr('id', 'green_audio')
-	var green_source = $('<source>').attr('src', data.green_note).attr('type', 'audio/mpeg');
+		var green_audio = $('<audio>').attr('id', 'green_audio')
+		var green_source = $('<source>').attr('src', data.green_note).attr('type', 'audio/mpeg');
 
-	var yellow_audio = $('<audio>').attr('id', 'yellow_audio')
-	var yellow_source = $('<source>').attr('src', data.yellow_note).attr('type', 'audio/mpeg');
+		var yellow_audio = $('<audio>').attr('id', 'yellow_audio')
+		var yellow_source = $('<source>').attr('src', data.yellow_note).attr('type', 'audio/mpeg');
 
-	var blue_audio = $('<audio>').attr('id', 'blue_audio')
-	var blue_source = $('<source>').attr('src', data.blue_note).attr('type', 'audio/mpeg');
-	
-	purple_audio.append(purple_source);
-	green_audio.append(green_source);
-	yellow_audio.append(yellow_source);
-	blue_audio.append(blue_source);
-	
-	var cell = $('<div>')
-							.addClass('cell')
-							.attr('row', data.row)
-							.append(purple_audio)
-							.append(green_audio)
-							.append(yellow_audio)
-							.append(blue_audio);
-							
-	cell.appendTo(cellsContainer);
-	
-	cellsContainer.appendTo($(document.body));
+		var blue_audio = $('<audio>').attr('id', 'blue_audio')
+		var blue_source = $('<source>').attr('src', data.blue_note).attr('type', 'audio/mpeg');
+		
+		purple_audio.append(purple_source);
+		green_audio.append(green_source);
+		yellow_audio.append(yellow_source);
+		blue_audio.append(blue_source);
+		
+		var cell = $('<div>')
+								.addClass('cell')
+								.attr('row', data.row)
+								.append(purple_audio)
+								.append(green_audio)
+								.append(yellow_audio)
+								.append(blue_audio);
+								
+
+		cell.appendTo(cellsContainer)
+		cellsContainer.appendTo($(document.body));
 }
 
+function playSound() {
+	console.log(this);
+	$(this).find('#blue_audio')[0].play();
+}
