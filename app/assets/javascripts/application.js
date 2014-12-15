@@ -29,7 +29,7 @@ function fetchCells() {
 function displayCells(data){
 	console.log('loaded')
 	cellsContainer = $('<div>').addClass('cellsContainer');
-	data.cells.forEach(renderCell);
+	data.cells.forEach(renderCells);
 }
 
 function renderCells(data){
