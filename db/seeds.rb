@@ -3,40 +3,234 @@ User.destroy_all
 Column.destroy_all
 Cell.destroy_all
 
-# # sam = User.create(
-# # 	username: "Sam",
-# # 	password: "password1",
-# # 	password_confirmation: "password1"
-# # 	)
 
-# # ross = User.create(
-# # 	username: "Ross",
-# # 	password: "password1",
-# # 	password_confirmation: "password1"
-# # 	)
 
-# # song1 = Song.new(
-# # 	name: "Test 1",
-# # 	user_id: 1
-# # 	)
+column1 = Column.create()
+column2 = Column.create()
+column3 = Column.create()
+column4 = Column.create()
+column5 = Column.create()
+column6 = Column.create()
+column7 = Column.create()
+column7 = Column.create()
+column8 = Column.create()
+column9 = Column.create()
+column10 = Column.create()
+column11 = Column.create()
+column12 = Column.create()
+column13 = Column.create()
+column14 = Column.create()
+column15 = Column.create()
+column16 = Column.create()
 
-# # song1 = Song.new(
-# # 	name: "Test 2",
-# # 	user_id: 2
-# # 	)
 
-# column1 = Column.new
+cell1 = Cell.create!(
+		purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    purple_active: false,
+    blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    blue_active: false,   
+    yellow_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    yellow_active: false,
+    green_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    green_active: false, 
+    row: 1,
+    column: column1
+) 
 
-# cell1 = Cell.new
-# cell1.purple_note = 'https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3'
-# cell1.purple_active = false
-# cell1.blue_note = 'https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3'
-# cell1.blue_active = false
-# cell1.yellow_note = 'https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3'
-# cell1.yellow_active = false
-# cell1.green_note = 'https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3'
-# cell1.green_active = false
-# # cell1.row = 1
-# # cell1.column = 1
-# cell1.save
+cell2 = Cell.create!(
+		purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    purple_active: false,
+    blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    blue_active: false,   
+    yellow_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    yellow_active: false,
+    green_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    green_active: false, 
+    row: 1,
+    column: column2
+) 
+
+cell3 = Cell.create!(
+		purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    purple_active: false,
+    blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    blue_active: false,   
+    yellow_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    yellow_active: false,
+    green_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    green_active: false, 
+    row: 1,
+    column: column3
+) 
+
+cell4 = Cell.create!(
+		purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    purple_active: false,
+    blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    blue_active: false,   
+    yellow_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    yellow_active: false,
+    green_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    green_active: false, 
+    row: 1,
+    column: column4
+) 
+
+cell5 = Cell.create!(
+		purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    purple_active: false,
+    blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    blue_active: false,   
+    yellow_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    yellow_active: false,
+    green_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    green_active: false, 
+    row: 1,
+    column: column5
+)
+
+cell6 = Cell.create!(
+		purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    purple_active: false,
+    blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    blue_active: false,   
+    yellow_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    yellow_active: false,
+    green_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    green_active: false, 
+    row: 1,
+    column: column6
+)
+
+cell7 = Cell.create!(
+		purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    purple_active: false,
+    blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    blue_active: false,   
+    yellow_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    yellow_active: false,
+    green_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    green_active: false, 
+    row: 1,
+    column: column7
+)
+
+cell8 = Cell.create!(
+		purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    purple_active: false,
+    blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    blue_active: false,   
+    yellow_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    yellow_active: false,
+    green_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    green_active: false, 
+    row: 1,
+    column: column8
+)
+
+cell9 = Cell.create!(
+		purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    purple_active: false,
+    blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    blue_active: false,   
+    yellow_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    yellow_active: false,
+    green_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    green_active: false, 
+    row: 1,
+    column: column9
+)
+
+cell10 = Cell.create!(
+		purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    purple_active: false,
+    blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    blue_active: false,   
+    yellow_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    yellow_active: false,
+    green_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    green_active: false, 
+    row: 1,
+    column: column10
+)
+
+cell11 = Cell.create!(
+		purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    purple_active: false,
+    blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    blue_active: false,   
+    yellow_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    yellow_active: false,
+    green_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    green_active: false, 
+    row: 1,
+    column: column11
+)
+
+cell12 = Cell.create!(
+		purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    purple_active: false,
+    blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    blue_active: false,   
+    yellow_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    yellow_active: false,
+    green_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    green_active: false, 
+    row: 1,
+    column: column12
+)
+
+cell13 = Cell.create!(
+		purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    purple_active: false,
+    blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    blue_active: false,   
+    yellow_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    yellow_active: false,
+    green_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    green_active: false, 
+    row: 1,
+    column: column13
+)
+
+cell14 = Cell.create!(
+		purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    purple_active: false,
+    blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    blue_active: false,   
+    yellow_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    yellow_active: false,
+    green_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    green_active: false, 
+    row: 1,
+    column: column14
+)
+
+cell15 = Cell.create!(
+		purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    purple_active: false,
+    blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    blue_active: false,   
+    yellow_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    yellow_active: false,
+    green_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    green_active: false, 
+    row: 1,
+    column: column15
+)
+
+cell16 = Cell.create!(
+		purple_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    purple_active: false,
+    blue_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    blue_active: false,   
+    yellow_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    yellow_active: false,
+    green_note: "https://s3.amazonaws.com/spctrl/Boy+Scouts+sleeping+in+a+tent+1.mp3",
+    green_active: false, 
+    row: 1,
+    column: column16
+)
+
+
 

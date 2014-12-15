@@ -2,15 +2,15 @@ class Cell < ActiveRecord::Base
 	
 	# Validations
 	validates_presence_of :purple_note
-	validates_presence_of :purple_active
+	validates :purple_active, inclusion: { in: [true, false] } 
 	validates_presence_of :blue_note
-	validates_presence_of :blue_active
+	validates :blue_active, inclusion: { in: [true, false] }
 	validates_presence_of :yellow_note
-	validates_presence_of :yellow_active
+	validates :yellow_active, inclusion: { in: [true, false] }
 	validates_presence_of :green_note
-	validates_presence_of :green_active
+	validates :green_active, inclusion: { in: [true, false] }
 	validates_presence_of :row
-	validates_presence_of :column
+	validates_presence_of :column_id
 
 	# Associations
 	belongs_to :column
