@@ -18,13 +18,31 @@
 $(document).ready(function() {
 	console.log('loaded');
 	fetchCells();
-	$(document.body).on('click', '.cell', playSound);
+	$(document.body).on('click', 'button', changeCurrentColor);
+	$(document.body).on('click', '.cell', activateCell);
+	board = new Board();
 })
+
+var blue = '#2B4482';
+var yellow = '#DAA520';
+var purple = '#622163';
+var green = '#4BC3A5';
+
+var Board = function(){
+	this.currentColor = "purple"
+}
 
 function fetchCells() {
 	console.log('loaded')
 	$.get('/').done(displayCells);
 }
+
+function changeCurrentColor() {
+	var color = this.id;
+	board.currentColor = color;
+	console.log(board.currentColor);
+}
+
 
 function displayCells(data){
 	console.log('loaded')
@@ -53,17 +71,25 @@ function renderCells(data){
 		var cell = $('<div>')
 								.addClass('cell')
 								.attr('row', data.row)
+								.attr('active', data.active)
 								.append(purple_audio)
 								.append(green_audio)
 								.append(yellow_audio)
 								.append(blue_audio);
-								
-
 		cell.appendTo(cellsContainer)
 		cellsContainer.appendTo($(document.body));
 }
 
-function playSound() {
-	console.log(this);
-	$(this).find('#blue_audio')[0].play();
+function activateCell() {
+	this.active = board.currentColor;
+	if (this.active === "blue") {
+		$(this).css("background-color", blue);
+	} else if (this.active === "purple") {
+		$(this).css("background-color", purple);	
+	} else if (this.active === "yellow") {
+		$(this).css("background-color", yellow);	
+	} else if (this.active === "green") {
+		$(this).css("background-color", green);		
+	}	
+	console.log(this.active);
 }
