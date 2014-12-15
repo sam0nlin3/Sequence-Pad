@@ -18,13 +18,10 @@ ActiveRecord::Schema.define(version: 20141214011846) do
 
   create_table "cells", force: true do |t|
     t.string   "purple_note"
-    t.boolean  "purple_active"
     t.string   "blue_note"
-    t.boolean  "blue_active"
     t.string   "yellow_note"
-    t.boolean  "yellow_active"
     t.string   "green_note"
-    t.boolean  "green_active"
+    t.string   "active"
     t.integer  "row"
     t.integer  "column_id"
     t.datetime "created_at"
