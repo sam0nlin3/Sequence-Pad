@@ -162,5 +162,4 @@ for j in 1..16
         row: 12,
         column: i
     )
-end   
-
+end
