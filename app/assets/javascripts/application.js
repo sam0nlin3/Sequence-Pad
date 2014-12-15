@@ -15,29 +15,55 @@
 //= require turbolinks
 //= require_tree .
 
-$(function() {
+$(document).ready(function() {
+	console.log('loaded');
 	fetchCells();
 })
 
 function fetchCells() {
+	console.log('loaded')
 	$.get('/').done(displayCells);
+
 }
 
 function displayCells(data){
-	console.log(data);
-	debugger;
-	data.forEach(renderCell);
+	console.log('loaded')
+	data.cells.forEach(renderCell);
 }
 
 function renderCell(data){
-	console.log(data);
+	
 	var cellContainer = $('<div>').addClass('cellContainer');
 	var column = $('<div>').addClass('column').attr('id', data.column);
 
 	column.appendTo(cellContainer);
+	
+	var purple_audio = $('<audio>').attr('id', 'purple_audio')
+	var purple_source = $('<source>').attr('src', data.purple_note).attr('type', 'audio/mpeg');
 
-	var cell = $('<div>').addClass('cell').attr('row', date.row);
+	var green_audio = $('<audio>').attr('id', 'green_audio')
+	var green_source = $('<source>').attr('src', data.green_note).attr('type', 'audio/mpeg');
 
-	cell.appendTo(cellContainer);
+	var yellow_audio = $('<audio>').attr('id', 'yellow_audio')
+	var yellow_source = $('<source>').attr('src', data.yellow_note).attr('type', 'audio/mpeg');
+
+	var blue_audio = $('<audio>').attr('id', 'blue_audio')
+	var blue_source = $('<source>').attr('src', data.blue_note).attr('type', 'audio/mpeg');
+	
+	purple_audio.append(purple_source);
+	green_audio.append(green_source);
+	yellow_audio.append(yellow_source);
+	blue_audio.append(blue_source);
+	
+	var cell = $('<div>')
+							.addClass('cell')
+							.attr('row', data.row)
+							.append(purple_audio)
+							.append(green_audio)
+							.append(yellow_audio)
+							.append(blue_audio);
+							
+
+	cell.appendTo(cellContainer).appendTo($(document.body));
 
 }
