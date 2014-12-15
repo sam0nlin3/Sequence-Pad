@@ -7,5 +7,6 @@ class User < ActiveRecord::Base
 
 	# Association
 	has_many :songs
+	has_secure_password
 
 end
