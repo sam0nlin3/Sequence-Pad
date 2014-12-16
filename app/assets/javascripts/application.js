@@ -20,6 +20,7 @@ $(document).ready(function() {
 	fetchCells();
 	$(document.body).on('click', 'button.color', changeCurrentColor);
 	$(document.body).on('click', 'button.play', columnLoop);
+	$(document.body).on('click', 'button.clear', clearBoard);
 	$(document.body).on('mousedown', '.cell', activateCell);
 	board = new Board();
 })
@@ -103,21 +104,6 @@ function activateCell() {
 	}		
 }
 
-// var cellLoop = function(column){
-// 	console.log(column)
-// 	for (var row = 0; row < column.length; row++) {
-// 		if (column[row].active === "blue") {
-// 			$(column[row]).find('#blue_audio')[0].play();
-// 		} else if (column[row].active === "purple") {
-// 			$(column[row]).find('#purple_audio')[0].play();
-// 		} else if (column[row].active === "yellow") {
-// 			$(column[row]).find('#yellow_audio')[0].play();
-// 		} else if (column[row].active === "green") {
-// 			$(column[row]).find('#green_audio')[0].play();
-// 		}
-// 	}	
-// }
-
 var cellLoop = function(column){
 		for (var i = 0; i < 12; i++) {
 			if ( column[i].active === "blue" ) {
@@ -147,71 +133,56 @@ function columnLoop() {
 	var column10 = $( "[class='cell'][column='10']" );
 	var column11 = $( "[class='cell'][column='11']" );
 	var column12 = $( "[class='cell'][column='12']" );
-	var column13 = $( "[class='cell'][column='12']" );
-	var column14 = $( "[class='cell'][column='12']" );
-	var column15 = $( "[class='cell'][column='12']" );
-	var column16 = $( "[class='cell'][column='12']" );
+	var column13 = $( "[class='cell'][column='13']" );
+	var column14 = $( "[class='cell'][column='14']" );
+	var column15 = $( "[class='cell'][column='15']" );
+	var column16 = $( "[class='cell'][column='16']" );
 
 	columnsArray.push( column1, column2, column3, column4, column5, column6,
 	  								 column7, column8, column9, column10, column11, column12,
 	  								 column13, column14, column15, column16 )
 
-	// for (var column = 0; column < columnsArray.length; column++) {
-	// 	console.log(columnsArray[column])
-	// 	cellLoop(columnsArray[column])
-	// };
+	var interval = 0;
 
-	var interval = 250;
 	setTimeout(function(){	
 		cellLoop(columnsArray[0])}, interval += 250);
-
 	setTimeout(function(){
 		cellLoop(columnsArray[1])}, interval += 250);
-
 	setTimeout(function(){
 		cellLoop(columnsArray[2])}, interval += 250);
-
 	setTimeout(function(){
 		cellLoop(columnsArray[3])}, interval += 250);
-
 	setTimeout(function(){
 		cellLoop(columnsArray[4])}, interval += 250);
-
 	setTimeout(function(){
 		cellLoop(columnsArray[5])}, interval += 250);
-
 	setTimeout(function(){
 		cellLoop(columnsArray[6])}, interval += 250);
-
 	setTimeout(function(){
 		cellLoop(columnsArray[7])}, interval += 250);
-
 	setTimeout(function(){
 		cellLoop(columnsArray[8])}, interval += 250);
-
 	setTimeout(function(){
 		cellLoop(columnsArray[9])}, interval += 250);
-
 	setTimeout(function(){
 		cellLoop(columnsArray[10])}, interval += 250);
-
 	setTimeout(function(){
-		cellLoop(columnsArray[11])}, interval += 250);
-	
+		cellLoop(columnsArray[11])}, interval += 250);	
 	setTimeout(function(){
-		cellLoop(columnsArray[12])}, interval += 250);
-	
+		cellLoop(columnsArray[12])}, interval += 250);	
 	setTimeout(function(){
-		cellLoop(columnsArray[13])}, interval += 250);
-	
+		cellLoop(columnsArray[13])}, interval += 250);	
 	setTimeout(function(){
-		cellLoop(columnsArray[14])}, interval += 250);
-	
+		cellLoop(columnsArray[14])}, interval += 250);	
 	setTimeout(function(){
 		cellLoop(columnsArray[15])}, interval += 250);
-
-
 }	
 
-
+function clearBoard() {
+	var eachCell = $('div.cell');
+	for (var i = 0; i < eachCell.length; i++) {
+		eachCell[i].active = "none";
+		$(eachCell[i]).css("background-color", 'whitesmoke');
+	};
+}
 
