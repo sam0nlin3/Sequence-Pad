@@ -9,7 +9,7 @@ for i in 1..16
         blue_note: "/assets/saw_synth/sawsynth_1.mp3",
         yellow_note: "/assets/Noise/Noise_1.mp3",
         green_note: "/assets/808/808_1.mp3",
-        active: 'none', 
+        active: "none", 
         row: 1,
         column: i )
 end  
