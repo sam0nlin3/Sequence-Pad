@@ -82,6 +82,8 @@ function renderCells(data){
 		cellsContainer.appendTo($(document.body));
 }
 
+// Added the play audio when a cell is activated.
+// Might want to remove this functionality eventually.
 function activateCell() {
 	if (this.active === board.currentColor) {
 		this.active = "none";
@@ -90,12 +92,16 @@ function activateCell() {
 	else if (this.active = board.currentColor) {
 		if (this.active === "blue") {
 			$(this).css("background-color", blue);
+			$(this).find('#blue_audio')[0].play();
 		} else if (this.active === "purple") {
-			$(this).css("background-color", purple);	
+			$(this).css("background-color", purple);
+			$(this).find('#purple_audio')[0].play();
 		} else if (this.active === "yellow") {
 			$(this).css("background-color", yellow);	
+			$(this).find('#purple_audio')[0].play();
 		} else if (this.active === "green") {
-			$(this).css("background-color", green);		
+			$(this).css("background-color", green);
+			$(this).find('#purple_audio')[0].play();		
 		}	
 	}	
 }

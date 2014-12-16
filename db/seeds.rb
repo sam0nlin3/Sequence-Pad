@@ -11,8 +11,8 @@ end
 # row one
 for j in 1..16
     Cell.create(
-    purple_note: "/assets/laserric.mp3",
-    blue_note: "/assets/dry_kick.mp3",
+    purple_note: "/assets/marimba_1.mp3",
+    blue_note: "/assets/synth_1.mp3",
     yellow_note: "/assets/windgong.mp3",
     green_note: "/assets/slap.mp3",
     active: 'none', 
@@ -24,8 +24,8 @@ end
 # row two   
 for j in 1..16
     Cell.create(
-        purple_note: "/assets/laserric.mp3",
-        blue_note: "/assets/dry_kick.mp3",
+        purple_note: "/assets/marimba_2.mp3",
+        blue_note: "/assets/synth_2.mp3",
         yellow_note: "/assets/windgong.mp3",
         green_note: "/assets/slap.mp3",
         active: "none",
@@ -37,8 +37,8 @@ end
 # row three   
 for j in 1..16
     Cell.create(
-        purple_note: "/assets/laserric.mp3",
-        blue_note: "/assets/dry_kick.mp3",
+        purple_note: "/assets/marimba_3.mp3",
+        blue_note: "/assets/synth_3.mp3",
         yellow_note: "/assets/windgong.mp3",
         green_note: "/assets/slap.mp3",
         active: "none",
@@ -50,8 +50,8 @@ end
 # row four   
 for j in 1..16
     Cell.create(
-        purple_note: "/assets/laserric.mp3",
-        blue_note: "/assets/dry_kick.mp3",
+        purple_note: "/assets/marimba_4.mp3",
+        blue_note: "/assets/synth_4.mp3",
         yellow_note: "/assets/windgong.mp3",
         green_note: "/assets/slap.mp3",
         active: "none",
@@ -63,8 +63,8 @@ end
 # row five   
 for j in 1..16
     Cell.create(
-        purple_note: "/assets/laserric.mp3",
-        blue_note: "/assets/dry_kick.mp3",
+        purple_note: "/assets/marimba_5.mp3",
+        blue_note: "/assets/synth_5.mp3",
         yellow_note: "/assets/windgong.mp3",
         green_note: "/assets/slap.mp3",
         active: "none",
@@ -76,8 +76,8 @@ end
 # row six   
 for j in 1..16
     Cell.create(
-        purple_note: "/assets/laserric.mp3",
-        blue_note: "/assets/dry_kick.mp3",
+        purple_note: "/assets/marimba_6.mp3",
+        blue_note: "/assets/synth_6.mp3",
         yellow_note: "/assets/windgong.mp3",
         green_note: "/assets/slap.mp3",
         active: "none",
@@ -89,8 +89,8 @@ end
 # row seven   
 for j in 1..16
     Cell.create(
-        purple_note: "/assets/laserric.mp3",
-        blue_note: "/assets/dry_kick.mp3",
+        purple_note: "/assets/marimba_7.mp3",
+        blue_note: "/assets/synth_7.mp3",
         yellow_note: "/assets/windgong.mp3",
         green_note: "/assets/slap.mp3",
         active: "none", 
@@ -102,8 +102,8 @@ end
 # row eight   
 for j in 1..16
     Cell.create(
-        purple_note: "/assets/laserric.mp3",
-        blue_note: "/assets/dry_kick.mp3",
+        purple_note: "/assets/marimba_8.mp3",
+        blue_note: "/assets/synth_8.mp3",
         yellow_note: "/assets/windgong.mp3",
         green_note: "/assets/slap.mp3",
         active: "none", 
@@ -115,8 +115,8 @@ end
 # row nine   
 for j in 1..16
     Cell.create(
-        purple_note: "/assets/laserric.mp3",
-        blue_note: "/assets/dry_kick.mp3",
+        purple_note: "/assets/marimba_9.mp3",
+        blue_note: "/assets/synth_9.mp3",
         yellow_note: "/assets/windgong.mp3",
         green_note: "/assets/slap.mp3",
         active: "none", 
@@ -128,8 +128,8 @@ end
 # row 10   
 for j in 1..16
     Cell.create(
-        purple_note: "/assets/laserric.mp3",
-        blue_note: "/assets/dry_kick.mp3",
+        purple_note: "/assets/marimba_10.mp3",
+        blue_note: "/assets/synth_10.mp3",
         yellow_note: "/assets/windgong.mp3",
         green_note: "/assets/slap.mp3",
         active: "none", 
@@ -141,8 +141,8 @@ end
 # row eleven   
 for j in 1..16
     Cell.create(
-        purple_note: "/assets/laserric.mp3",
-        blue_note: "/assets/dry_kick.mp3",
+        purple_note: "/assets/marimba_11.mp3",
+        blue_note: "/assets/synth_11.mp3",
         yellow_note: "/assets/windgong.mp3",
         green_note: "/assets/slap.mp3",
         active: "none", 
@@ -154,8 +154,8 @@ end
 # row tweleve   
 for j in 1..16
     Cell.create(
-        purple_note: "/assets/laserric.mp3",
-        blue_note: "/assets/dry_kick.mp3",
+        purple_note: "/assets/marimba_12.mp3",
+        blue_note: "/assets/synth_12.mp3",
         yellow_note: "/assets/windgong.mp3",
         green_note: "/assets/slap.mp3",
         active: "none", 
