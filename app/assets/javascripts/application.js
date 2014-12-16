@@ -143,8 +143,7 @@ function columnLoop() {
 	columnsArray.push( column1, column2, column3, column4, column5, column6,
 	  								 column7, column8, column9, column10, column11, column12,
 	  								 column13, column14, column15, column16 )
-
-
+	
 	var interval = 0;
 	setTimeout(function(){	
 		cellLoop(columnsArray[0])}, interval = 250);
@@ -190,11 +189,11 @@ function pauseLoop() {
 	clearInterval(nIntervId);
 }
 
-function clearBoard(){
-	var cellDivs = ($('div.cell'))
-	for (var i = 0; i < cellDivs.length; i++) {
-		cellDivs[i].active = 'none';
-		$(cellDivs[i]).css("background-color", 'whitesmoke');
+function clearBoard() {
+	var eachCell = $('div.cell');
+	for (var i = 0; i < eachCell.length; i++) {
+		eachCell[i].active = "none";
+		$(eachCell[i]).css("background-color", 'whitesmoke');
 	};
 }
 
