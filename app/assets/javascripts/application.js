@@ -143,6 +143,16 @@ function columnLoop() {
 	  								 column7, column8, column9, column10, column11, column12,
 	  								 column13, column14, column15, column16 )
 
+
+
+	var interval = 0;
+	
+	// for (var i = 0; i < 16; i++) {
+	// 	setTimeout(function(){	
+	// 	cellLoop(columnsArray[i])}, interval += 250);
+	// }  
+				// WHY DOESN'T THIS LOOP WORK!! 
+
 	var interval = 0;
 	setTimeout(function(){	
 		cellLoop(columnsArray[0])}, interval = 250);
