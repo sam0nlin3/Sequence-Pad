@@ -2,7 +2,6 @@ Song.destroy_all
 User.destroy_all
 Cell.destroy_all
 
-
 # row one
 for i in 1..16
     Cell.create(

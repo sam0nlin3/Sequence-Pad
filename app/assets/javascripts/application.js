@@ -18,7 +18,8 @@
 $(document).ready(function() {
 	console.log('loaded');
 	fetchCells();
-	$(document.body).on('click', 'button', changeCurrentColor);
+	$(document.body).on('click', 'button.color', changeCurrentColor);
+	$(document.body).on('click', 'button.play', loop);
 	$(document.body).on('mousedown', '.cell', activateCell);
 	board = new Board();
 })
@@ -71,7 +72,7 @@ function renderCells(data){
 								.addClass('cell')
 								.attr('row', data.row)
 								.attr('active', data.active)
-								.attr('column', data.column_id)
+								.attr('column', data.column)
 								.append(purple_audio)
 								.append(green_audio)
 								.append(yellow_audio)
@@ -80,26 +81,84 @@ function renderCells(data){
 		cellsContainer.appendTo($(document.body));
 }
 
-// Added the play audio when a cell is activated.
-// Might want to remove this functionality eventually.
 function activateCell() {
 	if (this.active === board.currentColor) {
 		this.active = "none";
 		$(this).css("background-color", "whitesmoke");
-	}
-	else if (this.active = board.currentColor) {
+	} else if (this.active = board.currentColor) {
 		if (this.active === "blue") {
-			$(this).css("background-color", blue);
-			$(this).find('#blue_audio')[0].play();
+				$(this).css("background-color", blue);
+				// $(this).find('#blue_audio')[0].play();
 		} else if (this.active === "purple") {
-			$(this).css("background-color", purple);
-			$(this).find('#purple_audio')[0].play();
+				$(this).css("background-color", purple);
+				// $(this).find('#purple_audio')[0].play();
 		} else if (this.active === "yellow") {
-			$(this).css("background-color", yellow);	
-			$(this).find('#yellow_audio')[0].play();
+				$(this).css("background-color", yellow);	
+				// $(this).find('#yellow_audio')[0].play();
 		} else if (this.active === "green") {
-			$(this).css("background-color", green);
-			$(this).find('#green_audio')[0].play();		
+				$(this).css("background-color", green);
+				// $(this).find('#green_audio')[0].play();		
 		}	
-	}	
+	}		
 }
+
+function loop() {
+	console.log('play loop')
+	var columnsArray = [];
+	var column1 = $( "[class='cell'][column='1']" );
+	var column2 = $( "[class='cell'][column='2']" );
+	var column3 = $( "[class='cell'][column='3']" );
+	var column4 = $( "[class='cell'][column='4']" );
+	var column5 = $( "[class='cell'][column='5']" );
+	var column6 = $( "[class='cell'][column='6']" );
+	var column7 = $( "[class='cell'][column='7']" );
+	var column8 = $( "[class='cell'][column='8']" );
+	var column9 = $( "[class='cell'][column='9']" );
+	var column10 = $( "[class='cell'][column='10']" );
+	var column11 = $( "[class='cell'][column='11']" );
+	var column12 = $( "[class='cell'][column='12']" );
+
+	var cellLoop = function(column){
+		for (var i = 0; i < column.length; i++) {
+			console.log(column[i])
+			if (column[i].active === "blue") {
+				$(column[i]).find('#blue_audio')[0].play();
+			} else if (column[i].active === "purple") {
+				$(column[i]).find('#purple_audio')[0].play();
+			} else if (column[i].active === "yellow") {
+				$(column[i]).find('#yellow_audio')[0].play();
+			} else if (column[i].active === "green") {
+				$(column[i]).find('#green_audio')[0].play();
+			}
+		}	
+	}
+
+columnsArray.push( column1, column2, column3, column4, column5, column6,
+  								 column7, column8, column9, column10, column11, column12 )
+
+columnsArray.forEach(function(column){
+	cellLoop(column);
+})
+
+
+
+}	
+
+
+	
+		// if (column[i].active === "blue") {
+		// 		$(column[i]).find('#blue_audio')[0].play();
+		// } else if (column[i].active === "purple") {
+		// 		$(column[i]).find('#purple_audio')[0].play();
+		// } else if (column[i].active === "yellow") {
+		// 		$(column[i]).find('#yellow_audio')[0].play();
+		// } else if (column[i].active === "green") {
+		// 		$(column[i]).find('#green_audio')[0].play();
+
+
+
+
+
+
+
+
