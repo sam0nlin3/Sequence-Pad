@@ -1,2 +1,3 @@
-JavaScript-Motion-Activated-Midi
-================================
+=====================================
+JavaScript-Motion-Activated-Sequencer
+=====================================
