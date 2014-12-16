@@ -19,7 +19,8 @@ $(document).ready(function() {
 	console.log('loaded');
 	fetchCells();
 	$(document.body).on('click', 'button.color', changeCurrentColor);
-	$(document.body).on('click', 'button.play', columnLoop);
+	$(document.body).on('click', 'button.play', looper);
+	$(document.body).on('click', 'button.pause', pauseLoop);
 	$(document.body).on('click', 'button.clear', clearBoard);
 	$(document.body).on('mousedown', '.cell', activateCell);
 	board = new Board();
@@ -177,6 +178,16 @@ function columnLoop() {
 		cellLoop(columnsArray[15])}, interval = 4000);
 }	
 
+var looper = function(){	
+	columnLoop();
+	nIntervId = setInterval(columnLoop, 4000);
+}	
+	
+function pauseLoop() {
+	console.log('')
+	clearInterval(nIntervId);
+}
+
 function clearBoard() {
 	var eachCell = $('div.cell');
 	for (var i = 0; i < eachCell.length; i++) {
@@ -184,4 +195,5 @@ function clearBoard() {
 		$(eachCell[i]).css("background-color", 'whitesmoke');
 	};
 }
+
 
