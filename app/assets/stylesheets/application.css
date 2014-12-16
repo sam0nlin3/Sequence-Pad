@@ -18,6 +18,20 @@
  	background: grey;
  }
 
+ h1 {
+ 	text-align: center;
+ 	color: whitesmoke;
+ 	opacity: 20%;
+ }
+
+/*button {
+	margin-left: auto;
+	margin-right: auto;
+	margin: 15px;
+	height: 30px;
+	width: 55px;
+}
+*/
 .cellsContainer {
 	width: 1152px;
 	height: 505px;
