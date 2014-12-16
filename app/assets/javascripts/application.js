@@ -98,10 +98,10 @@ function activateCell() {
 			$(this).find('#purple_audio')[0].play();
 		} else if (this.active === "yellow") {
 			$(this).css("background-color", yellow);	
-			$(this).find('#purple_audio')[0].play();
+			$(this).find('#yellow_audio')[0].play();
 		} else if (this.active === "green") {
 			$(this).css("background-color", green);
-			$(this).find('#purple_audio')[0].play();		
+			$(this).find('#green_audio')[0].play();		
 		}	
 	}	
 }

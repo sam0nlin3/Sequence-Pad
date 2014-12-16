@@ -13,8 +13,8 @@ for j in 1..16
     Cell.create(
     purple_note: "/assets/marimba_1.mp3",
     blue_note: "/assets/synth_1.mp3",
-    yellow_note: "/assets/windgong.mp3",
-    green_note: "/assets/slap.mp3",
+    yellow_note: "/assets/noise_1.mp3",
+    green_note: "/assets/808_1.mp3",
     active: 'none', 
     row: 1,
     column: i )
@@ -26,8 +26,8 @@ for j in 1..16
     Cell.create(
         purple_note: "/assets/marimba_2.mp3",
         blue_note: "/assets/synth_2.mp3",
-        yellow_note: "/assets/windgong.mp3",
-        green_note: "/assets/slap.mp3",
+        yellow_note: "/assets/noise_2.mp3",
+        green_note: "/assets/808_2.mp3",
         active: "none",
         row: 2,
         column: i
@@ -39,8 +39,8 @@ for j in 1..16
     Cell.create(
         purple_note: "/assets/marimba_3.mp3",
         blue_note: "/assets/synth_3.mp3",
-        yellow_note: "/assets/windgong.mp3",
-        green_note: "/assets/slap.mp3",
+        yellow_note: "/assets/noise_3.mp3",
+        green_note: "/assets/808_3.mp3",
         active: "none",
         row: 3,
         column: i
@@ -52,8 +52,8 @@ for j in 1..16
     Cell.create(
         purple_note: "/assets/marimba_4.mp3",
         blue_note: "/assets/synth_4.mp3",
-        yellow_note: "/assets/windgong.mp3",
-        green_note: "/assets/slap.mp3",
+        yellow_note: "/assets/noise_4.mp3",
+        green_note: "/assets/808_4.mp3",
         active: "none",
         row: 4,
         column: i
@@ -65,8 +65,8 @@ for j in 1..16
     Cell.create(
         purple_note: "/assets/marimba_5.mp3",
         blue_note: "/assets/synth_5.mp3",
-        yellow_note: "/assets/windgong.mp3",
-        green_note: "/assets/slap.mp3",
+        yellow_note: "/assets/noise_5.mp3",
+        green_note: "/assets/808_5.mp3",
         active: "none",
         row: 5,
         column: i
@@ -78,8 +78,8 @@ for j in 1..16
     Cell.create(
         purple_note: "/assets/marimba_6.mp3",
         blue_note: "/assets/synth_6.mp3",
-        yellow_note: "/assets/windgong.mp3",
-        green_note: "/assets/slap.mp3",
+        yellow_note: "/assets/noise_6.mp3",
+        green_note: "/assets/808_6.mp3",
         active: "none",
         row: 6,
         column: i
@@ -91,8 +91,8 @@ for j in 1..16
     Cell.create(
         purple_note: "/assets/marimba_7.mp3",
         blue_note: "/assets/synth_7.mp3",
-        yellow_note: "/assets/windgong.mp3",
-        green_note: "/assets/slap.mp3",
+        yellow_note: "/assets/noise_7.mp3",
+        green_note: "/assets/808_7.mp3",
         active: "none", 
         row: 7,
         column: i
@@ -104,8 +104,8 @@ for j in 1..16
     Cell.create(
         purple_note: "/assets/marimba_8.mp3",
         blue_note: "/assets/synth_8.mp3",
-        yellow_note: "/assets/windgong.mp3",
-        green_note: "/assets/slap.mp3",
+        yellow_note: "/assets/noise_8.mp3",
+        green_note: "/assets/808_8.mp3",
         active: "none", 
         row: 8,
         column: i
@@ -117,8 +117,8 @@ for j in 1..16
     Cell.create(
         purple_note: "/assets/marimba_9.mp3",
         blue_note: "/assets/synth_9.mp3",
-        yellow_note: "/assets/windgong.mp3",
-        green_note: "/assets/slap.mp3",
+        yellow_note: "/assets/noise_9.mp3",
+        green_note: "/assets/808_9.mp3",
         active: "none", 
         row: 9,
         column: i
@@ -130,8 +130,8 @@ for j in 1..16
     Cell.create(
         purple_note: "/assets/marimba_10.mp3",
         blue_note: "/assets/synth_10.mp3",
-        yellow_note: "/assets/windgong.mp3",
-        green_note: "/assets/slap.mp3",
+        yellow_note: "/assets/noise_10.mp3",
+        green_note: "/assets/808_10.mp3",
         active: "none", 
         row: 10,
         column: i
@@ -143,8 +143,8 @@ for j in 1..16
     Cell.create(
         purple_note: "/assets/marimba_11.mp3",
         blue_note: "/assets/synth_11.mp3",
-        yellow_note: "/assets/windgong.mp3",
-        green_note: "/assets/slap.mp3",
+        yellow_note: "/assets/noise_11.mp3",
+        green_note: "/assets/808_11.mp3",
         active: "none", 
         row: 11,
         column: i
@@ -156,8 +156,8 @@ for j in 1..16
     Cell.create(
         purple_note: "/assets/marimba_12.mp3",
         blue_note: "/assets/synth_12.mp3",
-        yellow_note: "/assets/windgong.mp3",
-        green_note: "/assets/slap.mp3",
+        yellow_note: "/assets/noise_12.mp3",
+        green_note: "/assets/808_12.mp3",
         active: "none", 
         row: 12,
         column: i
