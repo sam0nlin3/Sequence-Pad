@@ -160,31 +160,31 @@ function columnLoop() {
 	// 	console.log(columnsArray[column])
 	// 	cellLoop(columnsArray[column])
 	// };
+
 	var interval = 250;
+	setTimeout(function(){	
+		cellLoop(columnsArray[0])}, interval += 250);
 
 	setTimeout(function(){
-		cellLoop(columnsArray[0])}, interval);
+		cellLoop(columnsArray[1])}, interval += 250);
 
 	setTimeout(function(){
-		cellLoop(columnsArray[1])}, interval);
+		cellLoop(columnsArray[2])}, interval += 250);
 
 	setTimeout(function(){
-		cellLoop(columnsArray[2])}, interval);
+		cellLoop(columnsArray[3])}, interval += 250);
 
 	setTimeout(function(){
-		cellLoop(columnsArray[3])}, interval);
+		cellLoop(columnsArray[4])}, interval += 250);
 
 	setTimeout(function(){
-		cellLoop(columnsArray[4])}, interval);
+		cellLoop(columnsArray[5])}, interval += 250);
 
 	setTimeout(function(){
-		cellLoop(columnsArray[5])}, interval);
+		cellLoop(columnsArray[6])}, interval += 250);
 
 	setTimeout(function(){
-		cellLoop(columnsArray[6])}, interval);
-
-	setTimeout(function(){
-		cellLoop(columnsArray[7])}, interval);
+		cellLoop(columnsArray[7])}, interval += 250);
 
 	setTimeout(function(){
 		cellLoop(columnsArray[8])}, interval += 250);
@@ -197,7 +197,18 @@ function columnLoop() {
 
 	setTimeout(function(){
 		cellLoop(columnsArray[11])}, interval += 250);
-
+	
+	setTimeout(function(){
+		cellLoop(columnsArray[12])}, interval += 250);
+	
+	setTimeout(function(){
+		cellLoop(columnsArray[13])}, interval += 250);
+	
+	setTimeout(function(){
+		cellLoop(columnsArray[14])}, interval += 250);
+	
+	setTimeout(function(){
+		cellLoop(columnsArray[15])}, interval += 250);
 
 
 }	
