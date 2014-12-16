@@ -106,19 +106,18 @@ function activateCell() {
 }
 
 var cellLoop = function(column){
-		for (var i = 0; i < 12; i++) {
-			if ( column[i].active === "blue" ) {
-				$(column[i]).find('#blue_audio')[0].play();
-			} else if ( column[i].active === "purple") {
-				$(column[i]).find('#purple_audio')[0].play();
-			} else if ( column[i].active === "yellow") {
-				$(column[i]).find('#yellow_audio')[0].play();
-			} else if ( column[i].active === "green") {
-				$(column[i]).find('#green_audio')[0].play();
-			}
-		};
+	for (var i = 0; i < 12; i++) {
+		if (column[i].active === "blue" ) {
+			$(column[i]).find('#blue_audio')[0].play();
+		} else if ( column[i].active === "purple") {
+			$(column[i]).find('#purple_audio')[0].play();
+		} else if ( column[i].active === "yellow") {
+			$(column[i]).find('#yellow_audio')[0].play();
+		} else if ( column[i].active === "green") {
+			$(column[i]).find('#green_audio')[0].play();
+		}
+	};
 }
-
 
 function columnLoop() {
 	console.log('play loop')
@@ -143,7 +142,7 @@ function columnLoop() {
 	columnsArray.push( column1, column2, column3, column4, column5, column6,
 	  								 column7, column8, column9, column10, column11, column12,
 	  								 column13, column14, column15, column16 )
-	
+
 	var interval = 0;
 	setTimeout(function(){	
 		cellLoop(columnsArray[0])}, interval = 250);
