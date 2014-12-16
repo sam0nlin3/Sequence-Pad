@@ -7,7 +7,7 @@ class CreateCells < ActiveRecord::Migration
     	t.string :green_note
     	t.string :active
 		t.integer :row
-    	t.references :column
+    	t.integer :column
 
     	t.timestamps
     end

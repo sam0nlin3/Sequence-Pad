@@ -22,14 +22,14 @@
 	width: 1152px;
 	height: 505px;
 	margin: 0 auto;
-	background-color: silver;
+	background-color: transparent;
 }
 
 
 .cell {
 
 	background-color: whitesmoke;
-	opacity: 50%;
+	opacity: .5;
 	margin: 4px;
 	width: 60px;
 	height: 30px;
