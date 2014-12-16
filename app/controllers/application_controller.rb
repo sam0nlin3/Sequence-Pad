@@ -5,8 +5,7 @@ class ApplicationController < ActionController::Base
 
   def index
     @cells = Cell.all
-    @columns = Column.all
-    response = {cells: @cells, columns: @columns}
+    response = {cells: @cells }
     respond_to do |format|      
       format.json { render json: response }
     	format.html { render layout: 'application', text: '' }

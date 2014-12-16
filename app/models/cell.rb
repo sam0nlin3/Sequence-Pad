@@ -7,9 +7,7 @@ class Cell < ActiveRecord::Base
 	validates_presence_of :green_note
 	validates_presence_of :active
 	validates_presence_of :row
-	validates_presence_of :column_id
+	validates_presence_of :column
 
-	# Associations
-	belongs_to :column
 
 end
