@@ -43,9 +43,6 @@ function changeCurrentColor() {
 	console.log(board.currentColor);
 }
 
-function deactivate() {}
-
-
 function displayCells(data){
 	console.log('loaded')
 	cellsContainer = $('<div>').addClass('cellsContainer');
@@ -74,6 +71,7 @@ function renderCells(data){
 								.addClass('cell')
 								.attr('row', data.row)
 								.attr('active', data.active)
+								.attr('column', data.column_id)
 								.append(purple_audio)
 								.append(green_audio)
 								.append(yellow_audio)
