@@ -19,7 +19,7 @@ $(document).ready(function() {
 	console.log('loaded');
 	fetchCells();
 	$(document.body).on('click', 'button.color', changeCurrentColor);
-	$(document.body).on('click', 'button.play', loop);
+	$(document.body).on('click', 'button.play', columnLoop);
 	$(document.body).on('mousedown', '.cell', activateCell);
 	board = new Board();
 })
@@ -134,16 +134,13 @@ function columnLoop() {
 	var column11 = $( "[class='cell'][column='11']" );
 	var column12 = $( "[class='cell'][column='12']" );
 
-
 	columnsArray.push( column1, column2, column3, column4, column5, column6,
 	  								 column7, column8, column9, column10, column11, column12 )
-
 
 	for (var column = 0; column < columnsArray.length; column++) {
 		console.log(columnsArray[column])
 		cellLoop(columnsArray[column])
 	};
-	
 }	
 
 
