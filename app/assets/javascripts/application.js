@@ -88,16 +88,16 @@ function activateCell() {
 	} else if (this.active = board.currentColor) {
 		if (this.active === "blue") {
 				$(this).css("background-color", blue);
-				// $(this).find('#blue_audio')[0].play();
+				$(this).find('#blue_audio')[0].play();
 		} else if (this.active === "purple") {
 				$(this).css("background-color", purple);
-				// $(this).find('#purple_audio')[0].play();
+				$(this).find('#purple_audio')[0].play();
 		} else if (this.active === "yellow") {
 				$(this).css("background-color", yellow);	
-				// $(this).find('#yellow_audio')[0].play();
+				$(this).find('#yellow_audio')[0].play();
 		} else if (this.active === "green") {
 				$(this).css("background-color", green);
-				// $(this).find('#green_audio')[0].play();		
+				$(this).find('#green_audio')[0].play();		
 		}	
 	}		
 }
