@@ -103,19 +103,33 @@ function activateCell() {
 	}		
 }
 
+// var cellLoop = function(column){
+// 	console.log(column)
+// 	for (var row = 0; row < column.length; row++) {
+// 		if (column[row].active === "blue") {
+// 			$(column[row]).find('#blue_audio')[0].play();
+// 		} else if (column[row].active === "purple") {
+// 			$(column[row]).find('#purple_audio')[0].play();
+// 		} else if (column[row].active === "yellow") {
+// 			$(column[row]).find('#yellow_audio')[0].play();
+// 		} else if (column[row].active === "green") {
+// 			$(column[row]).find('#green_audio')[0].play();
+// 		}
+// 	}	
+// }
+
 var cellLoop = function(column){
-	console.log(column)
-	for (var row = 0; row < column.length; row++) {
-		if (column[row].active === "blue") {
-			$(column[row]).find('#blue_audio')[0].play();
-		} else if (column[row].active === "purple") {
-			$(column[row]).find('#purple_audio')[0].play();
-		} else if (column[row].active === "yellow") {
-			$(column[row]).find('#yellow_audio')[0].play();
-		} else if (column[row].active === "green") {
-			$(column[row]).find('#green_audio')[0].play();
-		}
-	}	
+		for (var i = 0; i < 12; i++) {
+			if ( column[i].active === "blue" ) {
+				$(column[i]).find('#blue_audio')[0].play();
+			} else if ( column[i].active === "purple") {
+				$(column[i]).find('#purple_audio')[0].play();
+			} else if ( column[i].active === "yellow") {
+				$(column[i]).find('#yellow_audio')[0].play();
+			} else if ( column[i].active === "green") {
+				$(column[i]).find('#green_audio')[0].play();
+			}
+		};
 }
 
 function columnLoop() {
@@ -133,14 +147,59 @@ function columnLoop() {
 	var column10 = $( "[class='cell'][column='10']" );
 	var column11 = $( "[class='cell'][column='11']" );
 	var column12 = $( "[class='cell'][column='12']" );
+	var column13 = $( "[class='cell'][column='12']" );
+	var column14 = $( "[class='cell'][column='12']" );
+	var column15 = $( "[class='cell'][column='12']" );
+	var column16 = $( "[class='cell'][column='12']" );
 
 	columnsArray.push( column1, column2, column3, column4, column5, column6,
-	  								 column7, column8, column9, column10, column11, column12 )
+	  								 column7, column8, column9, column10, column11, column12,
+	  								 column13, column14, column15, column16 )
 
-	for (var column = 0; column < columnsArray.length; column++) {
-		console.log(columnsArray[column])
-		cellLoop(columnsArray[column])
-	};
+	// for (var column = 0; column < columnsArray.length; column++) {
+	// 	console.log(columnsArray[column])
+	// 	cellLoop(columnsArray[column])
+	// };
+	var interval = 250;
+
+	setTimeout(function(){
+		cellLoop(columnsArray[0])}, interval);
+
+	setTimeout(function(){
+		cellLoop(columnsArray[1])}, interval);
+
+	setTimeout(function(){
+		cellLoop(columnsArray[2])}, interval);
+
+	setTimeout(function(){
+		cellLoop(columnsArray[3])}, interval);
+
+	setTimeout(function(){
+		cellLoop(columnsArray[4])}, interval);
+
+	setTimeout(function(){
+		cellLoop(columnsArray[5])}, interval);
+
+	setTimeout(function(){
+		cellLoop(columnsArray[6])}, interval);
+
+	setTimeout(function(){
+		cellLoop(columnsArray[7])}, interval);
+
+	setTimeout(function(){
+		cellLoop(columnsArray[8])}, interval += 250);
+
+	setTimeout(function(){
+		cellLoop(columnsArray[9])}, interval += 250);
+
+	setTimeout(function(){
+		cellLoop(columnsArray[10])}, interval += 250);
+
+	setTimeout(function(){
+		cellLoop(columnsArray[11])}, interval += 250);
+
+
+
 }	
 
 
