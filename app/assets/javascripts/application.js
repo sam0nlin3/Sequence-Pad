@@ -51,6 +51,7 @@ function displayCells(data){
 }
 
 function renderCells(data){
+
 		var purple_audio = $('<audio>').attr('id', 'purple_audio')
 		var purple_source = $('<source>').attr('src', data.purple_note).attr('type', 'audio/mpeg');
 
@@ -102,7 +103,22 @@ function activateCell() {
 	}		
 }
 
-function loop() {
+var cellLoop = function(column){
+	console.log(column)
+	for (var row = 0; row < column.length; row++) {
+		if (column[row].active === "blue") {
+			$(column[row]).find('#blue_audio')[0].play();
+		} else if (column[row].active === "purple") {
+			$(column[row]).find('#purple_audio')[0].play();
+		} else if (column[row].active === "yellow") {
+			$(column[row]).find('#yellow_audio')[0].play();
+		} else if (column[row].active === "green") {
+			$(column[row]).find('#green_audio')[0].play();
+		}
+	}	
+}
+
+function columnLoop() {
 	console.log('play loop')
 	var columnsArray = [];
 	var column1 = $( "[class='cell'][column='1']" );
@@ -118,47 +134,17 @@ function loop() {
 	var column11 = $( "[class='cell'][column='11']" );
 	var column12 = $( "[class='cell'][column='12']" );
 
-	var cellLoop = function(column){
-		for (var i = 0; i < column.length; i++) {
-			console.log(column[i])
-			if (column[i].active === "blue") {
-				$(column[i]).find('#blue_audio')[0].play();
-			} else if (column[i].active === "purple") {
-				$(column[i]).find('#purple_audio')[0].play();
-			} else if (column[i].active === "yellow") {
-				$(column[i]).find('#yellow_audio')[0].play();
-			} else if (column[i].active === "green") {
-				$(column[i]).find('#green_audio')[0].play();
-			}
-		}	
-	}
 
-columnsArray.push( column1, column2, column3, column4, column5, column6,
-  								 column7, column8, column9, column10, column11, column12 )
-
-columnsArray.forEach(function(column){
-	cellLoop(column);
-})
+	columnsArray.push( column1, column2, column3, column4, column5, column6,
+	  								 column7, column8, column9, column10, column11, column12 )
 
 
-
-}	
-
-
+	for (var column = 0; column < columnsArray.length; column++) {
+		console.log(columnsArray[column])
+		cellLoop(columnsArray[column])
+	};
 	
-		// if (column[i].active === "blue") {
-		// 		$(column[i]).find('#blue_audio')[0].play();
-		// } else if (column[i].active === "purple") {
-		// 		$(column[i]).find('#purple_audio')[0].play();
-		// } else if (column[i].active === "yellow") {
-		// 		$(column[i]).find('#yellow_audio')[0].play();
-		// } else if (column[i].active === "green") {
-		// 		$(column[i]).find('#green_audio')[0].play();
-
-
-
-
-
+}	
 
 
 
