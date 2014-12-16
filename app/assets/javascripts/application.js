@@ -105,17 +105,17 @@ function activateCell() {
 }
 
 var cellLoop = function(column){
-		for (var i = 0; i < 12; i++) {
-			if ( column[i].active === "blue" ) {
-				$(column[i]).find('#blue_audio')[0].play();
-			} else if ( column[i].active === "purple") {
-				$(column[i]).find('#purple_audio')[0].play();
-			} else if ( column[i].active === "yellow") {
-				$(column[i]).find('#yellow_audio')[0].play();
-			} else if ( column[i].active === "green") {
-				$(column[i]).find('#green_audio')[0].play();
-			}
-		};
+	for (var i = 0; i < 12; i++) {
+		if (column[i].active === "blue" ) {
+			$(column[i]).find('#blue_audio')[0].play();
+		} else if ( column[i].active === "purple") {
+			$(column[i]).find('#purple_audio')[0].play();
+		} else if ( column[i].active === "yellow") {
+			$(column[i]).find('#yellow_audio')[0].play();
+		} else if ( column[i].active === "green") {
+			$(column[i]).find('#green_audio')[0].play();
+		}
+	};
 }
 
 function columnLoop() {
@@ -141,41 +141,40 @@ function columnLoop() {
 	columnsArray.push( column1, column2, column3, column4, column5, column6,
 	  								 column7, column8, column9, column10, column11, column12,
 	  								 column13, column14, column15, column16 )
-	
-	var interval = 0;
 
+	var interval = 0;
 	setTimeout(function(){	
-		cellLoop(columnsArray[0])}, interval += 250);
+		cellLoop(columnsArray[0])}, interval = 250);
 	setTimeout(function(){
-		cellLoop(columnsArray[1])}, interval += 250);
+		cellLoop(columnsArray[1])}, interval = 500);
 	setTimeout(function(){
-		cellLoop(columnsArray[2])}, interval += 250);
+		cellLoop(columnsArray[2])}, interval = 750);
 	setTimeout(function(){
-		cellLoop(columnsArray[3])}, interval += 250);
+		cellLoop(columnsArray[3])}, interval = 1000);
 	setTimeout(function(){
-		cellLoop(columnsArray[4])}, interval += 250);
+		cellLoop(columnsArray[4])}, interval = 1250);
 	setTimeout(function(){
-		cellLoop(columnsArray[5])}, interval += 250);
+		cellLoop(columnsArray[5])}, interval = 1500);
 	setTimeout(function(){
-		cellLoop(columnsArray[6])}, interval += 250);
+		cellLoop(columnsArray[6])}, interval = 1750);
 	setTimeout(function(){
-		cellLoop(columnsArray[7])}, interval += 250);
+		cellLoop(columnsArray[7])}, interval = 2000);
 	setTimeout(function(){
-		cellLoop(columnsArray[8])}, interval += 250);
+		cellLoop(columnsArray[8])}, interval = 2250);
 	setTimeout(function(){
-		cellLoop(columnsArray[9])}, interval += 250);
+		cellLoop(columnsArray[9])}, interval = 2500);
 	setTimeout(function(){
-		cellLoop(columnsArray[10])}, interval += 250);
+		cellLoop(columnsArray[10])}, interval = 2750);
 	setTimeout(function(){
-		cellLoop(columnsArray[11])}, interval += 250);	
+		cellLoop(columnsArray[11])}, interval = 3000);	
 	setTimeout(function(){
-		cellLoop(columnsArray[12])}, interval += 250);	
+		cellLoop(columnsArray[12])}, interval = 3250);	
 	setTimeout(function(){
-		cellLoop(columnsArray[13])}, interval += 250);	
+		cellLoop(columnsArray[13])}, interval = 3500);	
 	setTimeout(function(){
-		cellLoop(columnsArray[14])}, interval += 250);	
+		cellLoop(columnsArray[14])}, interval = 3750);	
 	setTimeout(function(){
-		cellLoop(columnsArray[15])}, interval += 250);
+		cellLoop(columnsArray[15])}, interval = 4000);
 }	
 
 function clearBoard() {
