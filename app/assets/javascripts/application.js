@@ -19,7 +19,7 @@ $(document).ready(function() {
 	console.log('loaded');
 	fetchCells();
 	$(document.body).on('click', 'button.color', changeCurrentColor);
-	$(document.body).on('click', 'button.play', loop);
+	$(document.body).on('click', 'button.play', columnLoop);
 	$(document.body).on('mousedown', '.cell', activateCell);
 	board = new Board();
 })
