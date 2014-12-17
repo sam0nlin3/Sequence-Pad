@@ -18,6 +18,9 @@
 $(document).ready(function() {
 	console.log('loaded');
 	fetchCells();
+	$(document.body).on('click', '#login-link', showLogIn);
+	$(document.body).on('click', '#register-link', showRegister);
+	$(document.body).on('click', '#exit', hideModal);
 	$(document.body).on('click', 'button.color', changeCurrentColor);
 	$(document.body).on('click', 'button.background', changeBackground);
 	$(document.body).on('click', 'button.play', looper);
@@ -25,6 +28,8 @@ $(document).ready(function() {
 	$(document.body).on('click', 'button.clear', clearBoard);
 	$(document.body).on('mouseover', '.cell', activateCell);
 	board = new Board();
+	modalReady();
+
 })
 
 var blue = '#275EFF';

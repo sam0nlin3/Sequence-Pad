@@ -2,6 +2,19 @@ Song.destroy_all
 User.destroy_all
 Cell.destroy_all
 
+
+User.create(
+    username: "Sam",
+    password: "password1",
+    password_confirmation: "password1"
+)
+
+User.create(
+    username: "Ross",
+    password: "password2",
+    password_confirmation: "password2"
+)
+
 # row one
 for i in 1..16
     Cell.create(

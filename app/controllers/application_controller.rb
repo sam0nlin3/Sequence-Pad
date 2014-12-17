@@ -3,25 +3,30 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+  helper_method :current_user
+  helper_method :authenticate
+  
   def index
     @cells = Cell.all
-    response = {cells: @cells }
+    @user = User.new(params[:user_params])
+    response = { cells: @cells }
     respond_to do |format|      
       format.json { render json: response }
-    	format.html { render layout: 'application', text: '' }
+      format.html { render layout: 'application', text: '' }
     end  
   end
 
-  # This makes the method available in any file in our app
-  helper_method :current_user
-
-  # If the current user is not logged in, go to the login page
   def authenticate
     redirect_to root_path unless current_user
   end
 
-  # Returns the user currently logged in
   def current_user
-  	User.find(session[:current_user_id]) if session[:current_user_id]
+  	User.find(session[:current_user]) if session[:current_user]
   end
+
+  private
+  def user_params
+    params.require(:user).permit(:username, :password, :password_confirmation)
+  end 
+
 end
