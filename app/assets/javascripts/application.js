@@ -36,7 +36,8 @@ var active_purple = '#972EFE';
 var active_green = '#28FE42';
 
 var Board = function(){
-	this.currentColor = "purple"
+	this.currentColor = "purple";
+	this.playStatus = false;
 } 
 
 function fetchCells() {
@@ -95,16 +96,16 @@ function activateCell() {
 	} else if (this.active = board.currentColor) {
 		if (this.active === "blue") {
 				$(this).css("background-color", blue);
-				$(this).find('#blue_audio')[0].play();
+				// $(this).find('#blue_audio')[0].play();
 		} else if (this.active === "purple") {
 				$(this).css("background-color", purple);
-				$(this).find('#purple_audio')[0].play();
+				// $(this).find('#purple_audio')[0].play();
 		} else if (this.active === "yellow") {
 				$(this).css("background-color", yellow);	
-				$(this).find('#yellow_audio')[0].play();
+				// $(this).find('#yellow_audio')[0].play();
 		} else if (this.active === "green") {
 				$(this).css("background-color", green);
-				$(this).find('#green_audio')[0].play();		
+				// $(this).find('#green_audio')[0].play();		
 		}	
 	}		
 }
@@ -174,8 +175,6 @@ columnsArray.push( column1, column2, column3, column4, column5, column6,
   								 column13, column14, column15, column16 )
 
 
-	var interval = 0;
-	
 	// for (var i = 0; i < 16; i++) {
 	// 	setTimeout(function(){	
 	// 	cellLoop(columnsArray[i])}, interval += 250);
@@ -217,20 +216,28 @@ columnsArray.push( column1, column2, column3, column4, column5, column6,
 		cellLoop(columnsArray[15])}, interval = 4000);
 }	
 
-var looper = function(){	
-	columnLoop();
-	setTimeout(resetColors, 300);
-	playInterval = setInterval(columnLoop, 4000);
-	colorResetInterval = setInterval(resetColors, 300);
+var looper = function(){
+	if (board.playStatus === false) {	
+		columnLoop();
+		setTimeout(resetColors, 300);
+		playInterval = setInterval(columnLoop, 4000);
+		colorResetInterval = setInterval(resetColors, 300);
+		board.playStatus = true;
+	}
+	else {
+		return;
+	}	
 }	
 	
 function pauseLoop() {
-	console.log('')
+	board.playStatus = false;
 	clearInterval(playInterval);
+	colorResetInterval = setInterval(resetColors, 300);
 	clearInterval(colorResetInterval);
 }
 
 function clearBoard(){
+	pauseLoop()
 	var cellDivs = ($('div.cell'))
 	for (var i = 0; i < cellDivs.length; i++) {
 		cellDivs[i].active = 'none';
