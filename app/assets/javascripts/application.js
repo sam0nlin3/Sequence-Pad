@@ -26,14 +26,14 @@ $(document).ready(function() {
 	board = new Board();
 })
 
-var blue = '#112A73';
-var yellow = '#715611';
+var blue = '#275EFF';
+var yellow = '#FEC227';
 var purple = '#4B177E';
 var green = '#147E21';
-var active_blue = '#275EFF';
-var active_yellow = '#FEC227';
+var active_blue = '#A7BEFF';
+var active_yellow = '#FED773';
 var active_purple = '#972EFE';
-var active_green = '#28FE42';
+var active_green = '#20CA35';
 
 var Board = function(){
 	this.currentColor = "purple";
@@ -53,7 +53,6 @@ function changeCurrentColor() {
 
 function displayCells(data){
 	console.log('loaded')
-	cellsContainer = $('<div>').addClass('cellsContainer');
 	data.cells.forEach(renderCells);
 }
 
@@ -76,6 +75,8 @@ function renderCells(data){
 		yellow_audio.append(yellow_source);
 		blue_audio.append(blue_source);
 		
+		var cellsContainer = $('.cellsContainer')
+
 		var cell = $('<div>')
 								.addClass('cell')
 								.attr('row', data.row)
@@ -86,7 +87,6 @@ function renderCells(data){
 								.append(yellow_audio)
 								.append(blue_audio);
 		cell.appendTo(cellsContainer)
-		cellsContainer.appendTo($(document.body));
 }
 
 function activateCell() {
