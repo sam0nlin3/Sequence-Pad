@@ -19,8 +19,8 @@ $(document).ready(function() {
 	console.log('loaded');
 	fetchCells();
 	$(document.body).on('click', '#login-link', showLogIn);
-	$('body').on('click', '#register-link', showRegister);
-	$('#modal').on('click', '#exit', hideModal);
+	$(document.body).on('click', '#register-link', showRegister);
+	$(document.body).on('click', '#exit', hideModal);
 	$(document.body).on('click', 'button.color', changeCurrentColor);
 	$(document.body).on('click', 'button.play', looper);
 	$(document.body).on('click', 'button.pause', pauseLoop);

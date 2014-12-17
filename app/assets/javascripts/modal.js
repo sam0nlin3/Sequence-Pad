@@ -3,19 +3,19 @@ function modalReady() {
 	logInForm.remove();
 	registerForm = $('#register-form');
 	registerForm.remove();
-	modal = $('modal');
-	modal.find('form').remove();
+	// modal = $('modal');
+	$('body').find('form').remove();
 }
 
 function showLogIn() {
-	$('.form-container').empty();
+	$('.form1-container').empty();
 	modal.find('.form-container').append(logInForm);
 	logInForm.show();
 	modal.show();
 }
 
 function showRegister() {
- 	$('.form-container').empty();
+ 	$('.form2-container').empty();
  	modal.find('.form-container').append(registerForm);
  	registerForm.show();
  	modal.show();

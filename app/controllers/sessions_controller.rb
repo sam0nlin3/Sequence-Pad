@@ -14,15 +14,15 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:password])
       session[:current_user_id] = user.id
       redirect_to root_path
-      puts "XXXXXXXXXXXXXXX Created"
     else
       redirect_to root_path
-      puts "XXXXXXXXXXXXXXXXXX Did not log in"
     end
   end
 
   def destroy
+    binding.pry
     session[:current_user_id] = nil
+    current_user = nil
     redirect_to root_path
   end
 

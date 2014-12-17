@@ -13,14 +13,11 @@ class UsersController < ApplicationController
 
 	def create
 		@user = User.new(user_params)
-		binding.pry
 		if @user.save 
 			session[:current_user] = @user.id
 			redirect_to root_path
-			puts "XXXXXXXXXXXXXXXXXXXXXXXXXX Created"
 		else
 			render :new
-			puts "XXXXXXXXXXXXXXXXXXXXXXXXX Not created"
 		end
 	end
 	

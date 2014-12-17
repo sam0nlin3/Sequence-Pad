@@ -16,15 +16,19 @@
       <% @current_user ||= User.find(session[:current_user]) %>
       <%= link_to @current_user.username, user_path(@current_user) %> 
      	<%= link_to 'Sign Out', logout_path %>
-    
+     	
     <% else %>
-      <div id='modal'>
-      	<div class="form-container"></div>
-      </div>
-    	<span id="login-link">
-    		<%= link_to 'Log In' %>  | 
-    	<span id='register-link'>
-    		<%= link_to 'Sign Up' %> 
+      <!-- <div id='modal'> </div> -->
+      <div id='form1-container'>
+    		<span id="login-link">
+    			<%= link_to 'Log In' %>  | 
+    		</span>
+    	</div>
+    	<div id="form2-container">
+    		<span id='register-link'>
+    			<%= link_to 'Sign Up' %> 
+    		</span>
+    	</div>
     <% end %>
   </div>
 
@@ -53,18 +57,7 @@
 			<button class="pause" id="pause"></button>
 			<button class="clear" id="clear"></button>
 		</div>	
-	
-<div class="contentContainer">
-	<div class="buttonDiv">
-		<button class="play" id="play"></button>
-		<button class="pause" id="pause"></button>
-		<button class="color" id="blue"></button>
-		<button class="color" id="yellow"></button>
-		<button class="color" id="purple"></button>
-		<button class="color" id="green"></button>
-		<button class="clear" id="clear"></button>
-	</div>
-</div>	
+
 	<div class="mainContainer">
 		<div class="cellsContainer"></div>
 	</div>		
