@@ -1,53 +1,36 @@
-.buttonDiv {
+.buttonColorDiv {
+	height: 100vh;
 	width: 70px;
-	height:100vh;
 	display: block;
-	float: left;
-	opacity: .8; 
-	margin-right: 60px;
+	opacity: .7;
+	float: left; 
 	
 	button {
-		color: gainsboro;
-		width: 100%;
-		height: 14.4%;
+		width: 70px;
+		height: 25%;
 		border: none;
-		
-		&.play {
-			background-repeat: no-repeat;
-			background-color: black;
-		}
+		margin-right: 20px;
 
-		&.pause {
-			background-color: #696969;
-			&:hover{
-						background-color: #808080;
-			}
-		}
-
-		&.clear {
-			background-color: gainsboro;
-			color: dimgray;
-		}
 
 		&.color{	
 			&#blue {
-				background-color: #112A73;
+				background-color: #275EFF;
 					&:hover{
-						background-color: #275EFF;
+						background-color: #A7BEFF;
 					}
 			}
 
 			&#yellow {
-				background-color: #715611;
+				background-color: #FEC227;
 					&:hover{
-						background-color: #FEC227;
+						background-color: #FED773;
 					}
 			}	
 
 			&#green {
 				background-color: #147E21;
 					&:hover{
-						background-color: #28FE42;
+						background-color: #20CA35;
 					}
 			}
 
@@ -60,3 +43,47 @@
 		}	
 	}		
 }
+
+.buttonControlsDiv {
+	height: 100vh;
+	width: 70px;
+	display: block;
+	opacity: .7;
+	float: right; 
+	position: aboslute;
+    top: 0px;
+	
+	button {
+		width: 100%;
+		height: 33.33%;
+		border: none;
+
+		&.play {
+			background-image: url('/assets/play_icon.png');
+			background-size: 100%;
+			background-position: center; 
+			background-repeat: no-repeat;
+			background-color: black;
+		}
+
+		&.pause {
+			background-image: url('/assets/pause-icon.png');
+			background-size: 100%;
+			background-position: center; 
+			background-repeat: no-repeat;
+			background-color: #696969;
+			&:hover{
+						background-color: #808080;
+			}
+		}
+
+		&.clear {
+			background-image: url('/assets/clear-icon.png');
+			background-size: 100%;
+			background-position: center; 
+			background-repeat: no-repeat;
+			background-color: gainsboro;
+			color: dimgray;
+		}
+	}
+}		

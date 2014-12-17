@@ -31,17 +31,18 @@ $(document).ready(function() {
 
 })
 
-var blue = '#112A73';
-var yellow = '#715611';
+var blue = '#275EFF';
+var yellow = '#FEC227';
 var purple = '#4B177E';
 var green = '#147E21';
-var active_blue = '#275EFF';
-var active_yellow = '#FEC227';
+var active_blue = '#A7BEFF';
+var active_yellow = '#FED773';
 var active_purple = '#972EFE';
-var active_green = '#28FE42';
+var active_green = '#20CA35';
 
 var Board = function(){
-	this.currentColor = "purple"
+	this.currentColor = "purple";
+	this.playStatus = false;
 } 
 
 function fetchCells() {
@@ -57,7 +58,6 @@ function changeCurrentColor() {
 
 function displayCells(data){
 	console.log('loaded')
-	cellsContainer = $('<div>').addClass('cellsContainer');
 	data.cells.forEach(renderCells);
 }
 
@@ -80,6 +80,8 @@ function renderCells(data){
 		yellow_audio.append(yellow_source);
 		blue_audio.append(blue_source);
 		
+		var cellsContainer = $('.cellsContainer')
+
 		var cell = $('<div>')
 								.addClass('cell')
 								.attr('row', data.row)
@@ -90,7 +92,6 @@ function renderCells(data){
 								.append(yellow_audio)
 								.append(blue_audio);
 		cell.appendTo(cellsContainer)
-		cellsContainer.appendTo($(document.body));
 }
 
 function activateCell() {
@@ -100,16 +101,16 @@ function activateCell() {
 	} else if (this.active = board.currentColor) {
 		if (this.active === "blue") {
 				$(this).css("background-color", blue);
-				$(this).find('#blue_audio')[0].play();
+				// $(this).find('#blue_audio')[0].play();
 		} else if (this.active === "purple") {
 				$(this).css("background-color", purple);
-				$(this).find('#purple_audio')[0].play();
+				// $(this).find('#purple_audio')[0].play();
 		} else if (this.active === "yellow") {
 				$(this).css("background-color", yellow);	
-				$(this).find('#yellow_audio')[0].play();
+				// $(this).find('#yellow_audio')[0].play();
 		} else if (this.active === "green") {
 				$(this).css("background-color", green);
-				$(this).find('#green_audio')[0].play();		
+				// $(this).find('#green_audio')[0].play();		
 		}	
 	}		
 }
@@ -179,8 +180,6 @@ columnsArray.push( column1, column2, column3, column4, column5, column6,
   								 column13, column14, column15, column16 )
 
 
-	var interval = 0;
-	
 	// for (var i = 0; i < 16; i++) {
 	// 	setTimeout(function(){	
 	// 	cellLoop(columnsArray[i])}, interval += 250);
@@ -222,20 +221,28 @@ columnsArray.push( column1, column2, column3, column4, column5, column6,
 		cellLoop(columnsArray[15])}, interval = 4000);
 }	
 
-var looper = function(){	
-	columnLoop();
-	setTimeout(resetColors, 300);
-	playInterval = setInterval(columnLoop, 4000);
-	colorResetInterval = setInterval(resetColors, 300);
+var looper = function(){
+	if (board.playStatus === false) {	
+		columnLoop();
+		setTimeout(resetColors, 300);
+		playInterval = setInterval(columnLoop, 4000);
+		colorResetInterval = setInterval(resetColors, 300);
+		board.playStatus = true;
+	}
+	else {
+		return;
+	}	
 }	
 	
 function pauseLoop() {
-	console.log('')
+	board.playStatus = false;
 	clearInterval(playInterval);
+	colorResetInterval = setInterval(resetColors, 300);
 	clearInterval(colorResetInterval);
 }
 
 function clearBoard(){
+	pauseLoop()
 	var cellDivs = ($('div.cell'))
 	for (var i = 0; i < cellDivs.length; i++) {
 		cellDivs[i].active = 'none';

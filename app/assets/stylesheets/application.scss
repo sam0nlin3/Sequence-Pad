@@ -20,14 +20,19 @@
 @import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400);
 
 body {
-	background-image: url('http://www.zastavki.com/pictures/originals/2014/Backgrounds_Abstract_chaos_on_black_wallpaper_078576_.jpg'); 
+	background-color: black;
+	background-image: url('http://static.tumblr.com/571759f6f950b2f892cfd4bd6a8ed4fe/ansh2f3/Ha4n588gt/tumblr_static_czjkrwutkw008gwkwkcwcwwso.jpg'); 
 	background-size: 100%;
 }
 
-h1 {
-	font-family: Ubuntu;
-	color: white;
-	margin: 0 20px 60px 0;
-	font-size: 40px;
-	text-align: right;
+.title {
+	float: left;
+	display: inline;
+	h1 {
+		font-family: Ubuntu;
+		color: white;
+		font-size: 60px;
+		margin-left: 20px;
+
+	}
 }
