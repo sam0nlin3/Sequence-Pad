@@ -4,11 +4,12 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   helper_method :current_user
+  helper_method :authenticate
   
   def index
     @cells = Cell.all
     @user = User.new(params[:user_params])
-    response = {cells: @cells }
+    response = { cells: @cells }
     respond_to do |format|      
       format.json { render json: response }
       format.html { render layout: 'application', text: '' }
@@ -20,7 +21,7 @@ class ApplicationController < ActionController::Base
   end
 
   def current_user
-  	User.find(session[:current_user_id]) if session[:current_user_id]
+  	User.find(session[:current_user]) if session[:current_user]
   end
 
   private

@@ -3,7 +3,6 @@ function modalReady() {
 	logInForm.remove();
 	registerForm = $('#register-form');
 	registerForm.remove();
-	// modal = $('modal');
 	$('body').find('form').remove();
 }
 
