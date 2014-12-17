@@ -15,7 +15,10 @@
 		&.color{	
 			&#blue {
 				background-color: #275EFF;
-					&:hover{
+					&:hover {
+						background-color: #A7BEFF;
+					}
+					&:active {
 						background-color: #A7BEFF;
 					}
 			}
