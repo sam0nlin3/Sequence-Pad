@@ -14,42 +14,20 @@
  *= require_self
  */
 
- body {
- 	background: grey;
- }
+@import "reset";
+@import "buttons";
+@import "cells";
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400);
 
- h1 {
- 	text-align: center;
- 	color: whitesmoke;
- 	opacity: 20%;
- }
-
-/*button {
-	margin-left: auto;
-	margin-right: auto;
-	margin: 15px;
-	height: 30px;
-	width: 55px;
-}
-*/
-.cellsContainer {
-	width: 1152px;
-	height: 505px;
-	margin: 0 auto;
-	background-color: transparent;
+body {
+	background-image: url('http://www.zastavki.com/pictures/originals/2014/Backgrounds_Abstract_chaos_on_black_wallpaper_078576_.jpg'); 
+	background-size: 100%;
 }
 
-
-.cell {
-
-	background-color: whitesmoke;
-	opacity: .5;
-	margin: 4px;
-	width: 60px;
-	height: 30px;
-	border: 2px solid black;
-	border-radius: 12px;
-	display: inline-block;
-	float: left;
-
+h1 {
+	font-family: Ubuntu;
+	color: white;
+	margin: 0 20px 60px 0;
+	font-size: 40px;
+	text-align: right;
 }

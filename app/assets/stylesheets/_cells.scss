@@ -1,0 +1,16 @@
+.cellsContainer {
+	width: 1000px;
+	margin: 0 auto;
+	background-color: transparent;
+	.cell {
+		background-color: dimgray;
+		opacity: .8;
+		margin: 2px;
+		width: 58px;
+		height: 40px;
+		border-radius: 12px;
+		float: left;
+		display: inline-block;
+	}
+}
+
