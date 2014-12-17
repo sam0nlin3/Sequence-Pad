@@ -26,14 +26,14 @@ $(document).ready(function() {
 	board = new Board();
 })
 
-var blue = '#2B4482';
-var yellow = '#DAA520';
-var purple = '#622163';
-var green = '#4BC3A5';
-var active_blue = '#00FFFF';
-var active_yellow = '#FFFF00';
-var active_purple = '#FF00FF';
-var active_green = '#7FFF00';
+var blue = '#112A73';
+var yellow = '#715611';
+var purple = '#4B177E';
+var green = '#147E21';
+var active_blue = '#275EFF';
+var active_yellow = '#FEC227';
+var active_purple = '#972EFE';
+var active_green = '#28FE42';
 
 var Board = function(){
 	this.currentColor = "purple"
@@ -91,7 +91,7 @@ function renderCells(data){
 function activateCell() {
 	if (this.active === board.currentColor) {
 		this.active = "none";
-		$(this).css("background-color", "gainsboro");
+		$(this).css("background-color", "dimgray");
 	} else if (this.active = board.currentColor) {
 		if (this.active === "blue") {
 				$(this).css("background-color", blue);
@@ -126,6 +126,7 @@ var resetColors = function(){
 };
 
 var cellLoop = function(column){
+
 		for (var i = 0; i < 12; i++) {
 			if (column[i].active === "blue" ) {
 				$(column[i]).find('#blue_audio')[0].play();
@@ -171,6 +172,15 @@ var columnsArray = [];
 columnsArray.push( column1, column2, column3, column4, column5, column6,
   								 column7, column8, column9, column10, column11, column12,
   								 column13, column14, column15, column16 )
+
+
+	var interval = 0;
+	
+	// for (var i = 0; i < 16; i++) {
+	// 	setTimeout(function(){	
+	// 	cellLoop(columnsArray[i])}, interval += 250);
+	// }  
+				// WHY DOESN'T THIS LOOP WORK!! 
 
 	var interval = 0;
 	setTimeout(function(){	
@@ -224,7 +234,7 @@ function clearBoard(){
 	var cellDivs = ($('div.cell'))
 	for (var i = 0; i < cellDivs.length; i++) {
 		cellDivs[i].active = 'none';
-		$(cellDivs[i]).css("background-color", 'gainsboro');
+		$(cellDivs[i]).css("background-color", 'dimgray');
 	};
 }
 
