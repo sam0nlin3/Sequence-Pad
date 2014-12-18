@@ -23,7 +23,7 @@ function logOut(){
 function renderMenu(){
   $('<h1>').text('sequence').prependTo($('header'));
   
-  $('<h2>').text('home')
+  $('<h2>').text('home | ')
                 .addClass('home')
                 .attr('id', 'exit')
                 .prependTo($('.menu'));
