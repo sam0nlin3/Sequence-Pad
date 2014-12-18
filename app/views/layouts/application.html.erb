@@ -13,7 +13,7 @@
     <div class="menu">
       <% if session[:current_user] %>
         <% @current_user ||= User.find(session[:current_user]) %>
-        <%= link_to @current_user.username, user_path(@current_user) %> 
+        <h2 id="userViewLink"> <%= @current_user.username %> |</h2>
         <div class="logOut">log out</div>
           
       <% else %>
@@ -28,6 +28,7 @@
     <div class="modals">
       <modal class="logInModal"></modal>
       <modal class="registerModal"></modal>
+      <modal class="userViewModal"></modal>
     </div>
     
     <div class="logIn">
@@ -40,6 +41,7 @@
         <br>
         <%= submit_tag 'log in' %>
       <% end %>
+      <div id="exit">x<div>
     </div>
 
     <div class="register">
@@ -55,7 +57,13 @@
         <br>
         <%= f.submit 'Sign Up' %>
       <% end %>
+      <div id="exit">x<div>
     </div>
+
+    <div class="userView">
+      <h1>TEST</h1>
+      <div id="exit"><div>
+    </div>  
 
   </header> 
   
