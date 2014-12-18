@@ -21,18 +21,8 @@
 
 body {
 	background-color: black;
-	background-image: url('http://static.tumblr.com/571759f6f950b2f892cfd4bd6a8ed4fe/ansh2f3/Ha4n588gt/tumblr_static_czjkrwutkw008gwkwkcwcwwso.jpg'); 
-	background-size: 100%;
+	background-image: url('/assets/black_water_background.jpg'); 
+	background-size: contain;
 }
 
-.title {
-	float: left;
-	display: inline;
-	h1 {
-		font-family: Ubuntu;
-		color: white;
-		font-size: 60px;
-		margin-left: 20px;
 
-	}
-}

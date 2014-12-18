@@ -3,8 +3,10 @@
 	width: 70px;
 	display: block;
 	opacity: .7;
-	float: left; 
-	
+	float: right; 
+	position: aboslute;
+    top: 0px;	
+
 	button {
 		width: 70px;
 		height: 25%;
@@ -49,10 +51,8 @@
 	width: 70px;
 	display: block;
 	opacity: .7;
-	float: right; 
-	position: aboslute;
-    top: 0px;
-	
+	float: left; 
+
 	button {
 		width: 100%;
 		height: 33.33%;
@@ -80,10 +80,14 @@
 		&.clear {
 			background-image: url('/assets/clear-icon.png');
 			background-size: 100%;
+			height: 23.3%;
 			background-position: center; 
 			background-repeat: no-repeat;
+			background-color: silver;
+		}
+		&.background {
+			height: 10%;
 			background-color: gainsboro;
-			color: dimgray;
 		}
 	}
 }		

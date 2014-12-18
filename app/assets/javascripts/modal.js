@@ -1,26 +1,49 @@
 function modalReady() {
-	logInForm = $('#login-form');
-	logInForm.remove();
-	registerForm = $('#register-form');
-	registerForm.remove();
-	$('body').find('form').remove();
+	modal1 = ($(document.body)).find('.logInModal')
+	modal2 = ($(document.body)).find('.registerModal')
+	
+	logInForm = $('.logIn');
+	logInForm.hide();
+
+	registerForm = $('.register');
+	registerForm.hide();
 }
 
 function showLogIn() {
-	$('.form1-container').empty();
-	modal.find('.form-container').append(logInForm);
+	hideModal2()
+	modal1.empty();
 	logInForm.show();
-	modal.show();
+	modal1.append(logInForm);
+	modal1.show();
+	$('.modals').css({ 'z-index': '3', 'opacity': '1' });
 }
 
 function showRegister() {
- 	$('.form2-container').empty();
- 	modal.find('.form-container').append(registerForm);
+	console.log(this)
+	hideModal1();
+ 	modal2.empty();
+ 	modal2.append(registerForm);
  	registerForm.show();
- 	modal.show();
+ 	modal2.show();
+	$('.modals').css({ 'z-index': '3', 'opacity': '1' });
  }
 
-
-function hideModal() {
-	$('#modal').hide();
+function hideModal1() {
+	modal1.hide();
+	// $('.logInModal').css('display', 'none');
 }
+
+function hideModal2() {
+	modal2.hide();
+	// $('.registerModal').css('display', 'none');
+}
+
+function hideModals() {
+	modal2.hide();
+	modal1.hide();
+	// $('.modals').css('display', 'none');
+	
+
+}
+
+

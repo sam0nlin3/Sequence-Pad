@@ -7,59 +7,78 @@
   <%= csrf_meta_tags %>
 </head>
 
-<header>
-	<h1>sequence</h1>
-	<br>
-	<div id="menu">
-    <%= link_to('Home', root_path)%> 
-   	<% if session[:current_user] %>
-      <% @current_user ||= User.find(session[:current_user]) %>
-      <%= link_to @current_user.username, user_path(@current_user) %> 
-     	<%= link_to 'Sign Out', logout_path %>
-     	
-    <% else %>
-      <div id='form1-container'>
-    		<span id="login-link">
-    			<%= link_to 'Log In' %>  | 
-    		</span>
-    	</div>
-    	<div id="form2-container">
-    		<span id='register-link'>
-    			<%= link_to 'Sign Up' %> 
-    		</span>
-    	</div>
-    <% end %>
-  </div>
-
-  <div id="login-form">
-  	<%= render partial: 'sessions/form' %>
-  </div>
-
-  <div id="register-form">
-  	<%= render partial: 'users/form' %>
-  </div>
-
-  <%= yield %>
-
-</header>	
-
 <body>
-	
-		<div class="buttonColorDiv">
-			<button class="color" id="blue"></button>
-			<button class="color" id="yellow"></button>
-			<button class="color" id="purple"></button>
-			<button class="color" id="green"></button>
-		</div>
-		<div class="buttonControlsDiv">
-			<button class="play" id="play"></button>
-			<button class="pause" id="pause"></button>
-			<button class="clear" id="clear"></button>
-		</div>	
+  <header>
 
-	<div class="mainContainer">
-		<div class="cellsContainer"></div>
-	</div>		
+    <div class="menu">
+      <% if session[:current_user] %>
+        <% @current_user ||= User.find(session[:current_user]) %>
+        <%= link_to @current_user.username, user_path(@current_user) %> 
+        <div class="logOut">log out</div>
+          
+      <% else %>
+      
+        <h2 id='loginLink'>| log in |</h2>
+        <h2 id="registerLink"> register |</h2>
+      
+      <% end %>
+
+    </div>
+    
+    <div class="modals">
+      <modal class="logInModal"></modal>
+      <modal class="registerModal"></modal>
+    </div>
+    
+    <div class="logIn">
+      <%= form_tag sessions_path do %>
+        <%= label_tag :username %>
+        <%= text_field_tag :username %>
+        <br>
+        <%= label_tag :password %>
+        <%= password_field_tag :password %>
+        <br>
+        <%= submit_tag 'log in' %>
+      <% end %>
+    </div>
+
+    <div class="register">
+      <%= form_for @user, url: user_path(@user), method: :post do |f| %>
+        <%= f.label :username %>
+        <%= f.text_field :username %>
+        <br>
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+        <br>
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation %>
+        <br>
+        <%= f.submit 'Sign Up' %>
+      <% end %>
+    </div>
+
+  </header> 
+  
+    <div class="buttonColorDiv">
+      <button class="color" id="blue"></button>
+      <button class="color" id="yellow"></button>
+      <button class="color" id="purple"></button>
+      <button class="color" id="green"></button>
+    </div>
+    <div class="buttonControlsDiv">
+      <button class="play" id="play"></button>
+      <button class="pause" id="pause"></button>
+      <button class="clear" id="clear"></button>
+      <button class="background"></button>
+    </div>
+    
+
+  <div class="mainContainer">
+    <div class="cellsContainer"></div>
+  </div>    
+
+
+
 
 </body>
 </html>
