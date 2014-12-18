@@ -11,27 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141214011846) do
+ActiveRecord::Schema.define(version: 20141216144133) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "cells", force: true do |t|
     t.string   "purple_note"
-    t.boolean  "purple_active", default: false
     t.string   "blue_note"
-    t.boolean  "blue_active",   default: false
     t.string   "yellow_note"
-    t.boolean  "yellow_active", default: false
     t.string   "green_note"
-    t.boolean  "green_active",  default: false
+    t.string   "red_note"
+    t.string   "brown_note"
+    t.string   "active"
     t.integer  "row"
-    t.integer  "column_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "columns", force: true do |t|
+    t.integer  "column"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

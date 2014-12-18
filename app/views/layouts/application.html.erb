@@ -6,9 +6,90 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
 
-<%= yield %>
+<body>
+  <header>
+
+    <div class="menu">
+      <% if session[:current_user] %>
+        <% @current_user ||= User.find(session[:current_user]) %>
+        <h2 id="userViewLink"> <%= @current_user.username %> |</h2>
+        <div class="logOut">log out</div>
+          
+      <% else %>
+      
+        <h2 id='loginLink'>| log in |</h2>
+        <h2 id="registerLink"> register |</h2>
+      
+      <% end %>
+
+    </div>
+    
+    <div class="modals">
+      <modal class="logInModal"></modal>
+      <modal class="registerModal"></modal>
+      <modal class="userViewModal"></modal>
+    </div>
+    
+    <div class="logIn">
+      <%= form_tag sessions_path do %>
+        <%= label_tag :username %>
+        <%= text_field_tag :username %>
+        <br>
+        <%= label_tag :password %>
+        <%= password_field_tag :password %>
+        <br>
+        <%= submit_tag 'log in' %>
+      <% end %>
+      <div id="exit">x<div>
+    </div>
+
+    <div class="register">
+      <%= form_for @user, url: user_path(@user), method: :post do |f| %>
+        <%= f.label :username %>
+        <%= f.text_field :username %>
+        <br>
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+        <br>
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation %>
+        <br>
+        <%= f.submit 'Sign Up' %>
+      <% end %>
+      <div id="exit">x<div>
+    </div>
+
+    <div class="userView">
+      <h1>TEST</h1>
+      <div id="exit"><div>
+    </div>  
+
+  </header> 
+  
+    <div class="buttonColorDiv">
+      <button class="color" id="blue"></button>
+      <button class="color" id="yellow"></button>
+      <button class="color" id="purple"></button>
+      <button class="color" id="green"></button>
+      <button class="color" id="red"></button>
+      <button class="color" id="brown"></button>
+    </div>
+    
+    <div class="buttonControlsDiv">
+      <button class="play" id="play"></button>
+      <button class="pause" id="pause"></button>
+      <button class="clear" id="clear"></button>
+      <button class="background"></button>
+    </div>
+    
+
+  <div class="mainContainer">
+    <div class="cellsContainer"></div>
+  </div>    
+
+
+
 
 </body>
 </html>

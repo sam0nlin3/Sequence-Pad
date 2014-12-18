@@ -1,0 +1,21 @@
+header{
+	color: white;
+	margin: 20px;
+	h1 {
+		display: inline-block;
+		font-family: Ubuntu;
+		font-size: 36px;
+	}
+	.menu{
+		font-family: Ubuntu;
+		a {
+			display: inline-block;
+			color:white;
+			text-decoration: none;
+		}
+		h2 {
+			display: inline-block;
+			font-size: 20px;
+		}
+	}
+}	

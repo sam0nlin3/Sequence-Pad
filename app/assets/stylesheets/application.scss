@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+@import "reset";
+@import "buttons";
+@import "cells";
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400);
+
+body {
+	background-color: black;
+	background-image: url('/assets/black_water_background.jpg'); 
+	background-size: contain;
+}
+
+
