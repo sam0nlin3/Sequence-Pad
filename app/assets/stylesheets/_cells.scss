@@ -1,16 +1,16 @@
 .mainContainer {	
 	width: 900px;
 	margin: 0 auto;
-	padding-top: 115px;
+	padding-top: 50px;
 	.cellsContainer {
 		background-color: transparent;
 		.cell {
 			background-color: dimgray;
-			opacity: .7;
-			margin: 2px;
-			width: 52px;
-			height: 35px;
-			border-radius: 12px;
+			opacity: .8;
+			margin: 3px;
+			border-radius: 3px;
+			width: 50px;
+			height: 37.5px;
 			float: left;
 			display: inline-block;
 		}

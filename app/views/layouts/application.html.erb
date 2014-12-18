@@ -14,12 +14,12 @@
       <% if session[:current_user] %>
         <% @current_user ||= User.find(session[:current_user]) %>
         <h2 id="userViewLink"> <%= @current_user.username %> |</h2>
-        <div class="logOut">log out</div>
+        <h2><div class="logOut">log out</div></h2>
           
       <% else %>
       
-        <h2 id='loginLink'>| log in |</h2>
-        <h2 id="registerLink"> register |</h2>
+        <h2 id='loginLink'>log in |</h2>
+        <h2 id="registerLink"> register</h2>
       
       <% end %>
 
@@ -41,7 +41,7 @@
         <br>
         <%= submit_tag 'log in' %>
       <% end %>
-      <div id="exit">x<div>
+      <div id="exit"><div>
     </div>
 
     <div class="register">
@@ -57,7 +57,7 @@
         <br>
         <%= f.submit 'Sign Up' %>
       <% end %>
-      <div id="exit">x<div>
+      <div id="exit"><div>
     </div>
 
     <div class="userView">

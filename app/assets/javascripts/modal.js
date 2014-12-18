@@ -20,7 +20,7 @@ function showLogIn() {
 	logInForm.show();
 	modal1.append(logInForm);
 	modal1.show();
-	$('.modals').css({ 'z-index': '3', 'opacity': '.8' });
+	$('.modals').css({ 'z-index': '5', 'opacity': '.8' });
 }
 
 function showRegister() {

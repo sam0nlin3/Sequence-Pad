@@ -1,14 +1,14 @@
 .modals {
 	opacity: 0;
-	border-radius: 12px;
-	padding: 12px;
-	background-color: black;
-	width: 600px;
-	height: 300px;
+	z-index: -3;
 	position: absolute;
 	left: 350px;
-	top: 200px;
-	z-index: -1;
+	top: 100px;
+	.logIn {
+		width: 200px;
+		height: 400px;	
+		background-color: yellow;
+	}
 	#exit {
 		width: 60px;
 		height: 60px;

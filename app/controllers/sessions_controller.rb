@@ -6,6 +6,7 @@ class SessionsController < ApplicationController
   		redirect_to user_path(current_user)
   	else 
   		render :new
+      # need to fix this to render errors
     end
   end
 

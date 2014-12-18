@@ -24,7 +24,7 @@ $(document).ready(function() {
 	$(document.body).on('click', 'button.play', looper);
 	$(document.body).on('click', 'button.pause', pauseLoop);
 	$(document.body).on('click', 'button.clear', clearBoard);
-	$(document.body).on('mouseover', '.cell', activateCell);
+	$(document.body).on('click', '.cell', activateCell);
 	board = new Board();
 	modalReady();
 })
