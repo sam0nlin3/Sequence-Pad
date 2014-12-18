@@ -6,8 +6,9 @@ $(document).ready(function() {
   $('.menu').on('click', '#userViewLink', showUserView);  
   $(document.body).on('click', '#exit', hideModals);
   $('.menu').on('click', '.logOut', logOut);
-  modalReady();
+  
   renderMenu();
+  
 })
 
 function refresh(){

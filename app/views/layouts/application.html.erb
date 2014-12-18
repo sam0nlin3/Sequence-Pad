@@ -26,47 +26,21 @@
     </div>
     
     <div class="modals">
-      <modal class="logInModal"></modal>
-      <modal class="registerModal"></modal>
+      <modal class="logInModal">
+         <div class="logIn"></div>
+      </modal>
+
+      <modal class="registerModal">
+        <div class="register"></div>
+      </modal>
+      
       <modal class="userViewModal"></modal>
     </div>
-    
-    <div class="logIn">
-      <%= form_tag sessions_path do %>
-        <%= label_tag :username %>
-        <%= text_field_tag :username %>
-        <br>
-        <%= label_tag :password %>
-        <%= password_field_tag :password %>
-        <br>
-        <%= submit_tag 'log in' %>
-      <% end %>
-      <div id="exit"><div>
-    </div>
-
-    <div class="register">
-      <%= form_for @user, url: user_path(@user), method: :post do |f| %>
-        <%= f.label :username %>
-        <%= f.text_field :username %>
-        <br>
-        <%= f.label :password %>
-        <%= f.password_field :password %>
-        <br>
-        <%= f.label :password_confirmation %>
-        <%= f.password_field :password_confirmation %>
-        <br>
-        <%= f.submit 'Sign Up' %>
-      <% end %>
-      <div id="exit"><div>
-    </div>
-
-    <div class="userView">
-      <h1>TEST</h1>
-      <div id="exit"><div>
-    </div>  
 
   </header> 
   
+ 
+
     <div class="buttonColorDiv">
       <button class="color" id="blue"></button>
       <button class="color" id="yellow"></button>

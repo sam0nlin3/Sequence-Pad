@@ -25,6 +25,7 @@ $(document).ready(function() {
 	$(document.body).on('click', 'button.pause', pauseLoop);
 	$(document.body).on('click', 'button.clear', clearBoard);
 	$(document.body).on('click', '.cell', activateCell);
+	$(document.body).on('click', '#signIn', logInRequest);
 	board = new Board();
 	modalReady();
 })

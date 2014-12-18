@@ -11,18 +11,14 @@
 		width: 500px;
 		height: 200px;	
 		background-color: black;
-		form {
-			margin-top: 60px;
-			textfield {
-			color: green;
-			}
-			input{
-				font-family: Ubuntu;
-				font-size: 20px;
-				border: none;
-				background-color: transparent;
-				color: red;
-			}
+		input{
+			display: block;
+			font-family: Ubuntu;
+			font-size: 20px;
+			border:0;
+  		border-bottom: 2px dotted;
+			background-color: transparent;
+			color: white;
 		}
 	}
 	.register {
@@ -30,23 +26,15 @@
 		width: 700px;
 		height: 200px;	
 		background-color: black;
-		form {
-			margin-top: 60px;
-			textfield {
-			color: green;
+		input{
+			display: block;
+			font-family: Ubuntu;
+			font-size: 20px;
+			border:0;
+  		border-bottom: 2px dotted;
+			background-color: transparent;
+			color: white;
 			}
-			input{
-				font-family: Ubuntu;
-				font-size: 20px;
-				border:0;
-    		border-bottom: 2px dotted;
-				background-color: transparent;
-				color: white;
-				input {
-					background-color: green;
-				}
-			}
-		}
 	}
 
 	.userView {
