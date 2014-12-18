@@ -1,13 +1,18 @@
 header{
 	color: white;
 	margin: 20px;
+	background-color: black;
+
 	h1 {
 		display: inline-block;
 		font-family: Ubuntu;
 		font-size: 36px;
+		padding: 6px;
+
 	}
 	.menu{
 		font-family: Ubuntu;
+		padding: 8px;
 		a {
 			display: inline-block;
 			color:white;
