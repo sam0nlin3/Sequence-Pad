@@ -5,6 +5,8 @@ describe Cell do
 		it { is_expected.to validate_presence_of :blue_note }
 		it { is_expected.to validate_presence_of :yellow_note }
 		it { is_expected.to validate_presence_of :green_note }
+		it { is_expected.to validate_presence_of :red_note } 
+		it { is_expected.to validate_presence_of :brown_note }
 		it { is_expected.to validate_presence_of :active }
 		it { is_expected.to validate_presence_of :row }
 		it { is_expected.to validate_presence_of :column }									
@@ -14,6 +16,8 @@ describe Cell do
 					    blue_note: 'Sound File',                                   
 					    yellow_note: 'Sound File',
 					    green_note: 'Sound File',
+					    red_note: 'soundFile',
+					    brown_note: 'sound file',
 					    active: "none", 
 					    row: 1,
 					    column: 1)

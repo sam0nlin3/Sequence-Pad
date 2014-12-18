@@ -9,7 +9,7 @@
 
 	button {
 		width: 70px;
-		height: 25%;
+		height: 16.6%;
 		border: none;
 		margin-right: 20px;
 
@@ -43,6 +43,20 @@
 				background-color: #4B177E;
 					&:hover{
 						background-color: #972EFE;
+					}
+			}
+
+			&#red {
+				background-color: #991319;
+					&:hover{
+						background-color: #FE202A;
+					}
+			}
+
+			&#brown {
+				background-color: #4C3520;
+					&:hover{
+						background-color: #D8965B;
 					}
 			}
 		}	

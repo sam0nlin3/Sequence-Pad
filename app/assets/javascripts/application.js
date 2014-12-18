@@ -18,9 +18,7 @@
 $(document).ready(function() {
 	console.log('loaded');
 	fetchCells();
-	$(document.body).on('click', '#login-link', showLogIn);
-	$(document.body).on('click', '#register-link', showRegister);
-	$(document.body).on('click', '#exit', hideModal);
+	$(document.body).on('click', '#exit', hideModals);
 	$(document.body).on('click', 'button.color', changeCurrentColor);
 	$(document.body).on('click', 'button.background', changeBackground);
 	$(document.body).on('click', 'button.play', looper);
@@ -29,17 +27,20 @@ $(document).ready(function() {
 	$(document.body).on('mouseover', '.cell', activateCell);
 	board = new Board();
 	modalReady();
-
 })
 
 var blue = '#275EFF';
 var yellow = '#FEC227';
 var purple = '#4B177E';
 var green = '#147E21';
+var red = '#991319';
+var brown = '#4C3520'
 var active_blue = '#A7BEFF';
 var active_yellow = '#FED773';
 var active_purple = '#972EFE';
 var active_green = '#20CA35';
+var active_red = '#FE202A'
+var active_brown = '#D8965B'
 
 var Board = function(){
 	this.currentColor = "purple";
@@ -68,18 +69,26 @@ function renderCells(data){
 		var purple_source = $('<source>').attr('src', data.purple_note).attr('type', 'audio/mpeg');
 
 		var green_audio = $('<audio>').attr('id', 'green_audio')
-		var green_source = $('<source>').attr('src', data.green_note).attr('type', 'audio/mpeg');
+		var green_source = $('<source>').attr('src', data.green_note).attr('type', 'audio/wav');
 
 		var yellow_audio = $('<audio>').attr('id', 'yellow_audio')
-		var yellow_source = $('<source>').attr('src', data.yellow_note).attr('type', 'audio/mpeg');
+		var yellow_source = $('<source>').attr('src', data.yellow_note).attr('type', 'audio/wav');
 
 		var blue_audio = $('<audio>').attr('id', 'blue_audio')
 		var blue_source = $('<source>').attr('src', data.blue_note).attr('type', 'audio/mpeg');
+
+		var red_audio = $('<audio>').attr('id', 'red_audio')
+		var red_source = $('<source>').attr('src', data.red_note).attr('type', 'audio/wav'); 
+
+		var brown_audio = $('<audio>').attr('id', 'brown_audio')
+		var brown_source = $('<source>').attr('src', data.brown_note).attr('type', 'audio/wav');
 		
 		purple_audio.append(purple_source);
 		green_audio.append(green_source);
 		yellow_audio.append(yellow_source);
 		blue_audio.append(blue_source);
+		red_audio.append(red_source);
+		brown_audio.append(brown_source);
 		
 		var cellsContainer = $('.cellsContainer')
 
@@ -91,7 +100,9 @@ function renderCells(data){
 								.append(purple_audio)
 								.append(green_audio)
 								.append(yellow_audio)
-								.append(blue_audio);
+								.append(blue_audio)
+								.append(red_audio)
+								.append(brown_audio)
 		cell.appendTo(cellsContainer)
 }
 
@@ -101,35 +112,44 @@ function activateCell() {
 		$(this).css("background-color", "dimgray");
 	} else if (this.active = board.currentColor) {
 		if (this.active === "blue") {
-				$(this).css("background-color", blue);
-				// $(this).find('#blue_audio')[0].play();
+			$(this).css("background-color", blue);
+			// $(this).find('#blue_audio')[0].play();
 		} else if (this.active === "purple") {
-				$(this).css("background-color", purple);
-				// $(this).find('#purple_audio')[0].play();
+			$(this).css("background-color", purple);
+			// $(this).find('#purple_audio')[0].play();
 		} else if (this.active === "yellow") {
-				$(this).css("background-color", yellow);	
-				// $(this).find('#yellow_audio')[0].play();
+			$(this).css("background-color", yellow);	
+			// $(this).find('#yellow_audio')[0].play();
 		} else if (this.active === "green") {
-				$(this).css("background-color", green);
-				// $(this).find('#green_audio')[0].play();		
-		}	
-	}		
+			$(this).css("background-color", green);
+			// $(this).find('#green_audio')[0].play();		
+		} else if (this.active === "red") {
+			$(this).css("background-color", red);
+			// $(this).find('#red_audio')[0].play();
+		}	else if (this.active === "brown") {
+			$(this).css("background-color", brown)
+			// $(this).find('#brown_audio')[0].play();
+		};
+	};		
 }
 
 var resetColors = function(){
 	var cellDivs = ($('div.cell'))
 	for (var i = 0; i < cellDivs.length; i++) {
 		if (cellDivs[i].active === "blue" ) {
-			$(cellDivs[i]).css('background-color', blue)
-			} else if ( cellDivs[i].active === "purple") {
-				$(cellDivs[i]).css('background-color', purple)
-			} else if ( cellDivs[i].active === "yellow") {
-				$(cellDivs[i]).css('background-color', yellow)
-			} else if ( cellDivs[i].active === "green") {
-				$(cellDivs[i]).css('background-color', green)
-			};
-	};
-						
+		$(cellDivs[i]).css('background-color', blue)
+		} else if ( cellDivs[i].active === "purple") {
+			$(cellDivs[i]).css('background-color', purple)
+		} else if ( cellDivs[i].active === "yellow") {
+			$(cellDivs[i]).css('background-color', yellow)
+		} else if ( cellDivs[i].active === "green") {
+			$(cellDivs[i]).css('background-color', green)
+		} else if ( cellDivs[i].active === "red") {
+			$(cellDivs[i]).css('background-color', red)
+		} else if ( cellDivs[i].active === "brown") {
+			$(cellDivs[i]).css('background-color', brown)
+		}
+	};				
 };
 
 var cellLoop = function(column){
@@ -150,6 +170,14 @@ var cellLoop = function(column){
 			} else if ( column[i].active === "green") {
 				$(column[i]).find('#green_audio')[0].play();
 				$(column[i]).css('background-color', active_green)
+
+			} else if ( column[i].active === "red") {
+				$(column[i]).find('#red_audio')[0].play();
+				$(column[i]).css('background-color', active_red)
+
+			} else if ( column[i].active === "brown") {
+				$(column[i]).find('#brown_audio')[0].play();
+				$(column[i]).css('background-color', active_brown)
 			};
 		};	
 };
@@ -251,6 +279,8 @@ function clearBoard(){
 	};
 }
 
+
+// need to add functionality to change header/menu text color
 function changeBackground(){
 	console.log(($(document.body).css("background-image")))
 	if ($(document.body).css("background-image") === "url(http://localhost:3000/assets/black_water_background.jpg)") {

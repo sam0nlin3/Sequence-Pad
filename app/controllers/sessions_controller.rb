@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
 
   def new
   	@user = User.new
-  	if current_user
+  	if current_user 
   		redirect_to user_path(current_user)
   	else 
   		render :new
@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
 
   def create
     @user = User.find_by(username: params[:username])
-    if @user
+      if @user.authenticate(params[:password])
       session[:current_user] = @user.id
       redirect_to root_path
     else
