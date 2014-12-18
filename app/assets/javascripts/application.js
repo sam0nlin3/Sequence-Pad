@@ -18,12 +18,18 @@
 $(document).ready(function() {
 	console.log('loaded');
 	fetchCells();
+	$(document.body).on('click', '#login-link', showLogIn);
+	$(document.body).on('click', '#register-link', showRegister);
+	$(document.body).on('click', '#exit', hideModal);
 	$(document.body).on('click', 'button.color', changeCurrentColor);
+	$(document.body).on('click', 'button.background', changeBackground);
 	$(document.body).on('click', 'button.play', looper);
 	$(document.body).on('click', 'button.pause', pauseLoop);
 	$(document.body).on('click', 'button.clear', clearBoard);
 	$(document.body).on('mouseover', '.cell', activateCell);
 	board = new Board();
+	modalReady();
+
 })
 
 var blue = '#275EFF';
@@ -245,4 +251,12 @@ function clearBoard(){
 	};
 }
 
+function changeBackground(){
+	console.log(($(document.body).css("background-image")))
+	if ($(document.body).css("background-image") === "url(http://localhost:3000/assets/black_water_background.jpg)") {
+		$(document.body).css('background-image', 'url(/assets/white_water_background.jpg)')
+	}	else if ($(document.body).css("background-image") === "url(http://localhost:3000/assets/white_water_background.jpg)") {
+		$(document.body).css('background-image', 'url(/assets/black_water_background.jpg)')
+	}
+}	
 
