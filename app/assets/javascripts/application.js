@@ -65,10 +65,10 @@ function renderCells(data){
 		var purple_source = $('<source>').attr('src', data.purple_note).attr('type', 'audio/mpeg');
 
 		var green_audio = $('<audio>').attr('id', 'green_audio')
-		var green_source = $('<source>').attr('src', data.green_note).attr('type', 'audio/mpeg');
+		var green_source = $('<source>').attr('src', data.green_note).attr('type', 'audio/wav');
 
 		var yellow_audio = $('<audio>').attr('id', 'yellow_audio')
-		var yellow_source = $('<source>').attr('src', data.yellow_note).attr('type', 'audio/mpeg');
+		var yellow_source = $('<source>').attr('src', data.yellow_note).attr('type', 'audio/wav');
 
 		var blue_audio = $('<audio>').attr('id', 'blue_audio')
 		var blue_source = $('<source>').attr('src', data.blue_note).attr('type', 'audio/mpeg');
