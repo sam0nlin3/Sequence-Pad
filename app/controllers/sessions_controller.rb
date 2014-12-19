@@ -1,29 +1,21 @@
 class SessionsController < ApplicationController
 
-  def new
-  	@user = User.new
-  	if current_user 
-  		redirect_to user_path(current_user)
-  	else 
-  		render :new
-      # need to fix this to render errors
-    end
-  end
-
   def create
     @user = User.find_by(username: params[:username])
-      if @user.authenticate(params[:password])
-      session[:current_user] = @user.id
-      redirect_to root_path
+    if @user.authenticate(params[:password])
+      session[:current_user] = @user.id  
+      render json: @user
     else
-      redirect_to root_path
+      render json: {error: "Username or password is incorrect."}
     end
+    
   end
 
   def destroy
     session[:current_user] = nil
     current_user = nil
-    redirect_to root_path
+    @current_user = User.find(session[:current_user]) if session[:current_user]
+    render json: @current_user 
   end
 
 end

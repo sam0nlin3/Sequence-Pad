@@ -16,6 +16,11 @@ class ApplicationController < ActionController::Base
     end  
   end
 
+  def get_current_user
+    @current_user = User.find(session[:current_user]) if session[:current_user]
+    render json: @current_user 
+  end  
+
   def authenticate
     redirect_to root_path unless current_user
   end
@@ -24,7 +29,9 @@ class ApplicationController < ActionController::Base
   	User.find(session[:current_user]) if session[:current_user]
   end
 
+
   private
+  
   def user_params
     params.require(:user).permit(:username, :password, :password_confirmation)
   end 
