@@ -24,24 +24,26 @@ $(document).ready(function() {
 	$(document.body).on('click', 'button.play', looper);
 	$(document.body).on('click', 'button.pause', pauseLoop);
 	$(document.body).on('click', 'button.clear', clearBoard);
-	$(document.body).on('click', '.cell', activateCell);
-	$(document.body).on('click', '#signIn', logInRequest);
+	$(document.body).on('mouseover', '.cell', activateCell);
 	board = new Board();
 	modalReady();
 })
 
-var blue = '#275EFF';
-var yellow = '#FEC227';
+
+var blue = '#196D85';
+var yellow = '#F1BF28';
 var purple = '#4B177E';
-var green = '#147E21';
-var red = '#991319';
-var brown = '#4C3520'
-var active_blue = '#A7BEFF';
-var active_yellow = '#FED773';
+var green = '#166C3F';
+var red = '#7F3649';
+var brown = '#99412E'
+var active_blue = '#5ADBFF';
+var active_yellow = '#FFE468';
 var active_purple = '#972EFE';
-var active_green = '#20CA35';
-var active_red = '#FE202A'
-var active_brown = '#D8965B'
+var active_green = '#4FDE95';
+var active_red = '#FF81A1'
+var active_brown = '#FF8168'
+
+
 
 var Board = function(){
 	this.currentColor = "purple";
@@ -283,11 +285,10 @@ function clearBoard(){
 
 // need to add functionality to change header/menu text color
 function changeBackground(){
-	console.log(($(document.body).css("background-image")))
-	if ($(document.body).css("background-image") === "url(http://localhost:3000/assets/black_water_background.jpg)") {
-		$(document.body).css('background-image', 'url(/assets/white_water_background.jpg)')
-	}	else if ($(document.body).css("background-image") === "url(http://localhost:3000/assets/white_water_background.jpg)") {
-		$(document.body).css('background-image', 'url(/assets/black_water_background.jpg)')
+	if ( $(document.body).css('background-color' === 'rgb(0,0,0)' ) ) {
+		$(document.body).css('background-color', 'rgb(255,255,255)')
+	}	else if ( $(document.body).css('background-color' === "rgb(255,255,255)") ) {
+		$(document.body).css('background-color', 'rgb(0,0,0)' )
 	}
 }	
 

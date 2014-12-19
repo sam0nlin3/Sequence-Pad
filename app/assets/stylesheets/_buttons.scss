@@ -16,26 +16,26 @@
 
 		&.color{	
 			&#blue {
-				background-color: #275EFF;
+				background-color: #196D85;
 					&:hover {
-						background-color: #A7BEFF;
+						background-color: #5ADBFF;
 					}
 					&:active {
-						background-color: #A7BEFF;
+						background-color: #5ADBFF;
 					}
 			}
 
 			&#yellow {
-				background-color: #FEC227;
+				background-color: #F1BF28;
 					&:hover{
-						background-color: #FED773;
+						background-color: #FFE468;
 					}
 			}	
 
 			&#green {
-				background-color: #147E21;
+				background-color: #166C3F;
 					&:hover{
-						background-color: #20CA35;
+						background-color: #4FDE95;
 					}
 			}
 
@@ -47,16 +47,16 @@
 			}
 
 			&#red {
-				background-color: #991319;
+				background-color: #7F3649;
 					&:hover{
-						background-color: #FE202A;
+						background-color: #FF81A1;
 					}
 			}
 
 			&#brown {
-				background-color: #4C3520;
+				background-color: #99412E;
 					&:hover{
-						background-color: #D8965B;
+						background-color: #FF8168;
 					}
 			}
 		}	
@@ -81,6 +81,9 @@
 			background-position: center; 
 			background-repeat: no-repeat;
 			background-color: black;
+			&:hover{
+						background-color: #363636;
+			}
 		}
 
 		&.pause {
@@ -88,9 +91,9 @@
 			background-size: 100%;
 			background-position: center; 
 			background-repeat: no-repeat;
-			background-color: #696969;
+			background-color: #555555;
 			&:hover{
-						background-color: #808080;
+						background-color: #7D7D7D;
 			}
 		}
 
@@ -100,11 +103,17 @@
 			height: 23.3%;
 			background-position: center; 
 			background-repeat: no-repeat;
-			background-color: silver;
+			background-color: #959595;
+			&:hover{
+						background-color: #B7B7B7;
+			}
 		}
 		&.background {
 			height: 10%;
-			background-color: gainsboro;
+			background-color: #D7D7D7;
+			&:hover{
+						background-color: #EBEBEB;
+			}
 		}
 	}
 }		

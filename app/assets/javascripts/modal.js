@@ -19,7 +19,7 @@ function modalReady() {
 }
 
 function showLogIn() {
-	hideModal2()
+	hideModal2();
 	hideModal3();
 	modal1.empty();
 	logInForm.show();
@@ -104,7 +104,7 @@ function generateRegistration() {
 	var regPWcon = $('<input>').attr('id', 'regPWcon')
 														 .attr('type', 'password')
 
-	var register = $('<button>').attr('id', 'signIn')
+	var register = $('<button>').attr('id', 'register')
 														.text('register');									
 
 	regDiv.append(regName)
@@ -114,9 +114,18 @@ function generateRegistration() {
 				.append(exit);
 }
 
+function generateUserView() {
+	var userViewDiv = $('.userView')
 
-function logInRequest(){
-	$.post('/sessions', { username: $('#username').val(), password: $('#password').val() });
+	var exit = $('<div>').attr('id', 'exit');
+
+	var userName = $('<div>').attr('id', 'userName')
+														.text('username');
+	var songs = $('<div>').attr('id', 'songs')
+												.text('song1')																					
+	userViewDiv.append(userName)
+				.append(songs)
+				.append(exit);
 }
 
 

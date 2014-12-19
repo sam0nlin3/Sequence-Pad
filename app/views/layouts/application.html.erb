@@ -11,18 +11,7 @@
   <header>
 
     <div class="menu">
-      <% if session[:current_user] %>
-        <% @current_user ||= User.find(session[:current_user]) %>
-        <h2 id="userViewLink"> <%= @current_user.username %> |</h2>
-        <h2><div class="logOut">log out</div></h2>
-          
-      <% else %>
-      
-        <h2 id='loginLink'>log in |</h2>
-        <h2 id="registerLink"> register</h2>
-      
-      <% end %>
-
+    
     </div>
     
     <div class="modals">
@@ -34,7 +23,9 @@
         <div class="register"></div>
       </modal>
       
-      <modal class="userViewModal"></modal>
+      <modal class="userViewModal">
+        <div class="userView"></div>
+      </modal>
     </div>
 
   </header> 

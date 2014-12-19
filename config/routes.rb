@@ -3,10 +3,14 @@ Rails.application.routes.draw do
 	root 'application#index'
 
 	resource :cell, only: [:index]
-  resource :user, only: [:new, :create, :show, :destroy]
+  resource :user, only: [:destroy]
 
-  get '/login' => 'sessions#new'
+  post '/new_user' => 'users#create'
+
+  get '/get_current_user' => 'application#get_current_user'
+    
   post '/sessions' => 'sessions#create'
+  
   get '/logout' => 'sessions#destroy'
 
 end
