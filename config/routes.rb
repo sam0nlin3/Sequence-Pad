@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-	root 'application#index'
+	root 'application#index' 
 
 	resource :cell, only: [:index]
   resource :user, only: [:destroy]
