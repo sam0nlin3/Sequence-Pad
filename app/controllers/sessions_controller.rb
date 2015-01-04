@@ -7,8 +7,7 @@ class SessionsController < ApplicationController
       render json: @user
     else
       render json: {error: "Username or password is incorrect."}
-    end
-    
+    end  
   end
 
   def destroy
