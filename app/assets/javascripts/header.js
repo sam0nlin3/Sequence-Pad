@@ -1,17 +1,4 @@
 $(document).ready(function() {
-<<<<<<< HEAD
-||||||| merged common ancestors
-  $(document.body).on('click', '.home', refresh);
-  $('.menu').on('click', '#loginLink', showLogIn);
-
-  $('.menu').on('click', '#registerLink', showRegister);
-  $('.menu').on('click', '#userViewLink', showUserView);  
-=======
-  $(document.body).on('click', '.home', refresh);
-  $('.menu').on('click', '#loginLink', showLogIn);
-  $('.menu').on('click', '#registerLink', showRegister);
-  $('.menu').on('click', '#userViewLink', showUserView);  
->>>>>>> 54ffcfefe6af238f4fd158ee18f458880e507192
   $(document.body).on('click', '#exit', hideModals);
   $(document.body).on('click', '#signIn', newCurrentUser);
   $(document.body).on('click', '#register', newRegister);
