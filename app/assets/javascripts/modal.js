@@ -135,7 +135,7 @@ function fetchUserForUserView(){
 
 function generateUserView(data) {
 	console.log(data)
-	if ($('#userName').length === 0){
+	if ($('#userName').length === 0 ){
 		var userViewDiv = $('.userView');
 
 		var exit = $('<div>').attr('id', 'exit');
@@ -147,8 +147,8 @@ function generateUserView(data) {
 		userViewDiv.append(userName)
 					.append(songs)
 					.append(exit);
-		showUserView();	
 	}		
+	showUserView();	
 }
 
 
