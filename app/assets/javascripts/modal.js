@@ -49,10 +49,10 @@ function showRegister() {
  	registerForm.show();
  	modal2.show();
 	$('.modals').css({ 'z-index': '3', 'opacity': '.8' });
- }
+}
 
- function showUserView() {
-	console.log(this)
+function showUserView() {
+	console.log("hi")
 	hideModal1();
 	hideModal2();
  	modal3.empty();
@@ -60,7 +60,7 @@ function showRegister() {
  	userView.show();
  	modal3.show();
 	$('.modals').css({ 'z-index': '3', 'opacity': '.8' });
- }
+}
 
 function hideModal1() {
 	modal1.hide();
@@ -127,18 +127,27 @@ function generateRegistration() {
 				.append(exit);
 }
 
-function generateUserView() {
-	var userViewDiv = $('.userView')
+function fetchUserForUserView(){
+	console.log("test")
+	$.get('/get_current_user').done(generateUserView);
+};	
 
-	var exit = $('<div>').attr('id', 'exit');
+function generateUserView(data) {
+	console.log(data)
+	if ($('#userName').length === 0){
+		var userViewDiv = $('.userView');
 
-	var userName = $('<div>').attr('id', 'userName')
-														.text('username');
-	var songs = $('<div>').attr('id', 'songs')
-												.text('song1')																					
-	userViewDiv.append(userName)
-				.append(songs)
-				.append(exit);
+		var exit = $('<div>').attr('id', 'exit');
+
+		var userName = $('<div>').attr('id', 'userName')
+															.text(data.username);
+		var songs = $('<div>').attr('id', 'songs')
+													.text('songs:')																					
+		userViewDiv.append(userName)
+					.append(songs)
+					.append(exit);
+		showUserView();	
+	}		
 }
 
 

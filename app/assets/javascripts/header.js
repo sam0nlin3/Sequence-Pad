@@ -5,7 +5,7 @@ $(document).ready(function() {
   $('.menuDiv').on('mouseover', showMenu);
   $('.menuDiv').on('click', '#loginLink', showLogIn);
   $('.menuDiv').on('click', '#registerLink', showRegister);
-  $('.menuDiv').on('click', '#userViewLink', showUserView);  
+  $('.menuDiv').on('click', '#userViewLink', fetchUserForUserView);  
   $('.menuDiv').on('click', '.logOut', logOut);  
   fetchCurrentUser();
 })
@@ -39,14 +39,14 @@ function renderMenu(data){
   $('<h1>').text('sequence').prependTo($('.menuDiv'));
   
   if ( data && data !== "null" ) {
-    var loggedInUserName = $('<h2>').text(data.username) .attr('id',' userViewLink ');
+    var loggedInUserName = $('<h2>').text(data.username).attr('id','userViewLink');
     var logOutText = $('<h2>').addClass("logOut").text('log out')
     
     $('.menuDiv').append(loggedInUserName)
               .append(logOutText);
   } else {
     var loginLink = $('<h2>').attr('id', 'loginLink').text(' log in ')
-    var registerLink = $('<h2>').attr('id', 'registerLink').text(' register ')
+    var registerLink = $('<h2>').attr('id', 'registerLink').text('register')
     $('.menuDiv').append(loginLink)
               .append(registerLink);  
   }    

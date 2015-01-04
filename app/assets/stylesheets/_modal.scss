@@ -2,13 +2,13 @@
 	opacity: 0;
 	z-index: -3;
 	position: absolute;
-	left: 200px;
-	top: 200px;
+	left: 287px;
+	top: 240px;
 	font-family: Ubuntu;
 	font-size: 20px;
 	.logIn {
 		padding: 20px;
-		width: 500px;
+		width: 700px;
 		height: 200px;	
 		background-color: black;
 		input{
@@ -37,9 +37,10 @@
 			}
 	}
 	.userView {
-		width: 200px;
-		height: 400px;	
-		background-color: red;
+		padding: 20px;
+		width: 700px;
+		height: 200px;	
+		background-color: black;
 	}
 	#exit {
 		width: 60px;
