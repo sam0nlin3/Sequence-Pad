@@ -1,18 +1,27 @@
 $(document).ready(function() {
+<<<<<<< HEAD
+||||||| merged common ancestors
+  $(document.body).on('click', '.home', refresh);
+  $('.menu').on('click', '#loginLink', showLogIn);
+
+  $('.menu').on('click', '#registerLink', showRegister);
+  $('.menu').on('click', '#userViewLink', showUserView);  
+=======
   $(document.body).on('click', '.home', refresh);
   $('.menu').on('click', '#loginLink', showLogIn);
   $('.menu').on('click', '#registerLink', showRegister);
   $('.menu').on('click', '#userViewLink', showUserView);  
+>>>>>>> 54ffcfefe6af238f4fd158ee18f458880e507192
   $(document.body).on('click', '#exit', hideModals);
   $(document.body).on('click', '#signIn', newCurrentUser);
   $(document.body).on('click', '#register', newRegister);
-  $('.menu').on('click', '.logOut', logOut);  
+  $('.menuDiv').on('mouseover', showMenu);
+  $('.menuDiv').on('click', '#loginLink', showLogIn);
+  $('.menuDiv').on('click', '#registerLink', showRegister);
+  $('.menuDiv').on('click', '#userViewLink', fetchUserForUserView);  
+  $('.menuDiv').on('click', '.logOut', logOut);  
   fetchCurrentUser();
 })
-
-function refresh(){
-  window.location.reload();
-};
 
 function logOut(){
   $.get( '/logout' ).done(renderMenu);
@@ -38,25 +47,21 @@ function newRegister(){
   }).done(renderMenu);
 }
 
-
 function renderMenu(data){ 
-  ($('.menu')).empty();
-  $('<h1>').text('sequence').prependTo($('.menu'));
+  ($('.menuDiv')).empty();
+  $('<h1>').text('sequence').prependTo($('.menuDiv'));
   
   if ( data && data !== "null" ) {
     var loggedInUserName = $('<h2>').text(data.username).attr('id', 'userViewLink');
     var logOutText = $('<h2>').addClass("logOut").text('log out')
-    
-    $('.menu').append(loggedInUserName)
+    $('.menuDiv').append(loggedInUserName)
               .append(logOutText);
-
   } else {
     var loginLink = $('<h2>').attr('id', 'loginLink').text(' log in ')
-    var registerLink = $('<h2>').attr('id', 'registerLink').text(' register ')
-
-    $('.menu').append(loginLink)
+    var registerLink = $('<h2>').attr('id', 'registerLink').text('register')
+    $('.menuDiv').append(loginLink)
               .append(registerLink);  
-  }             
+  }    
 hideModals();
 }
 
