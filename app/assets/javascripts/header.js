@@ -22,7 +22,7 @@ function newCurrentUser(){
   $.ajax({ 
       type: "POST",
       url: '/sessions',
-      data: { username: $('#username').val(), password: $('#username').val()  }
+      data: { username: $('#username').val(), password: $('#password').val()  }
   }).done(renderMenu);
 }
 
@@ -39,9 +39,8 @@ function renderMenu(data){
   $('<h1>').text('sequence').prependTo($('.menuDiv'));
   
   if ( data && data !== "null" ) {
-    var loggedInUserName = $('<h2>').text(data.username).attr('id','userViewLink');
+    var loggedInUserName = $('<h2>').text(data.username).attr('id', 'userViewLink');
     var logOutText = $('<h2>').addClass("logOut").text('log out')
-    
     $('.menuDiv').append(loggedInUserName)
               .append(logOutText);
   } else {
