@@ -3,9 +3,9 @@ function modalReady() {
 	generateLogin();
   generateRegistration();
 
-	modal1 = ($(document.body)).find('.logInModal')
-	modal2 = ($(document.body)).find('.registerModal')
-	modal3 = ($(document.body)).find('.userViewModal')
+	modal1 = ($(document.body)).find('.logInModal');
+	modal2 = ($(document.body)).find('.registerModal');
+	modal3 = ($(document.body)).find('.userViewModal');
 	
 	logInForm = $('.logIn');
 	logInForm.hide();
@@ -16,6 +16,18 @@ function modalReady() {
 	userView = $('.userView');
 	userView.hide();
 
+	menuShow = false; // set global var to prevent re-hiding menu on mouseover event
+	menu = $('.menuDiv');
+	$('.menuDiv').css({'height': '0', 'opacity': '0' });
+}
+
+function showMenu() {
+	if (menuShow === false){
+		menu.hide();
+		$('.menuDiv').css({ 'height': 'auto', 'opacity': '1' });
+		menu.slideDown('700', "swing");
+		menuShow = true;
+	} 	
 }
 
 function showLogIn() {
@@ -54,6 +66,7 @@ function hideModal1() {
 	modal1.hide();
 	$('.logInModal').css({ 'z-index': '3', 'opacity': '0' });
 }
+
 
 function hideModal2() {
 	modal2.hide();
