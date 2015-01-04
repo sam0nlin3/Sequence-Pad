@@ -1,5 +1,5 @@
 function modalReady() {
-	
+	 
 	generateLogin();
   generateRegistration();
 
@@ -45,8 +45,8 @@ function showRegister() {
 	hideModal1();
 	hideModal3();
  	modal2.empty();
- 	modal2.append(registerForm);
  	registerForm.show();
+ 	modal2.append(registerForm);
  	modal2.show();
 	$('.modals').css({ 'z-index': '3', 'opacity': '.8' });
 }
@@ -108,9 +108,10 @@ function generateRegistration() {
 
 	var exit = $('<div>').attr('id', 'exit');
 
-	var regName = $('<input>').attr('id', 'regName')
+	var regName = $('<input>').attr('id', 'username')
 														.attr('type', 'text')
 														.val('username');
+
 	var regPW = $('<input>').attr('id', 'regPW')
 													.attr('type', 'password')
 
@@ -118,7 +119,7 @@ function generateRegistration() {
 														 .attr('type', 'password')
 
 	var register = $('<button>').attr('id', 'register')
-														.text('register');									
+														  .text('register');									
 
 	regDiv.append(regName)
 				.append(regPW)

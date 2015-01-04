@@ -1,4 +1,17 @@
 $(document).ready(function() {
+<<<<<<< HEAD
+||||||| merged common ancestors
+  $(document.body).on('click', '.home', refresh);
+  $('.menu').on('click', '#loginLink', showLogIn);
+
+  $('.menu').on('click', '#registerLink', showRegister);
+  $('.menu').on('click', '#userViewLink', showUserView);  
+=======
+  $(document.body).on('click', '.home', refresh);
+  $('.menu').on('click', '#loginLink', showLogIn);
+  $('.menu').on('click', '#registerLink', showRegister);
+  $('.menu').on('click', '#userViewLink', showUserView);  
+>>>>>>> 54ffcfefe6af238f4fd158ee18f458880e507192
   $(document.body).on('click', '#exit', hideModals);
   $(document.body).on('click', '#signIn', newCurrentUser);
   $(document.body).on('click', '#register', newRegister);
@@ -30,7 +43,7 @@ function newRegister(){
   $.ajax({ 
       type: "POST",
       url: '/new_user',
-      data: { username: $('#regName').val(), password: $('#regPW').val(), password_confirmation: $('#regPWcon').val()  }
+      data: { username: $('#userame').val(), password: $('#regPW').val(), password_confirmation: $('#regPWcon').val()  }
   }).done(renderMenu);
 }
 
