@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
 	resource :cell, only: [:index]
   resource :user, only: [:destroy]
+  resource :uploads
 
   post '/new_user' => 'users#create'
 
