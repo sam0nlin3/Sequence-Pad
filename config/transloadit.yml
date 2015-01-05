@@ -1,0 +1,45 @@
+development:
+  # the jquery_sdk version you want to use, read up on it here:
+  # https://transloadit.com/blog/2013/02/transloadit-javascript-plugin-and-jquery-1-9
+  # defaults to latest
+  # use "v1.0.0" if you need IE6 support (using jQuery < 1.9)
+  jquery_sdk_version: 'latest'
+  auth:
+    key     : '9683a430947d11e4aabfb1dea4e1a9a8'
+    secret  : '38aef0cfaa76d60dd3cbac6c48162bf7dd8674bb' # this is optional, but highly recommended, https://transloadit.com/docs/authentication
+    duration: 1800 # 30 minute validity period for signed upload forms
+
+  templates:
+    # template identified by template_id
+    s3_store: 'S3_STORE_TEMPLATE_ID'
+
+    # template defined inline
+    image_resize:
+      steps:
+        resize:
+          robot : '/image/resize'
+          width : 320
+          height: 200
+
+production:
+  # the jquery_sdk version you want to use, read up on it here:
+  # https://transloadit.com/blog/2013/02/transloadit-javascript-plugin-and-jquery-1-9
+  # defaults to latest
+  # use "v1.0.0" if you need IE6 support (using jQuery < 1.9)
+  jquery_sdk_version: 'latest'
+  auth:
+    key     : '9683a430947d11e4aabfb1dea4e1a9a8'
+    secret  : '38aef0cfaa76d60dd3cbac6c48162bf7dd8674bb' # this is optional, but highly recommended, https://transloadit.com/docs/authentication
+    duration: 1800 # 30 minute validity period for signed upload forms
+
+  templates:
+    # template identified by template_id
+    s3_store: '9683a430947d11e4aabfb1dea4e1a9a8'
+
+    # template defined inline
+    image_resize:
+      steps:
+        resize:
+          robot : '/image/resize'
+          width : 320
+          height: 200
