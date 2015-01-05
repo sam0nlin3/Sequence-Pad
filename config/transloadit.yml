@@ -28,13 +28,13 @@ production:
   # use "v1.0.0" if you need IE6 support (using jQuery < 1.9)
   jquery_sdk_version: 'latest'
   auth:
-    key     : 'YOUR_KEY'
-    secret  : 'YOUR_SECRET' # this is optional, but highly recommended, https://transloadit.com/docs/authentication
+    key     : '9683a430947d11e4aabfb1dea4e1a9a8'
+    secret  : '38aef0cfaa76d60dd3cbac6c48162bf7dd8674bb' # this is optional, but highly recommended, https://transloadit.com/docs/authentication
     duration: 1800 # 30 minute validity period for signed upload forms
 
   templates:
     # template identified by template_id
-    s3_store: 'S3_STORE_TEMPLATE_ID'
+    s3_store: '9683a430947d11e4aabfb1dea4e1a9a8'
 
     # template defined inline
     image_resize:
