@@ -7,6 +7,7 @@ class UsersController < ApplicationController
 			render json: @user
 		else
 			render json: {error: "username or password must match."}
+
 		end 
 	end
 	
