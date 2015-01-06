@@ -5,8 +5,8 @@ class UsersController < ApplicationController
 		if @user.save 
 			session[:current_user] = @user.id
 			render json: @user
-		# else
-		# 	render json: {error: "username or password must match."}
+		else
+			render json: {error: "username or password must match."}
 		end 
 	end
 	

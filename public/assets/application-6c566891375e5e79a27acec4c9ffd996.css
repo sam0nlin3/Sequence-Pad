@@ -1,0 +1,520 @@
+/* line 1, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonColorDiv {
+  height: 100vh;
+  width: 70px;
+  display: block;
+  opacity: .7;
+  float: right;
+  position: aboslute;
+  top: 0px;
+}
+/* line 10, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonColorDiv button {
+  width: 70px;
+  height: 16.6%;
+  border: none;
+  margin-right: 20px;
+}
+/* line 18, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonColorDiv button.color#blue {
+  background-color: #196D85;
+}
+/* line 20, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonColorDiv button.color#blue:hover {
+  background-color: #5ADBFF;
+}
+/* line 23, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonColorDiv button.color#blue:active {
+  background-color: #5ADBFF;
+}
+/* line 28, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonColorDiv button.color#yellow {
+  background-color: #F1BF28;
+}
+/* line 30, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonColorDiv button.color#yellow:hover {
+  background-color: #FFE468;
+}
+/* line 35, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonColorDiv button.color#green {
+  background-color: #166C3F;
+}
+/* line 37, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonColorDiv button.color#green:hover {
+  background-color: #4FDE95;
+}
+/* line 42, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonColorDiv button.color#purple {
+  background-color: #4B177E;
+}
+/* line 44, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonColorDiv button.color#purple:hover {
+  background-color: #972EFE;
+}
+/* line 49, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonColorDiv button.color#red {
+  background-color: #7F3649;
+}
+/* line 51, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonColorDiv button.color#red:hover {
+  background-color: #FF81A1;
+}
+/* line 56, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonColorDiv button.color#brown {
+  background-color: #99412E;
+}
+/* line 58, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonColorDiv button.color#brown:hover {
+  background-color: #FF8168;
+}
+
+/* line 66, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonControlsDiv {
+  height: 100vh;
+  width: 70px;
+  display: block;
+  opacity: .7;
+  float: left;
+}
+/* line 73, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonControlsDiv button {
+  width: 100%;
+  height: 33.33%;
+  border: none;
+}
+/* line 78, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonControlsDiv button.play {
+  background-image: url("/assets/play_icon.png");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: black;
+}
+/* line 84, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonControlsDiv button.play:hover {
+  background-color: #363636;
+}
+/* line 89, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonControlsDiv button.pause {
+  background-image: url("/assets/pause-icon.png");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #555555;
+}
+/* line 95, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonControlsDiv button.pause:hover {
+  background-color: #7D7D7D;
+}
+/* line 100, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonControlsDiv button.clear {
+  background-image: url("/assets/clear-icon.png");
+  background-size: 100%;
+  height: 23.3%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #959595;
+}
+/* line 107, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonControlsDiv button.clear:hover {
+  background-color: #B7B7B7;
+}
+/* line 111, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonControlsDiv button.background {
+  height: 10%;
+  background-color: #D7D7D7;
+}
+/* line 114, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonControlsDiv button.background:hover {
+  background-color: #EBEBEB;
+}
+/* line 1, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_cells.scss */
+.mainContainer {
+  width: 900px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+/* line 5, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_cells.scss */
+.mainContainer .cellsContainer {
+  background-color: transparent;
+}
+/* line 7, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_cells.scss */
+.mainContainer .cellsContainer .cell {
+  background-color: dimgray;
+  opacity: .8;
+  margin: 3px;
+  border-radius: 3px;
+  width: 50px;
+  height: 37.5px;
+  float: left;
+  display: inline-block;
+}
+/* line 1, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_header.scss */
+header {
+  color: white;
+  margin: 20px;
+  background-color: black;
+}
+/* line 6, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_header.scss */
+header h1 {
+  display: inline-block;
+  font-family: Ubuntu;
+  font-size: 36px;
+  padding: 6px;
+}
+/* line 13, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_header.scss */
+header .menu {
+  font-family: Ubuntu;
+  padding: 8px;
+}
+/* line 16, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_header.scss */
+header .menu a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+}
+/* line 21, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_header.scss */
+header .menu h2 {
+  display: inline-block;
+  font-size: 20px;
+  padding-left: 8px;
+}
+/* line 1, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_modal.scss */
+.modals {
+  opacity: 0;
+  z-index: -3;
+  position: absolute;
+  left: 200px;
+  top: 200px;
+  font-family: Ubuntu;
+  font-size: 20px;
+}
+/* line 9, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_modal.scss */
+.modals .logIn {
+  padding: 20px;
+  width: 500px;
+  height: 200px;
+  background-color: black;
+}
+/* line 14, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_modal.scss */
+.modals .logIn input {
+  display: block;
+  font-family: Ubuntu;
+  font-size: 20px;
+  border: 0;
+  border-bottom: 2px dotted;
+  background-color: transparent;
+  color: white;
+}
+/* line 24, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_modal.scss */
+.modals .register {
+  padding: 20px;
+  width: 700px;
+  height: 200px;
+  background-color: black;
+}
+/* line 29, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_modal.scss */
+.modals .register input {
+  display: block;
+  font-family: Ubuntu;
+  font-size: 20px;
+  border: 0;
+  border-bottom: 2px dotted;
+  background-color: transparent;
+  color: white;
+}
+/* line 40, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_modal.scss */
+.modals .userView {
+  width: 200px;
+  height: 400px;
+  background-color: red;
+}
+/* line 45, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_modal.scss */
+.modals #exit {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background-image: url("/assets/exit_icon.png");
+  background-size: 100%;
+  background-position: center;
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 7, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_reset.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 17, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_reset.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 20, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 23, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 30, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_reset.scss */
+blockquote:before, blockquote:after {
+  content: '';
+  content: none;
+}
+
+/* line 35, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_reset.scss */
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 39, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400);
+/* line 7, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_reset.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 17, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_reset.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 20, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 23, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 30, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_reset.scss */
+blockquote:before, blockquote:after {
+  content: '';
+  content: none;
+}
+
+/* line 35, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_reset.scss */
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 39, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 1, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonColorDiv {
+  height: 100vh;
+  width: 70px;
+  display: block;
+  opacity: .7;
+  float: right;
+  position: aboslute;
+  top: 0px;
+}
+/* line 10, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonColorDiv button {
+  width: 70px;
+  height: 16.6%;
+  border: none;
+  margin-right: 20px;
+}
+/* line 18, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonColorDiv button.color#blue {
+  background-color: #196D85;
+}
+/* line 20, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonColorDiv button.color#blue:hover {
+  background-color: #5ADBFF;
+}
+/* line 23, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonColorDiv button.color#blue:active {
+  background-color: #5ADBFF;
+}
+/* line 28, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonColorDiv button.color#yellow {
+  background-color: #F1BF28;
+}
+/* line 30, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonColorDiv button.color#yellow:hover {
+  background-color: #FFE468;
+}
+/* line 35, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonColorDiv button.color#green {
+  background-color: #166C3F;
+}
+/* line 37, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonColorDiv button.color#green:hover {
+  background-color: #4FDE95;
+}
+/* line 42, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonColorDiv button.color#purple {
+  background-color: #4B177E;
+}
+/* line 44, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonColorDiv button.color#purple:hover {
+  background-color: #972EFE;
+}
+/* line 49, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonColorDiv button.color#red {
+  background-color: #7F3649;
+}
+/* line 51, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonColorDiv button.color#red:hover {
+  background-color: #FF81A1;
+}
+/* line 56, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonColorDiv button.color#brown {
+  background-color: #99412E;
+}
+/* line 58, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonColorDiv button.color#brown:hover {
+  background-color: #FF8168;
+}
+
+/* line 66, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonControlsDiv {
+  height: 100vh;
+  width: 70px;
+  display: block;
+  opacity: .7;
+  float: left;
+}
+/* line 73, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonControlsDiv button {
+  width: 100%;
+  height: 33.33%;
+  border: none;
+}
+/* line 78, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonControlsDiv button.play {
+  background-image: url("/assets/play_icon.png");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: black;
+}
+/* line 84, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonControlsDiv button.play:hover {
+  background-color: #363636;
+}
+/* line 89, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonControlsDiv button.pause {
+  background-image: url("/assets/pause-icon.png");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #555555;
+}
+/* line 95, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonControlsDiv button.pause:hover {
+  background-color: #7D7D7D;
+}
+/* line 100, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonControlsDiv button.clear {
+  background-image: url("/assets/clear-icon.png");
+  background-size: 100%;
+  height: 23.3%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #959595;
+}
+/* line 107, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonControlsDiv button.clear:hover {
+  background-color: #B7B7B7;
+}
+/* line 111, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonControlsDiv button.background {
+  height: 10%;
+  background-color: #D7D7D7;
+}
+/* line 114, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_buttons.scss */
+.buttonControlsDiv button.background:hover {
+  background-color: #EBEBEB;
+}
+
+/* line 1, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_cells.scss */
+.mainContainer {
+  width: 900px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+/* line 5, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_cells.scss */
+.mainContainer .cellsContainer {
+  background-color: transparent;
+}
+/* line 7, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/_cells.scss */
+.mainContainer .cellsContainer .cell {
+  background-color: dimgray;
+  opacity: .8;
+  margin: 3px;
+  border-radius: 3px;
+  width: 50px;
+  height: 37.5px;
+  float: left;
+  display: inline-block;
+}
+
+/* line 23, /Users/sammatthews9/Repos/JavaScript-Motion-Activated-Midi/app/assets/stylesheets/application.scss */
+body {
+  background-color: black;
+}
