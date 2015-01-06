@@ -1,11 +1,11 @@
 function modalReady() {
-	
+	 
 	generateLogin();
   generateRegistration();
 
-	modal1 = ($(document.body)).find('.logInModal')
-	modal2 = ($(document.body)).find('.registerModal')
-	modal3 = ($(document.body)).find('.userViewModal')
+	modal1 = ($(document.body)).find('.logInModal');
+	modal2 = ($(document.body)).find('.registerModal');
+	modal3 = ($(document.body)).find('.userViewModal');
 	
 	logInForm = $('.logIn');
 	logInForm.hide();
@@ -16,6 +16,18 @@ function modalReady() {
 	userView = $('.userView');
 	userView.hide();
 
+	menuShow = false; // set global var to prevent re-hiding menu on mouseover event
+	menu = $('.menuDiv');
+	$('.menuDiv').css({'height': '0', 'opacity': '0' });
+}
+
+function showMenu() {
+	if (menuShow === false){
+		menu.hide();
+		$('.menuDiv').css({ 'height': 'auto', 'opacity': '1' });
+		menu.slideDown('700', "swing");
+		menuShow = true;
+	} 	
 }
 
 function showLogIn() {
@@ -33,14 +45,14 @@ function showRegister() {
 	hideModal1();
 	hideModal3();
  	modal2.empty();
- 	modal2.append(registerForm);
  	registerForm.show();
+ 	modal2.append(registerForm);
  	modal2.show();
 	$('.modals').css({ 'z-index': '3', 'opacity': '.8' });
- }
+}
 
- function showUserView() {
-	console.log(this)
+function showUserView() {
+	console.log("hi")
 	hideModal1();
 	hideModal2();
  	modal3.empty();
@@ -48,12 +60,13 @@ function showRegister() {
  	userView.show();
  	modal3.show();
 	$('.modals').css({ 'z-index': '3', 'opacity': '.8' });
- }
+}
 
 function hideModal1() {
 	modal1.hide();
 	$('.logInModal').css({ 'z-index': '3', 'opacity': '0' });
 }
+
 
 function hideModal2() {
 	modal2.hide();
@@ -95,9 +108,10 @@ function generateRegistration() {
 
 	var exit = $('<div>').attr('id', 'exit');
 
-	var regName = $('<input>').attr('id', 'regName')
+	var regName = $('<input>').attr('id', 'username')
 														.attr('type', 'text')
 														.val('username');
+
 	var regPW = $('<input>').attr('id', 'regPW')
 													.attr('type', 'password')
 
@@ -105,7 +119,7 @@ function generateRegistration() {
 														 .attr('type', 'password')
 
 	var register = $('<button>').attr('id', 'register')
-														.text('register');									
+														  .text('register');									
 
 	regDiv.append(regName)
 				.append(regPW)
@@ -114,18 +128,27 @@ function generateRegistration() {
 				.append(exit);
 }
 
-function generateUserView() {
-	var userViewDiv = $('.userView')
+function fetchUserForUserView(){
+	console.log("test")
+	$.get('/get_current_user').done(generateUserView);
+};	
 
-	var exit = $('<div>').attr('id', 'exit');
+function generateUserView(data) {
+	console.log(data)
+	if ($('#userName').length === 0 ){
+		var userViewDiv = $('.userView');
 
-	var userName = $('<div>').attr('id', 'userName')
-														.text('username');
-	var songs = $('<div>').attr('id', 'songs')
-												.text('song1')																					
-	userViewDiv.append(userName)
-				.append(songs)
-				.append(exit);
+		var exit = $('<div>').attr('id', 'exit');
+
+		var userName = $('<div>').attr('id', 'userName')
+															.text(data.username);
+		var songs = $('<div>').attr('id', 'songs')
+													.text('songs:')																					
+		userViewDiv.append(userName)
+					.append(songs)
+					.append(exit);
+	}		
+	showUserView();	
 }
 
 

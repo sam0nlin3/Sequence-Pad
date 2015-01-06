@@ -282,8 +282,6 @@ function clearBoard(){
 	};
 }
 
-
-// need to add functionality to change header/menu text color
 function changeBackground(){
 	if ( $(document.body).css('background-color' === 'rgb(0,0,0)' ) ) {
 		$(document.body).css('background-color', 'rgb(255,255,255)')
