@@ -30,7 +30,7 @@ function newRegister(){
   $.ajax({ 
       type: "POST",
       url: '/new_user',
-      data: { "user" :{ username: $('#regName').val(), password: $('#regPW').val(), password_confirmation: $('#regPWcon').val()  }
+      data: {"user" :{ username: $('#regName').val(), password: $('#regPW').val(), password_confirmation: $('#regPWcon').val()  }
   }}).done(renderMenu);
 }
 

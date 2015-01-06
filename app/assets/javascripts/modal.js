@@ -108,7 +108,7 @@ function generateRegistration() {
 
 	var exit = $('<div>').attr('id', 'exit');
 
-	var regName = $('<input>').attr('id', 'username')
+	var regName = $('<input>').attr('id', 'regName')
 														.attr('type', 'text')
 														.val('username');
 
