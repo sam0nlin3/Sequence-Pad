@@ -67,7 +67,6 @@ function displayCells(data){
 }
 
 function renderCells(data){
-
 		var purple_audio = $('<audio>').attr('id', 'purple_audio')
 		var purple_source = $('<source>').attr('src', data.purple_note).attr('type', 'audio/mpeg');
 

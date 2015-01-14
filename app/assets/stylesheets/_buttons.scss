@@ -73,7 +73,7 @@
 		border: none;
 
 		&.play {
-			background-image: url('/assets/play_icon.png');
+			background-image: url('https://s3.amazonaws.com/project3sequencer/images/play_icon.png');
 			background-size: 100%;
 			background-position: center; 
 			background-repeat: no-repeat;
@@ -84,7 +84,7 @@
 		}
 
 		&.pause {
-			background-image: url('/assets/pause-icon.png');
+			background-image: url('https://s3.amazonaws.com/project3sequencer/images/pause-icon.png');
 			background-size: 100%;
 			background-position: center; 
 			background-repeat: no-repeat;
@@ -95,7 +95,7 @@
 		}
 
 		&.clear {
-			background-image: url('/assets/clear-icon.png');
+			background-image: url('https://s3.amazonaws.com/project3sequencer/images/clear-icon.png');
 			background-size: 100%;
 			background-position: center; 
 			background-repeat: no-repeat;

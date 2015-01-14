@@ -78,8 +78,10 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
+
+### I NEED TO UNCOMMENT THE USERNAME & PASSWORD
+production: 
   <<: *default
   database: motion_activated_midi_production
-  username: motion_activated_midi
-  password: <%= ENV['MOTION_ACTIVATED_MIDI_DATABASE_PASSWORD'] %>
+  # username: motion_activated_midi
+  # password: <%= ENV['MOTION_ACTIVATED_MIDI_DATABASE_PASSWORD'] %>

@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
     @user = User.new(params[:user_params])
     response = { cells: @cells }
     respond_to do |format|      
-      format.json { render json: response }
+      format.json { render json: response } 
       format.html { render layout: 'application', text: '' }
     end  
   end
