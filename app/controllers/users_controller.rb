@@ -1,12 +1,13 @@
 class UsersController < ApplicationController
 
 	def create
-		@user = User.new(user_params)
+		binding.pry
+		@user = User.new(params[:user])
 		if @user.save 
 			session[:current_user] = @user.id
 			render json: @user
-		# else
-		# 	render json: {error: "username or password must match."}
+		else
+			render json: {error: "username or password must match."}
 		end 
 	end
 	

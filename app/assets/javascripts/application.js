@@ -40,15 +40,52 @@ var active_blue = '#5ADBFF';
 var active_yellow = '#FFE468';
 var active_purple = '#972EFE';
 var active_green = '#4FDE95';
-var active_red = '#FF81A1'
-var active_brown = '#FF8168'
-
-
+var active_red = '#FF81A1';
+var active_brown = '#FF8168';
 
 var Board = function(){
 	this.currentColor = "purple";
 	this.playStatus = false;
 } 
+
+// function resetButtonColors(button){
+// 	console.log($(button).css("background-color"))
+
+// 	if ($(button).attr("id") === 'blue' ){
+// 		$(button).css("background-color", blue);
+// 	} else if ($(button).attr("id") === 'yellow' ){
+// 		$(button).css("background-color", yellow);
+// 	} else if ($(button).attr("id") === 'purple' ){
+// 		$(button).css("background-color", purple);
+// 	} else if ($(button).attr("id") === 'green' ){
+// 		$(button).css("background-color", green);
+// 	} else if ($(button).attr("id") === 'red' ){
+// 		$(button).css("background-color", red);
+// 	} else if ($(button).attr("id") === 'brown' ){
+// 		$(button).css("background-color", brown);
+// 	} 
+// }
+
+function activateButton(button, color){
+	console.log(button);	
+	console.log(color);
+	// resetButtonColors(button);
+	if (color === "blue"){
+		$(button).css("background-color", active_blue);
+	} else if (color === "yellow"){
+		$(button).css("background-color", active_yellow);
+	} else if (color === "purple"){
+		$(button).css("background-color", active_purple);
+	} else if (color === "purple"){
+		$(button).css("background-color", active_purple);
+	} else if (color === "green"){
+		$(button).css("background-color", active_green);
+	} else if (color === "red"){
+		$(button).css("background-color", active_red);
+	} else if (color === "brown"){
+		$(button).css("background-color", active_brown);
+	}  
+}	
 
 function fetchCells() {
 	console.log('loaded')
@@ -58,6 +95,7 @@ function fetchCells() {
 function changeCurrentColor() {
 	var color = this.id;
 	board.currentColor = color;
+	activateButton(this, color);
 	console.log(board.currentColor);
 }
 
@@ -140,7 +178,7 @@ var resetColors = function(){
 	var cellDivs = ($('div.cell'))
 	for (var i = 0; i < cellDivs.length; i++) {
 		if (cellDivs[i].active === "blue" ) {
-		$(cellDivs[i]).css('background-color', blue)
+			$(cellDivs[i]).css('background-color', blue)
 		} else if ( cellDivs[i].active === "purple") {
 			$(cellDivs[i]).css('background-color', purple)
 		} else if ( cellDivs[i].active === "yellow") {

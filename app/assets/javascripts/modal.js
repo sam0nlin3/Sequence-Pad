@@ -108,14 +108,14 @@ function generateRegistration() {
 
 	var exit = $('<div>').attr('id', 'exit');
 
-	var regName = $('<input>').attr('id', 'username')
+	var regName = $('<input>').attr('id', 'usernameReg')
 														.attr('type', 'text')
 														.val('username');
 
-	var regPW = $('<input>').attr('id', 'regPW')
+	var regPW = $('<input>').attr('id', 'regPWReg')
 													.attr('type', 'password')
 
-	var regPWcon = $('<input>').attr('id', 'regPWcon')
+	var regPWcon = $('<input>').attr('id', 'regPWconReg')
 														 .attr('type', 'password')
 
 	var register = $('<button>').attr('id', 'register')
