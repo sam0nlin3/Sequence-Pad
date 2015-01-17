@@ -6,7 +6,9 @@ class SessionsController < ApplicationController
       session[:current_user] = @user.id  
       render json: @user
     else
-      render json: {error: "Username or password is incorrect."}
+      # If we render the json error, and the user password is incorrect, the login option goes away.
+      # render json: {error: "Username or password is incorrect."}
+      current_user = nil
     end  
   end
 
