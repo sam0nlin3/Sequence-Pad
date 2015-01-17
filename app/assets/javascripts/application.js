@@ -24,8 +24,10 @@ $(document).ready(function() {
 	$(document.body).on('click', 'button.play', looper);
 	$(document.body).on('click', 'button.pause', pauseLoop);
 	$(document.body).on('click', 'button.clear', clearBoard);
-	$(document.body).on('click', 'button.save', saveSong);
+	$(document.body).on('click', 'button.save', fetchUserForSaveSongForm);
+	$('.modals').on('click', 'button#submitSong', saveSong)
 	$(document.body).on('click', '.cell', activateCell);
+
 	board = new Board();
 	modalReady();
 })
@@ -300,7 +302,15 @@ function saveSong(){
 	for (var i = 0; i < cellDivs.length; i++){
 		activeStatusArray.push(cellDivs[i].getAttribute('active'))
 	}
-	console.log(activeStatusArray)
-
+	
+	var activeStatusString = activeStatusArray.join("+")
+  var userId = $('h6').attr('userid');
+  $.ajax({ 
+      type: "POST",
+      url: '/users/' + userId +'/songs',
+      data: {"song" :{ 
+      	title: $('#songTitle').val(), 
+      	song_string: activeStatusString, 
+      	user_id: userId }
+  }}).done(renderMenu);
 }
-
