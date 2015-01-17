@@ -37,7 +37,6 @@ function newRegister(){
 function renderMenu(data){ 
   ($('.menuDiv')).empty();
   $('<h1>').text('sequence').prependTo($('.menuDiv'));
-  
   if ( data && data !== "null" ) {
     var loggedInUserName = $('<h2>').text(data.username).attr('id', 'userViewLink');
     var logOutText = $('<h2>').addClass("logOut").text('log out')

@@ -31,8 +31,9 @@ ActiveRecord::Schema.define(version: 20141216144133) do
   end
 
   create_table "songs", force: true do |t|
-    t.string   "name"
+    t.string   "title"
     t.integer  "user_id"
+    t.text   "song_string"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
