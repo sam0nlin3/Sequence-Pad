@@ -24,6 +24,7 @@ $(document).ready(function() {
 	$(document.body).on('click', 'button.play', looper);
 	$(document.body).on('click', 'button.pause', pauseLoop);
 	$(document.body).on('click', 'button.clear', clearBoard);
+	$(document.body).on('click', 'button.save', saveSong);
 	$(document.body).on('click', '.cell', activateCell);
 	board = new Board();
 	modalReady();
@@ -58,6 +59,8 @@ function fetchCells() {
 function changeCurrentColor() {
 	var color = this.id;
 	board.currentColor = color;
+	// debugger;
+	// $(this).css('background-color', 'white');
 	console.log(board.currentColor);
 }
 
@@ -109,26 +112,28 @@ function renderCells(data){
 }
 
 function activateCell() {
-	if (this.active === board.currentColor) {
-		this.active = "none";
+	// debugger; 
+	if (this.getAttribute('active') === board.currentColor) {
+		this.setAttribute('active', 'none');
 		$(this).css("background-color", "dimgray");
-	} else if (this.active = board.currentColor) {
-		if (this.active === "blue") {
+	} else {
+		this.setAttribute('active', board.currentColor)
+		if (this.getAttribute('active') === 'blue') {
 			$(this).css("background-color", blue);
 			// $(this).find('#blue_audio')[0].play();
-		} else if (this.active === "purple") {
+		} else if (this.getAttribute('active') === "purple") {
 			$(this).css("background-color", purple);
 			// $(this).find('#purple_audio')[0].play();
-		} else if (this.active === "yellow") {
+		} else if (this.getAttribute('active') === "yellow") {
 			$(this).css("background-color", yellow);	
 			// $(this).find('#yellow_audio')[0].play();
-		} else if (this.active === "green") {
+		} else if (this.getAttribute('active') === "green") {
 			$(this).css("background-color", green);
 			// $(this).find('#green_audio')[0].play();		
-		} else if (this.active === "red") {
+		} else if (this.getAttribute('active') === "red") {
 			$(this).css("background-color", red);
 			// $(this).find('#red_audio')[0].play();
-		}	else if (this.active === "brown") {
+		}	else if (this.getAttribute('active') === "brown") {
 			$(this).css("background-color", brown)
 			// $(this).find('#brown_audio')[0].play();
 		};
@@ -138,50 +143,49 @@ function activateCell() {
 var resetColors = function(){
 	var cellDivs = ($('div.cell'))
 	for (var i = 0; i < cellDivs.length; i++) {
-		if (cellDivs[i].active === "blue" ) {
-		$(cellDivs[i]).css('background-color', blue)
-		} else if ( cellDivs[i].active === "purple") {
+		if (cellDivs[i].getAttribute('active') === "blue" ) {
+			$(cellDivs[i]).css('background-color', blue)
+		} else if ( cellDivs[i].getAttribute('active') === "purple") {
 			$(cellDivs[i]).css('background-color', purple)
-		} else if ( cellDivs[i].active === "yellow") {
+		} else if ( cellDivs[i].getAttribute('active') === "yellow") {
 			$(cellDivs[i]).css('background-color', yellow)
-		} else if ( cellDivs[i].active === "green") {
+		} else if ( cellDivs[i].getAttribute('active') === "green") {
 			$(cellDivs[i]).css('background-color', green)
-		} else if ( cellDivs[i].active === "red") {
+		} else if ( cellDivs[i].getAttribute('active') === "red") {
 			$(cellDivs[i]).css('background-color', red)
-		} else if ( cellDivs[i].active === "brown") {
+		} else if ( cellDivs[i].getAttribute('active') === "brown") {
 			$(cellDivs[i]).css('background-color', brown)
 		}
 	};				
 };
 
 var cellLoop = function(column){
+	for (var i = 0; i < 12; i++) {
+		if (column[i].getAttribute('active') === "blue" ) {
+			$(column[i]).find('#blue_audio')[0].play();
+			$(column[i]).css('background-color', active_blue)
 
-		for (var i = 0; i < 12; i++) {
-			if (column[i].active === "blue" ) {
-				$(column[i]).find('#blue_audio')[0].play();
-				$(column[i]).css('background-color', active_blue)
+		} else if ( column[i].getAttribute('active') === "purple") {
+			$(column[i]).find('#purple_audio')[0].play();
+			$(column[i]).css('background-color', active_purple)
 
-			} else if ( column[i].active === "purple") {
-				$(column[i]).find('#purple_audio')[0].play();
-				$(column[i]).css('background-color', active_purple)
+		} else if ( column[i].getAttribute('active') === "yellow") {
+			$(column[i]).find('#yellow_audio')[0].play();
+			$(column[i]).css('background-color', active_yellow)
 
-			} else if ( column[i].active === "yellow") {
-				$(column[i]).find('#yellow_audio')[0].play();
-				$(column[i]).css('background-color', active_yellow)
+		} else if ( column[i].getAttribute('active') === "green") {
+			$(column[i]).find('#green_audio')[0].play();
+			$(column[i]).css('background-color', active_green)
 
-			} else if ( column[i].active === "green") {
-				$(column[i]).find('#green_audio')[0].play();
-				$(column[i]).css('background-color', active_green)
+		} else if ( column[i].getAttribute('active') === "red") {
+			$(column[i]).find('#red_audio')[0].play();
+			$(column[i]).css('background-color', active_red)
 
-			} else if ( column[i].active === "red") {
-				$(column[i]).find('#red_audio')[0].play();
-				$(column[i]).css('background-color', active_red)
-
-			} else if ( column[i].active === "brown") {
-				$(column[i]).find('#brown_audio')[0].play();
-				$(column[i]).css('background-color', active_brown)
-			};
-		};	
+		} else if ( column[i].getAttribute('active') === "brown") {
+			$(column[i]).find('#brown_audio')[0].play();
+			$(column[i]).css('background-color', active_brown)
+		};
+	};	
 };
 
 function columnLoop() {
@@ -276,7 +280,7 @@ function clearBoard(){
 	pauseLoop()
 	var cellDivs = ($('div.cell'))
 	for (var i = 0; i < cellDivs.length; i++) {
-		cellDivs[i].active = 'none';
+		cellDivs[i].setAttribute('active', 'none');
 		$(cellDivs[i]).css("background-color", 'dimgray');
 	};
 }
@@ -288,4 +292,15 @@ function changeBackground(){
 		$(document.body).css('background-color', 'rgb(0,0,0)' )
 	}
 }	
+
+function saveSong(){
+	console.log('saving...')
+	var activeStatusArray = [];
+	var cellDivs = ($('div.cell'))
+	for (var i = 0; i < cellDivs.length; i++){
+		activeStatusArray.push(cellDivs[i].getAttribute('active'))
+	}
+	console.log(activeStatusArray)
+
+}
 
