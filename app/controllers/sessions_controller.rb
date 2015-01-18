@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
       session[:current_user] = @user.id  
       render json: response
     else
-      render json: {error: "Username or password is incorrect.", current_user: nil}
+      render json: {error: "Username or password is incorrect." }
       current_user = nil
 
     end  

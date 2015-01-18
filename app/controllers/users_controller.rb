@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 			render json: { current_user: @user }
 		else
 			current_user = nil
-			format.json { render :json => { render json: @user.errors }
+			# format.json { render :json => { render json: @user.errors }
 		end 
 	end
 
