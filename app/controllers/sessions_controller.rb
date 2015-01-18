@@ -8,6 +8,8 @@ class SessionsController < ApplicationController
       render json: response
     else
       render json: {error: "Username or password is incorrect.", current_user: nil}
+      current_user = nil
+
     end  
   end
 
