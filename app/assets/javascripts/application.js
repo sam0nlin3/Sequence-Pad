@@ -58,6 +58,11 @@ function fetchCells() {
 	$.get('/').done(displayCells);
 }
 
+// function fetchCellsforRenderSaved(userId, songId) {
+// 	console.log('fetching cell data to re-render cells from saved')
+// 	$.get('/users/'+userId+'/songs'+songId).done(renderSavedSong);
+// }
+
 function changeCurrentColor() {
 	var color = this.id;
 	board.currentColor = color;
@@ -145,6 +150,7 @@ function activateCell() {
 var resetColors = function(){
 	var cellDivs = ($('div.cell'))
 	for (var i = 0; i < cellDivs.length; i++) {
+		$(cellDivs[i]).css('background-color', 'dimgray')
 		if (cellDivs[i].getAttribute('active') === "blue" ) {
 			$(cellDivs[i]).css('background-color', blue)
 		} else if ( cellDivs[i].getAttribute('active') === "purple") {
@@ -272,10 +278,12 @@ var looper = function(){
 }	
 	
 function pauseLoop() {
-	board.playStatus = false;
-	clearInterval(playInterval);
-	colorResetInterval = setInterval(resetColors, 300);
-	clearInterval(colorResetInterval);
+	if (board.playStatus === true){ 
+		board.playStatus = false;
+		clearInterval(playInterval);
+		colorResetInterval = setInterval(resetColors, 300);
+		clearInterval(colorResetInterval);
+	}	
 }
 
 function clearBoard(){
@@ -302,9 +310,8 @@ function saveSong(){
 	for (var i = 0; i < cellDivs.length; i++){
 		activeStatusArray.push(cellDivs[i].getAttribute('active'))
 	}
-	
-	var activeStatusString = activeStatusArray.join("+")
-  var userId = $('h6').attr('userid');
+	var activeStatusString = activeStatusArray.join(" ")
+  var userId = $('h3').attr('userId');
   $.ajax({ 
       type: "POST",
       url: '/users/' + userId +'/songs',
@@ -312,5 +319,26 @@ function saveSong(){
       	title: $('#songTitle').val(), 
       	song_string: activeStatusString, 
       	user_id: userId }
-  }}).done(renderMenu);
+  }}).done(hideModals);
 }
+
+function activateSavedSong(){
+	var songString = (this.getAttribute('songstring'))
+	var songArray = songString.split(" ")
+	var cellDivs = ($('div.cell'))
+	
+	for (var i = 0; i < cellDivs.length; i++) {
+		cellDivs[i].setAttribute('active', songArray[i])
+	};
+	resetColors();
+	hideModals();
+}
+
+
+
+
+
+
+
+
+
