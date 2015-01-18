@@ -4,10 +4,10 @@ class UsersController < ApplicationController
 		@user = User.new(user_params)
 		if @user.save 
 			session[:current_user] = @user.id
-			render json: @user
+			render json: { current_user: @user }
 		else
 			current_user = nil
-			# render json: {error: "username or password must match."}
+			format.json { render :json => { render json: @user.errors }
 		end 
 	end
 

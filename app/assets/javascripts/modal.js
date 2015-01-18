@@ -6,7 +6,8 @@ function modalReady() {
 	modal1 = ($(document.body)).find('.logInModal');
 	modal2 = ($(document.body)).find('.registerModal');
 	modal3 = ($(document.body)).find('.userViewModal');
-	modal4 = ($(document.body)).find('.saveSongModal')
+	modal4 = ($(document.body)).find('.saveSongModal');
+	$('.modals').on('click', '.songObject', activateSavedSong)
 	
 	logInForm = $('.logIn');
 	logInForm.hide();
@@ -74,8 +75,9 @@ function showSaveSongForm(){
 	hideModal1();
 	hideModal2();
 	hideModal3();
-	saveSong.show();
+	modal4.empty();
 	modal4.append(saveSong);
+	saveSong.show();
 	modal4.show();
 	$('.modals').css({ 'z-index': '5', 'opacity': '.8' })
 }
@@ -166,15 +168,22 @@ function generateUserView(data) {
 		var exit = $('<div>').attr('id', 'exit');
 
 		var userName = $('<div>').attr('id', 'userName')
-															.text(data.username);
-		var songs = $('<div>').attr('id', 'songs')
-													.text('songs: ' + data.songs)																					
+															.text(data.current_user.username + "'s songs:");
+		var songsContainer = $('<div>').addClass('songsContainer');
+															
+		for (var i = 0; i < data.songs.length; i++) {
+					$('<div>').attr('id', i+1)
+										.attr('songString', data.songs[i].song_string)
+										.text(data.songs[i].title)
+										.addClass('songObject')
+										.appendTo(songsContainer)
+		};
 		userViewDiv.append(userName)
-					.append(songs)
-					.append(exit);
-	}		
+							 .append(songsContainer)
+					     .append(exit);
+	};		
 	showUserView();	
-}
+};
 
 function fetchUserForSaveSongForm(){
 	console.log("fetching current user data")
@@ -183,19 +192,22 @@ function fetchUserForSaveSongForm(){
 
 function generateSaveForm(data) {
 	console.log(data)
-	var formDiv = $('.saveSongForm');
-	var user = $('<h6>').text(data.username).attr('userId', data.id);
-	var exit = $('<div>').attr('id', 'exit');
-	var songTitle = $('<input>').attr('id', 'songTitle')
-															.attr('type', 'text')
-															.val('Song Title');
-	var submitSong = $('<button>').attr('id', 'submitSong')
-																.text('save song');
-	formDiv.append(user)
-				 .append(songTitle)
-				 .append(exit)
-				 .append(submitSong);			 
-	showSaveSongForm();			 															
+	if ($('#songTitle').length === 0) {
+		var formDiv = $('.saveSongForm');
+		var user = $('<h3>').text(data.current_user.username)
+												.attr('userId', data.current_user.id);
+		var exit = $('<div>').attr('id', 'exit');
+		var songTitle = $('<input>').attr('id', 'songTitle')
+																.attr('type', 'text')
+																.val('Song Title');
+		var submitSong = $('<button>').attr('id', 'submitSong')
+																	.text('save song');
+		formDiv.append(user)
+					 .append(songTitle)
+					 .append(exit)
+					 .append(submitSong);			 
+	}	 															
+	showSaveSongForm();			
 };
 
 
