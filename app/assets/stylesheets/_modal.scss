@@ -49,13 +49,24 @@
   		border-bottom: 2px dotted;
 			background-color: transparent;
 			color: white;
-			}
+		}
 	}
 	.userView {
 		padding: 20px;
+		margin-top: 10px;
 		width: 700px;
-		height: 200px;	
-		background-color: black;
+		height: 200px;
+		background-color: rgb(0,0,20);
+		font-size: 30px;
+		overflow: scroll;
+		.songsContainer{
+			margin-left: 20px;
+			font-size: 20px;
+			.songObject{
+				margin-top: 10px;
+
+			}
+		}
 	}
 	#exit {
 		width: 60px;
