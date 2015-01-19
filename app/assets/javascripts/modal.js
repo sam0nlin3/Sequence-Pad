@@ -156,7 +156,7 @@ function generateRegistration() {
 }
 
 function fetchUserForUserView(){
-	console.log("test")
+	console.log("fetching user view data")
 	$.get('/get_current_user').done(generateUserView);
 };	
 
@@ -206,7 +206,7 @@ function generateSaveForm(data) {
 					 .append(songTitle)
 					 .append(exit)
 					 .append(submitSong);			 
-	}	 															
+	} 															
 	showSaveSongForm();			
 };
 
