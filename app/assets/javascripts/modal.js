@@ -115,16 +115,20 @@ function generateLogin(){
 	var logInDiv = $('.logIn');
 	
 	var exit = $('<div>').attr('id', 'exit');
+	var nameLabel = $("<label>").text('username:');	
 	var userName = $('<input>').attr('id', 'username')
-														 .attr('type', 'text')
-														 .val('username');
+														 .attr('type', 'text');
 	var password = $('<input>').attr('id', 'password')
 														 .attr('type', 'password')
 	var signIn = $('<button>').attr('id', 'signIn')
 														.text('sign in');
+	var pwLabel = $("<label>").text('password:');		
+	
+	password.appendTo(pwLabel);
+	userName.appendTo(nameLabel);
 
-	logInDiv.append(userName)
-					.append(password)
+	logInDiv.append(nameLabel)
+					.append(pwLabel)
 					.append(signIn)
 					.append(exit);
 }
@@ -135,22 +139,30 @@ function generateRegistration() {
 
 	var exit = $('<div>').attr('id', 'exit');
 
+	var nameLabel = $("<label>").text('username:');	
+
 	var regName = $('<input>').attr('id', 'regName')
-														.attr('type', 'text')
-														.val('username');
+														.attr('type', 'text');
+
+	var pwLabel = $("<label>").text('password:');
 
 	var regPW = $('<input>').attr('id', 'regPW')
-													.attr('type', 'password')
+													.attr('type', 'password');
+
+	var pwConLabel = $("<label>").text('password confirmation:');													
 
 	var regPWcon = $('<input>').attr('id', 'regPWcon')
 														 .attr('type', 'password')
 
 	var register = $('<button>').attr('id', 'register')
-														  .text('register');									
+														  .text('register');	
+	regPW.appendTo(pwLabel);	
+	regPWcon.appendTo(pwConLabel);												  
+	regName.appendTo(nameLabel)
 
-	regDiv.append(regName)
-				.append(regPW)
-				.append(regPWcon)
+	regDiv.append(nameLabel)
+				.append(pwLabel)
+				.append(pwConLabel)
 				.append(register)
 				.append(exit);
 }
