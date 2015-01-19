@@ -18,7 +18,9 @@ class ApplicationController < ActionController::Base
 
   def get_current_user
     @current_user = User.find(session[:current_user]) if session[:current_user]
-    render json: @current_user 
+    @songs =  Song.where( user_id: @current_user.id ) if session[:current_user]
+    response = { current_user: @current_user, songs: @songs }
+    render json: response 
   end  
 
   def authenticate

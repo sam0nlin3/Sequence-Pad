@@ -22,9 +22,20 @@ function newCurrentUser(){
   $.ajax({ 
       type: "POST",
       url: '/sessions',
-      data: { username: $('#username').val(), password: $('#password').val()  }
-  }).done(renderMenu);
+      data: { username: $('#username').val(), password: $('#password').val()},
+      success: function (data) {
+        renderMenu(data)
+      },
+      error: function (data) {
+        renderErrors(data.error())   
+      } 
+  });
 }
+
+function renderErrors(data){
+  debugger;
+  console.log(data)
+};
 
 function newRegister(){
   $.ajax({ 
@@ -36,20 +47,20 @@ function newRegister(){
 
 function renderMenu(data){ 
   ($('.menuDiv')).empty();
+  console.log(data)
   $('<h1>').text('sequence').prependTo($('.menuDiv'));
-  
-  if ( data && data !== "null" ) {
-    var loggedInUserName = $('<h2>').text(data.username).attr('id', 'userViewLink');
+  if ( data.current_user && data.current_user !== "null" ) {
+    var loggedInUserName = $('<h2>').text(data.current_user.username).attr('id', 'userViewLink');
     var logOutText = $('<h2>').addClass("logOut").text('log out')
     $('.menuDiv').append(loggedInUserName)
-              .append(logOutText);
+                 .append(logOutText);
   } else {
     var loginLink = $('<h2>').attr('id', 'loginLink').text(' log in ')
     var registerLink = $('<h2>').attr('id', 'registerLink').text('register')
     $('.menuDiv').append(loginLink)
-              .append(registerLink);  
+                 .append(registerLink);  
   }    
-hideModals();
+  hideModals();
 }
 
 

@@ -4,21 +4,29 @@ class UsersController < ApplicationController
 		@user = User.new(user_params)
 		if @user.save 
 			session[:current_user] = @user.id
-			render json: @user
+			render json: { current_user: @user }
 		else
-			render json: {error: "username or password must match."}
+			current_user = nil
+			# format.json { render :json => { render json: @user.errors }
 		end 
 	end
-	
-	def destroy
-		@user = User.find(params[:id])
-		@user.destroy
-		session[:current_user] = nil
-		redirect_to root_path
-	end
+
+	def save_song
+		@song = Song.new(song_params)
+		if @song.save
+			render json: @song
+		# else
+		end	
+	end	
 
 	private
+
 	def user_params
-		params.require(:user).permit(:username, :password, :password_confirmation)
+		params.require(:user).permit(:username, :songs, :password, :password_confirmation)
 	end	
+
+	def song_params
+		params.require(:song).permit(:title, :song_string, :user_id)
+	end	
+
 end	

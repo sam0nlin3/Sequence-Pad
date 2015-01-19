@@ -6,6 +6,8 @@ function modalReady() {
 	modal1 = ($(document.body)).find('.logInModal');
 	modal2 = ($(document.body)).find('.registerModal');
 	modal3 = ($(document.body)).find('.userViewModal');
+	modal4 = ($(document.body)).find('.saveSongModal');
+	$('.modals').on('click', '.songObject', activateSavedSong)
 	
 	logInForm = $('.logIn');
 	logInForm.hide();
@@ -15,6 +17,9 @@ function modalReady() {
 
 	userView = $('.userView');
 	userView.hide();
+
+	saveSong = $('.saveSongForm');
+	saveSong.hide();
 
 	menuShow = false; // set global var to prevent re-hiding menu on mouseover event
 	menu = $('.menuDiv');
@@ -33,6 +38,7 @@ function showMenu() {
 function showLogIn() {
 	hideModal2();
 	hideModal3();
+	hideModal4();
 	modal1.empty();
 	logInForm.show();
 	modal1.append(logInForm);
@@ -44,6 +50,7 @@ function showRegister() {
 	console.log(this)
 	hideModal1();
 	hideModal3();
+	hideModal4();
  	modal2.empty();
  	registerForm.show();
  	modal2.append(registerForm);
@@ -55,11 +62,24 @@ function showUserView() {
 	console.log("hi")
 	hideModal1();
 	hideModal2();
+	hideModal4();
  	modal3.empty();
  	modal3.append(userView);
  	userView.show();
  	modal3.show();
 	$('.modals').css({ 'z-index': '3', 'opacity': '.8' });
+}
+
+function showSaveSongForm(){
+	console.log('showing save song form')
+	hideModal1();
+	hideModal2();
+	hideModal3();
+	modal4.empty();
+	modal4.append(saveSong);
+	saveSong.show();
+	modal4.show();
+	$('.modals').css({ 'z-index': '5', 'opacity': '.8' })
 }
 
 function hideModal1() {
@@ -78,10 +98,16 @@ function hideModal3() {
 	$('.registerModal').css({ 'z-index': '3', 'opacity': '0' });
 }
 
+function hideModal4() {
+	modal4.hide();
+	$('.saveSongModal').css({ 'z-index': '3', 'opacity': '0' });
+}
+
 function hideModals() {
-	modal2.hide();
 	modal1.hide();
+	modal2.hide();
 	modal3.hide();
+	modal4.hide();
 	$('.modals').css({ 'z-index': '3', 'opacity': '0' });
 }
 
@@ -102,6 +128,7 @@ function generateLogin(){
 					.append(signIn)
 					.append(exit);
 }
+
 
 function generateRegistration() {
 	var regDiv = $('.register')
@@ -141,18 +168,47 @@ function generateUserView(data) {
 		var exit = $('<div>').attr('id', 'exit');
 
 		var userName = $('<div>').attr('id', 'userName')
-															.text(data.username);
-		var songs = $('<div>').attr('id', 'songs')
-													.text('songs:')																					
+															.text(data.current_user.username + "'s songs:");
+		var songsContainer = $('<div>').addClass('songsContainer');
+															
+		for (var i = 0; i < data.songs.length; i++) {
+					$('<div>').attr('id', i+1)
+										.attr('songString', data.songs[i].song_string)
+										.text(data.songs[i].title)
+										.addClass('songObject')
+										.appendTo(songsContainer)
+		};
 		userViewDiv.append(userName)
-					.append(songs)
-					.append(exit);
-	}		
+							 .append(songsContainer)
+					     .append(exit);
+	};		
 	showUserView();	
+};
+
+function fetchUserForSaveSongForm(){
+	console.log("fetching current user data")
+	$.get('/get_current_user').done(generateSaveForm);
 }
 
-
-
+function generateSaveForm(data) {
+	console.log(data)
+	if ($('#songTitle').length === 0) {
+		var formDiv = $('.saveSongForm');
+		var user = $('<h3>').text(data.current_user.username)
+												.attr('userId', data.current_user.id);
+		var exit = $('<div>').attr('id', 'exit');
+		var songTitle = $('<input>').attr('id', 'songTitle')
+																.attr('type', 'text')
+																.val('Song Title');
+		var submitSong = $('<button>').attr('id', 'submitSong')
+																	.text('save song');
+		formDiv.append(user)
+					 .append(songTitle)
+					 .append(exit)
+					 .append(submitSong);			 
+	}	 															
+	showSaveSongForm();			
+};
 
 
 
