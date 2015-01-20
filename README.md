@@ -1,3 +1,4 @@
-=====================================
-JavaScript-Motion-Activated-Sequencer
-=====================================
+Sequence Pad
+======
+
+
