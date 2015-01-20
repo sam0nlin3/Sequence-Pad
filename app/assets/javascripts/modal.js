@@ -206,14 +206,15 @@ function generateSaveForm(data) {
 	console.log(data)
 	if ($('#songTitle').length === 0) {
 		var formDiv = $('.saveSongForm');
-		var user = $('<h3>').text(data.current_user.username)
+		var user = $('<h3>').text("sequence title:")
 												.attr('userId', data.current_user.id);
 		var exit = $('<div>').attr('id', 'exit');
-		var songTitle = $('<input>').attr('id', 'songTitle')
-																.attr('type', 'text')
-																.val('Song Title');
+		var songTitle = $('<input>').attr('id', 'songTitle') 
+																.attr('type', 'text');
+
 		var submitSong = $('<button>').attr('id', 'submitSong')
 																	.text('save song');
+														
 		formDiv.append(user)
 					 .append(songTitle)
 					 .append(exit)
