@@ -39,12 +39,10 @@ footer {
 		font-family: Ubuntu;
 		p{
 			line-height: 20px;
+			color: rgb(64,63,67);
 		}
 		a {
 			text-decoration: none;
-			a:hover, a:focus {
-    		text-decoration:underline;
-			}
 		}
 	}
 }
