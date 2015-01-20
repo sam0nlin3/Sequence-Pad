@@ -37,5 +37,14 @@ footer {
 		text-align: center;
 		font-size: 12px;
 		font-family: Ubuntu;
+		p{
+			line-height: 20px;
+		}
+		a {
+			text-decoration: none;
+			a:hover, a:focus {
+    		text-decoration:underline;
+			}
+		}
 	}
 }
