@@ -20,6 +20,7 @@
 				background-color: #196D85;
 					&:hover {
 						background-color: #5ADBFF;
+						cursor: pointer;
 					}
 					&:active {
 						background-color: #5ADBFF;
@@ -29,30 +30,35 @@
 				background-color: #F1BF28;
 					&:hover{
 						background-color: #FFE468;
+						cursor: pointer;
 					}
 			}	
 			&#green {
 				background-color: #166C3F;
 					&:hover{
 						background-color: #4FDE95;
+						cursor: pointer;
 					}
 			}
 			&#purple {
 				background-color: #4B177E;
 					&:hover{
 						background-color: #972EFE;
+						cursor: pointer;
 					}
 			}
 			&#red {
 				background-color: #7F3649;
 					&:hover{
 						background-color: #FF81A1;
+						cursor: pointer;
 					}
 			}
 			&#brown {
 				background-color: #99412E;
 					&:hover{
 						background-color: #FF8168;
+						cursor: pointer;
 					}
 			}
 		}	
@@ -80,6 +86,7 @@
 			background-color: black;
 			&:hover{
 						background-color: #363636;
+						cursor: pointer;
 			}
 		}
 
@@ -91,6 +98,7 @@
 			background-color: #555555;
 			&:hover{
 						background-color: #7D7D7D;
+						cursor: pointer;
 			}
 		}
 
@@ -102,6 +110,7 @@
 			background-color: #959595;
 			&:hover{
 						background-color: #B7B7B7;
+						cursor: pointer;
 			}
 		}
 
@@ -113,6 +122,7 @@
 			background-color: 'silver';
 			&:hover{
 						background-color: white;
+						cursor: pointer;
 			}
 		}
 	}
