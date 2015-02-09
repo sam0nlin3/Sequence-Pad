@@ -66,9 +66,31 @@ function fetchCells() {
 function changeCurrentColor() {
 	var color = this.id;
 	board.currentColor = color;
-	// debugger;
+	resetButtons();
+	if (board.currentColor === 'blue') {
+		$(this).css('background-color', active_blue)
+	} else if (board.currentColor === 'yellow') {
+		$(this).css('background-color', active_yellow)
+	} else if (board.currentColor === 'green') {
+		$(this).css('background-color', active_green)
+	} else if (board.currentColor === 'purple') {
+		$(this).css('background-color', active_purple)
+	} else if (board.currentColor === 'red') {
+		$(this).css('background-color', active_red)
+	} else if (board.currentColor === 'brown') {
+		$(this).css('background-color', active_brown)
+	}
 	// $(this).css('background-color', 'white');
 	console.log(board.currentColor);
+}
+
+function resetButtons() {
+	$('#blue').css('background-color', blue);
+	$('#yellow').css('background-color', yellow)
+	$('#green').css('background-color', green);
+	$('#purple').css('background-color', purple);
+	$('#red').css('background-color', red);
+	$('#brown').css('background-color', brown);
 }
 
 function displayCells(data){
