@@ -13,14 +13,20 @@ header{
 		font-family: Ubuntu;
 		padding: 8px;
 		a {
+			font-weight: 300;
 			display: inline-block;
 			color:white;
 			text-decoration: none;
 		}
 		h2 {
+			font-weight: 300;
 			display: inline-block;
 			font-size: 20px;
 			padding-left: 8px;
+			&:hover {
+				cursor: pointer;
+				color: #555555;
+			}
 		}
 	}
 }	

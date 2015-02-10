@@ -2,7 +2,7 @@
 	height: 100vh;
 	width: 70px;
 	display: block;
-	opacity: .7;
+	opacity: .6;
 	float: right; 
 	position: aboslute;
     top: 0px;	
@@ -13,8 +13,9 @@
 		border: none;
 		outline: none;
 		margin-right: 20px;
-
-
+		&:hover {
+			cursor: pointer;
+		}
 		&.color{	
 			&#blue {
 				background-color: #196D85;
@@ -66,7 +67,7 @@
 	height: 100vh;
 	width: 70px;
 	display: block;
-	opacity: .7;
+	opacity: .6;
 	float: left; 
 
 	button {
@@ -74,13 +75,17 @@
 		height: 25%;
 		outline: none;
 		border: none;
-
+		&:hover {
+			cursor: pointer;
+		}
 		&.play {
-			background-image: url('https://s3.amazonaws.com/project3sequencer/images/play_icon.png');
 			background-size: 100%;
 			background-position: center; 
 			background-repeat: no-repeat;
 			background-color: black;
+			i {
+				color: whitesmoke;
+			}
 			&:hover{
 						background-color: #363636;
 						cursor: pointer;
@@ -88,38 +93,35 @@
 		}
 
 		&.pause {
-			background-image: url('https://s3.amazonaws.com/project3sequencer/images/pause-icon.png');
 			background-size: 100%;
 			background-position: center; 
 			background-repeat: no-repeat;
 			background-color: #555555;
 			&:hover{
-						background-color: #7D7D7D;
-						cursor: pointer;
+				background-color: #7D7D7D;
+				cursor: pointer;
 			}
 		}
 
 		&.clear {
-			background-image: url('https://s3.amazonaws.com/project3sequencer/images/clear-icon.png');
 			background-size: 100%;
 			background-position: center; 
 			background-repeat: no-repeat;
 			background-color: #959595;
 			&:hover{
-						background-color: #B7B7B7;
-						cursor: pointer;
+				background-color: #B7B7B7;
+				cursor: pointer;
 			}
 		}
 
 		&.save {
-			background-image: url('https://s3.amazonaws.com/project3sequencer/images/save-icon.png');
 			background-size: 100%;
 			background-position: center; 
 			background-repeat: no-repeat;
 			background-color: 'silver';
 			&:hover{
-						background-color: white;
-						cursor: pointer;
+				background-color: white;
+				cursor: pointer;
 			}
 		}
 	}

@@ -12,11 +12,13 @@
  *
  *= require_tree .
  *= require_self
+ *=require font-awesome
  */
 
 @import "reset";
 @import "buttons";
 @import "cells";
+@import "font-awesome";
 @import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400);
 
 body {
@@ -24,6 +26,7 @@ body {
 	background-image: url("http://www.h3dwallpapers.com/wp-content/uploads/2014/11/Black_Background_02.jpg");
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
+	background-color: black;
 }
 
 footer {
