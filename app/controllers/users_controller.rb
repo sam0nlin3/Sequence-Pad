@@ -7,7 +7,6 @@ class UsersController < ApplicationController
 			render json: { current_user: @user }
 		else
 			current_user = nil
-			# format.json { render :json => { render json: @user.errors }
 		end 
 	end
 
@@ -15,8 +14,17 @@ class UsersController < ApplicationController
 		@song = Song.new(song_params)
 		if @song.save
 			render json: @song
-		# else
 		end	
+	end	
+
+	def delete_song
+		song = Song.find(params[:id])
+		@current_user = User.find(session[:current_user])
+		if song.destroy
+			render json: @current_user
+		else
+			render json: @current_user	
+		end		
 	end	
 
 	private

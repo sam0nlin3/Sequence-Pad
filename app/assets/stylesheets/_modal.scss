@@ -94,10 +94,26 @@
 			margin-left: 20px;
 			font-size: 20px;
 			.songObject{
+				display: inline-flex;
 				margin-top: 10px;
+				h2{
+					width: 225px;
+					&:hover {
+						cursor: pointer;
+						color: #166C3F;
+					}
+				}
 			}
 		}
 	}
+	i#delete {
+		font-size: 16px;
+		color: #7F3649;
+		&:hover {
+			cursor: pointer;
+			color: #FF81A1;
+		}
+	}	
 	i#exit {
 		text-align: right;
 		width: 100%;

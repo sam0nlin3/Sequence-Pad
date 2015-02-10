@@ -7,7 +7,9 @@ function modalReady() {
 	modal2 = ($(document.body)).find('.registerModal');
 	modal3 = ($(document.body)).find('.userViewModal');
 	modal4 = ($(document.body)).find('.saveSongModal');
-	$('.modals').on('click', '.songObject', activateSavedSong)
+	$('.modals').on('click', '.songObject h2', activateSavedSong)
+	$('.modals').on('click', '#delete', delete_song);
+
 	
 	logInForm = $('.logIn');
 	logInForm.hide();
@@ -191,12 +193,15 @@ function generateUserView(data) {
 		userViewDiv.append(userName)													
 															
 		var songsContainer = $('<div>').addClass('songsContainer');
-															
+		
+
 		for (var i = 0; i < data.songs.length; i++) {
-					$('<div>').attr('id', i+1)
+					var delete_song = $('<i>').addClass('fa fa-times').attr('id', 'delete').text(' delete song')
+					$('<div>').attr('id', data.songs[i].id)
 										.attr('songString', data.songs[i].song_string)
-										.text(data.songs[i].title)
+										.html('<h2>' + data.songs[i].title + '</h2>')
 										.addClass('songObject')
+										.append(delete_song)
 										.appendTo(songsContainer);
 		userViewDiv.append(songsContainer)
 	
@@ -230,7 +235,20 @@ function generateSaveForm(data) {
 	showSaveSongForm();			
 };
 
-
+function delete_song(){
+	var songId = $(this).closest('.songObject').attr('id');
+	$.ajax({ 
+      type: "DELETE",
+      url: '/songs/' + songId,
+      data: { songId: songId},
+      success: function (data) {
+        fetchUserForUserView()
+      },
+      error: function(data){
+      	fetchUserForUserView()
+      }
+  });
+}
 
 
 
