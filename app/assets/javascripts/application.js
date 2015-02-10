@@ -18,8 +18,10 @@
 $(document).ready(function() {
 	console.log('loaded');
 	fetchCells();
-	$(document.body).on('click', '#exit', hideModals);
+	$(document.body).on('click', '#exit', hideModals);	
 	$(document.body).on('click', 'button.color', changeCurrentColor);
+	$(document.body).on('mouseover', 'button.color', hoverColor);
+	$(document.body).on('mouseout', 'button.color', removeHover);		
 	$(document.body).on('click', 'button.background', changeBackground);
 	$(document.body).on('click', 'button.play', looper);
 	$(document.body).on('click', 'button.pause', pauseLoop);
@@ -27,11 +29,9 @@ $(document).ready(function() {
 	$(document.body).on('click', 'button.save', fetchUserForSaveSongForm);
 	$('.modals').on('click', 'button#submitSong', saveSong)
 	$(document.body).on('click', '.cell', activateCell);
-
 	board = new Board();
 	modalReady();
 })
-
 
 var blue = '#196D85';
 var yellow = '#F1BF28';
@@ -58,6 +58,7 @@ function fetchCells() {
 	$.get('/').done(displayCells);
 }
 
+
 // function fetchCellsforRenderSaved(userId, songId) {
 // 	console.log('fetching cell data to re-render cells from saved')
 // 	$.get('/users/'+userId+'/songs'+songId).done(renderSavedSong);
@@ -66,7 +67,6 @@ function fetchCells() {
 function changeCurrentColor() {
 	var color = this.id;
 	board.currentColor = color;
-	resetButtons();
 	if (board.currentColor === 'blue') {
 		$(this).css('background-color', active_blue)
 	} else if (board.currentColor === 'yellow') {
@@ -80,18 +80,58 @@ function changeCurrentColor() {
 	} else if (board.currentColor === 'brown') {
 		$(this).css('background-color', active_brown)
 	}
-	// $(this).css('background-color', 'white');
+	resetButtons();
 	console.log(board.currentColor);
 }
 
-function resetButtons() {
-	$('#blue').css('background-color', blue);
-	$('#yellow').css('background-color', yellow)
-	$('#green').css('background-color', green);
-	$('#purple').css('background-color', purple);
-	$('#red').css('background-color', red);
-	$('#brown').css('background-color', brown);
+// These next two functions are needed since the hover in Sass in no longer functions,
+// since we the button colors are being altered in the above function, whether that button is
+// being hovered or not.
+function hoverColor() {
+	if (this.id !== board.currentColor) {
+		if (this.id === 'blue') {
+			$(this).css('background-color', active_blue)
+		} else if (this.id === 'yellow') {
+			$(this).css('background-color', active_yellow)
+		} else if (this.id === 'green') {
+			$(this).css('background-color', active_green)
+		} else if (this.id === 'purple') {
+			$(this).css('background-color', active_purple)
+		} else if (this.id === 'red') {
+			$(this).css('background-color', active_red)
+		} else if (this.id === 'brown') {
+			$(this).css('background-color', active_brown)
+		}
+	}
 }
+
+function removeHover() {
+	if (this.id !== board.currentColor) {
+		resetButtons();
+	}
+}
+
+function resetButtons() {
+	if (board.currentColor !== 'yellow') {
+		$('#yellow').css('background-color', yellow);
+	}
+	if (board.currentColor !== 'green') {
+		$('#green').css('background-color', green);	
+	}
+	if (board.currentColor !== 'blue') {
+		$('#blue').css('background-color', blue);	
+	}
+	if (board.currentColor !== 'purple') {
+		$('#purple').css('background-color', purple);	
+	}
+	if (board.currentColor !== 'brown') {
+		$('#brown').css('background-color', brown);	
+	}		
+	if (board.currentColor !== 'red') {
+		$('#red').css('background-color', red);	
+	}	
+}
+
 
 function displayCells(data){
 	console.log('loaded')
@@ -141,7 +181,6 @@ function renderCells(data){
 }
 
 function activateCell() {
-	// debugger; 
 	if (this.getAttribute('active') === board.currentColor) {
 		this.setAttribute('active', 'none');
 		$(this).css("background-color", "dimgray");
