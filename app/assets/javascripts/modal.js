@@ -104,6 +104,8 @@ function hideModal4() {
 }
 
 function hideModals() {
+	var logInDiv = $('.logIn').css('height', '250px');
+	var logInDiv = $('.register').css('height', '330px');
 	modal1.hide();
 	modal2.hide();
 	modal3.hide();
@@ -112,7 +114,7 @@ function hideModals() {
 }
 
 function generateLogin(){
-	var logInDiv = $('.logIn');
+	var logInDiv = $('.logIn').css('height', '250px');
 	
 	var exit = $('<i>').addClass('fa fa-times-circle').attr('id', 'exit');
 

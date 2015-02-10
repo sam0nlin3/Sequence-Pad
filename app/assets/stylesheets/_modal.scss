@@ -11,6 +11,7 @@
 		.logIn {
 			width: 250px;
 			height: 250px;
+			overflow: hidden;
 			margin: 15% auto;
 			padding: 20px;
 			background-color: black;
@@ -27,11 +28,18 @@
 				background-color: transparent;
 				color: white;
 			}
+			h3 {
+				font-weight: 300;
+				font-size: 16px;
+				margin-top: 40px;
+				color: #7F3649;
+			}
 		}
 	}
 	.register {
 		width: 250px;
 		height: 330px;
+		overflow: hidden;
 		margin: 12% auto;
 		padding: 20px;
 		background-color: black;
@@ -47,6 +55,12 @@
 			border-bottom: 2px dotted;
 			background-color: transparent;
 			color: white;
+		}
+		h3 {
+				font-weight: 300;
+				font-size: 16px;
+				margin-top: 40px;
+				color: #7F3649;
 		}
 	}
 	.saveSongForm {

@@ -19,6 +19,7 @@ function fetchCurrentUser(){
 }
 
 function newCurrentUser(){
+  var logInDiv = $('.logIn').css('height', '250px');
   $.ajax({ 
       type: "POST",
       url: '/sessions',
@@ -27,23 +28,46 @@ function newCurrentUser(){
         renderMenu(data)
       },
       error: function (data) {
-        renderErrors(data.error())   
+        showLoginErrors()   
       } 
   });
 }
 
-function renderErrors(data){
-  debugger;
-  console.log(data)
+function showLoginErrors(){
+  var logIn = $('.logIn')
+  logIn.css('height', '350px')
+  if ($('.errorMessageDiv').length < 1) {
+    var errorMessageDiv = $('<div>').addClass('errorMessageDiv');
+    errorMessageDiv.html('<h3>username and/or password do not match our records. please try again</h3>');
+    errorMessageDiv.appendTo(logIn)
+  }  
 };
 
 function newRegister(){
+  var logInDiv = $('.register').css('height', '330px');
   $.ajax({ 
       type: "POST",
       url: '/new_user',
-      data: {"user" :{ username: $('#regName').val(), password: $('#regPW').val(), password_confirmation: $('#regPWcon').val()  }
-  }}).done(renderMenu);
-}
+      data: {"user" :{ username: $('#regName').val(), password: $('#regPW').val(), password_confirmation: $('#regPWcon').val()  }},
+      success: function (data) {
+        renderMenu(data)
+      },
+      error: function (data) {
+        showRegisterErrors(data)   
+      }   
+  });
+}  
+
+function showRegisterErrors(data){
+  var register = $('.register')
+  register.css('height', '425px')
+  if ($('.errorMessageDiv').length < 2) {
+    var errorMessageDiv = $('<div>').addClass('errorMessageDiv');
+    errorMessageDiv.html('<h3>there was an error with you registation information. please try again</h3>');
+    errorMessageDiv.appendTo(register)
+  }  
+};
+
 
 function renderMenu(data){ 
   ($('.menuDiv')).empty();
