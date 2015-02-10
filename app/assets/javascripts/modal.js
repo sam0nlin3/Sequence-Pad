@@ -43,7 +43,7 @@ function showLogIn() {
 	logInForm.show();
 	modal1.append(logInForm);
 	modal1.show();
-	$('.modals').css({ 'z-index': '5', 'opacity': '.8' });
+	$('.modals').css({ 'z-index': '5', 'opacity': '1' });
 }
 
 function showRegister() {
@@ -55,7 +55,7 @@ function showRegister() {
  	registerForm.show();
  	modal2.append(registerForm);
  	modal2.show();
-	$('.modals').css({ 'z-index': '3', 'opacity': '.8' });
+	$('.modals').css({ 'z-index': '3', 'opacity': '1' });
 }
 
 function showUserView() {
@@ -67,7 +67,7 @@ function showUserView() {
  	modal3.append(userView);
  	userView.show();
  	modal3.show();
-	$('.modals').css({ 'z-index': '3', 'opacity': '.8' });
+	$('.modals').css({ 'z-index': '3', 'opacity': '1' });
 }
 
 function showSaveSongForm(){
@@ -79,7 +79,7 @@ function showSaveSongForm(){
 	modal4.append(saveSong);
 	saveSong.show();
 	modal4.show();
-	$('.modals').css({ 'z-index': '5', 'opacity': '.8' })
+	$('.modals').css({ 'z-index': '5', 'opacity': '1' })
 }
 
 function hideModal1() {
@@ -114,7 +114,9 @@ function hideModals() {
 function generateLogin(){
 	var logInDiv = $('.logIn');
 	
-	var exit = $('<div>').attr('id', 'exit');
+	var exit = $('<i>').addClass('fa fa-times-circle').attr('id', 'exit');
+
+
 	var nameLabel = $("<label>").text('username:');	
 	var userName = $('<input>').attr('id', 'username')
 														 .attr('type', 'text');
@@ -130,14 +132,14 @@ function generateLogin(){
 	logInDiv.append(nameLabel)
 					.append(pwLabel)
 					.append(signIn)
-					.append(exit);
+					.prepend(exit);
 }
 
 
 function generateRegistration() {
 	var regDiv = $('.register')
 
-	var exit = $('<div>').attr('id', 'exit');
+	var exit = $('<i>').addClass('fa fa-times-circle').attr('id', 'exit');
 
 	var nameLabel = $("<label>").text('username:');	
 
@@ -164,7 +166,7 @@ function generateRegistration() {
 				.append(pwLabel)
 				.append(pwConLabel)
 				.append(register)
-				.append(exit);
+				.prepend(exit);
 }
 
 function fetchUserForUserView(){
@@ -177,10 +179,15 @@ function generateUserView(data) {
 		var userViewDiv = $('.userView');
 		$(userViewDiv).empty()
 
-		var exit = $('<div>').attr('id', 'exit');
+		var exit = $('<i>').addClass('fa fa-times-circle').attr('id', 'exit');
+
+		userViewDiv.prepend(exit);
 
 		var userName = $('<div>').attr('id', 'userName')
 															.text(data.current_user.username + "'s songs:");
+
+		userViewDiv.append(userName)													
+															
 		var songsContainer = $('<div>').addClass('songsContainer');
 															
 		for (var i = 0; i < data.songs.length; i++) {
@@ -188,11 +195,9 @@ function generateUserView(data) {
 										.attr('songString', data.songs[i].song_string)
 										.text(data.songs[i].title)
 										.addClass('songObject')
-										.appendTo(songsContainer)
-
-		userViewDiv.append(userName)
-							 .append(songsContainer)
-					     .append(exit);
+										.appendTo(songsContainer);
+		userViewDiv.append(songsContainer)
+	
 	};		
 	showUserView();	
 };
@@ -208,7 +213,7 @@ function generateSaveForm(data) {
 		var formDiv = $('.saveSongForm');
 		var user = $('<h3>').text("sequence title:")
 												.attr('userId', data.current_user.id);
-		var exit = $('<div>').attr('id', 'exit');
+		var exit = $('<i>').addClass('fa fa-times-circle').attr('id', 'exit');
 		var songTitle = $('<input>').attr('id', 'songTitle') 
 																.attr('type', 'text');
 
@@ -217,8 +222,8 @@ function generateSaveForm(data) {
 														
 		formDiv.append(user)
 					 .append(songTitle)
-					 .append(exit)
-					 .append(submitSong);			 
+					 .append(submitSong)	 
+					 .prepend(exit)
 	} 															
 	showSaveSongForm();			
 };
