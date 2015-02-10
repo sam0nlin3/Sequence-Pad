@@ -36,7 +36,7 @@ function newCurrentUser(){
 function showLoginErrors(){
   var logIn = $('.logIn')
   logIn.css('height', '350px')
-  if ($('.errorMessageDiv').length < 1) {
+  if ($('.errorMessageDiv').length <= 1) {
     var errorMessageDiv = $('<div>').addClass('errorMessageDiv');
     errorMessageDiv.html('<h3>username and/or password do not match our records. please try again</h3>');
     errorMessageDiv.appendTo(logIn)
@@ -61,7 +61,7 @@ function newRegister(){
 function showRegisterErrors(data){
   var register = $('.register')
   register.css('height', '425px')
-  if ($('.errorMessageDiv').length < 2) {
+  if ($('.errorMessageDiv').length <= 1) {
     var errorMessageDiv = $('<div>').addClass('errorMessageDiv');
     errorMessageDiv.html('<h3>there was an error with you registation information. please try again</h3>');
     errorMessageDiv.appendTo(register)
