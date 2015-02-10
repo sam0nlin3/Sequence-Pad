@@ -20,6 +20,7 @@
 @import "cells";
 @import "font-awesome";
 @import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700);
 
 body {
 	background-color: black;
@@ -40,13 +41,20 @@ footer {
 		color: rgb(64,63,67);
 		text-align: center;
 		font-size: 12px;
-		font-family: Ubuntu;
+		font-family: 'Source Sans Pro', sans-serif;
 		p{
 			line-height: 20px;
 			color: rgb(64,63,67);
 		}
 		a {
 			text-decoration: none;
+			&:visited, &:link, &:active {
+				color: #196D85;
+			}
+			&:hover {
+				color: #5ADBFF;
+				cursor: pointer;
+			}
 		}
 	}
 }

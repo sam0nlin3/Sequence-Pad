@@ -4,13 +4,15 @@ header{
 
 	h1 {
 		display: inline-block;
-		font-family: Ubuntu;
+		font-family: 'Ubuntu', sans-serif;
 		font-size: 36px;
+		font-weight: 400;
+		text-transform: uppercase;
 		padding: 6px;
 
 	}
 	.menuDiv{
-		font-family: Ubuntu;
+		font-family: 'Source Sans Pro', sans-serif;
 		padding: 8px;
 		a {
 			font-weight: 300;
@@ -25,7 +27,7 @@ header{
 			padding-left: 8px;
 			&:hover {
 				cursor: pointer;
-				color: #555555;
+				color: #5ADBFF;
 			}
 		}
 	}
