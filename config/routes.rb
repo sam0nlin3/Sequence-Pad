@@ -11,6 +11,8 @@ Rails.application.routes.draw do
     
   post '/sessions' => 'sessions#create'
 
+  delete '/songs/:id' => 'users#delete_song'
+
   get '/logout' => 'sessions#destroy'
 
 end

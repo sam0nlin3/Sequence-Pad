@@ -384,7 +384,7 @@ function saveSong(){
 }
 
 function activateSavedSong(){
-	var songString = (this.getAttribute('songstring'))
+	var songString = $(this).closest('.songObject').attr('songstring')
 	var songArray = songString.split(" ")
 	var cellDivs = ($('div.cell'))
 	
