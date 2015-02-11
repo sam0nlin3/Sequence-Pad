@@ -63,7 +63,7 @@ function showRegisterErrors(data){
   register.css('height', '425px')
   if ($('.registerErrorMessageDiv').length <= 1) {
     var errorMessageDiv = $('<div>').addClass('registerErrorMessageDiv');
-    errorMessageDiv.html('<h3>there was an error with you registation information. please try again</h3>');
+    errorMessageDiv.html('<h3>there was an error with you registration information. please try again</h3>');
     errorMessageDiv.appendTo(register)
   }  
 };
