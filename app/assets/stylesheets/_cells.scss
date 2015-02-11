@@ -13,6 +13,9 @@
 			height: 37.5px;
 			float: left;
 			display: inline-block;
+			&:hover {
+				cursor: crosshair;
+			}
 		}
 	}
 }
