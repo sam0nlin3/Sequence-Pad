@@ -22,7 +22,7 @@ This project utilized the following technologies:
 
 Creators:
 ------
-##### Sam Matthews - https://github.com/SamMatthews9 | SamMatthews9@gmail.com
+##### Sam Matthews - https://github.com/SamMatthews9
 ##### Ross Wittenberg - https://github.com/RossWittenberg
 
 
